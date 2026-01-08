@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>დავალება 7 - ფორმები</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 7</h1>
+                <p>ფორმები (Inputs)</p>
+            </header>
+
+            <div class="content">
+                <h2>ინსტრუქცია:</h2>
+                <p>ველები, სადაც მომხმარებელს ტექსტი შეჰყავს, ლამაზი უნდა იყოს. იპოვე <code>.styled-input</code>.</p>
+                
+                <ol>
+                    <li>
+                        შეცვალე ჩარჩოს ფერი: <code>border: 2px solid #eee;</code>
+                    </li>
+                    <li>
+                        როდესაც მომხმარებელი დააკლიკებს (focus), ჩარჩო გახდეს ლურჯი. ამისთვის დაწერე ახალი წესი:
+<pre><code>.styled-input:focus {
+    outline: none;
+    border-color: #61dafb;
+}</code></pre>
+                    </li>
+                    <li>
+                        დაამატე ქვედა ჩრდილი: <code>box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);</code>
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task6.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task8.html" class="nav-btn next">შემდეგი: პოზიცია &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                <div class="input-group">
+                    <input type="text" class="styled-input" placeholder="სახელი">
+                    <input type="email" class="styled-input" placeholder="ელ-ფოსტა">
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

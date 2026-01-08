@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>დავალება 4 - Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 4</h1>
+                <p>განლაგება (Flexbox Basics)</p>
+            </header>
+
+            <div class="content">
+                <h2>ინსტრუქცია:</h2>
+                <p>ელემენტების სწორად განლაგება ყველაზე მნიშვნელოვანია. ჩვენ გამოვიყენებთ <strong>Flexbox</strong>-ს.</p>
+                <p>იპოვე <code>.flex-container</code> <code>style.css</code>-ში.</p>
+                
+                <ol>
+                    <li>
+                        ჩართე ფლექსი: <code>display: flex;</code> (ახლა ელემენტები ერთ ხაზზე დადგებიან).
+                    </li>
+                    <li>
+                        გაანაწილე სივრცე თანაბრად: <code>justify-content: space-around;</code>
+                    </li>
+                    <li>
+                        გაასწორე ვერტიკალურად ცენტრში: <code>align-items: center;</code>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <code>justify-content</code> ასწორებს ჰორიზონტალურად (მთავარ ღერძზე), ხოლო <code>align-items</code> ვერტიკალურად.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task3.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task5.html" class="nav-btn next">შემდეგი: Hover &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                <div class="flex-container">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>დავალება 8 - პოზიცია</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 8</h1>
+                <p>პოზიციონირება (Absolute Positioning)</p>
+            </header>
+
+            <div class="content">
+                <h2>ინსტრუქცია:</h2>
+                <p>ზოგჯერ ელემენტის ზუსტად განთავსება გვჭირდება. ამისთვის ვიყენებთ <code>position: absolute;</code>-ს.</p>
+                <p>წითელი რგოლი (<code>.child-box</code>) გვინდა განვათავსოთ ნაცრისფერი ყუთის (<code>.parent-box</code>) მარჯვენა ზედა კუთხეში.</p>
+                
+                <ol>
+                    <li>
+                        იპოვე <code>.child-box</code> და მიანიჭე <code>position: absolute;</code>.
+                    </li>
+                    <li>
+                        განათავსე ზემოდან <code>-20px</code> (რომ ამოიწიოს): <code>top: -20px;</code>
+                    </li>
+                    <li>
+                        განათავსე მარჯვნიდან <code>-20px</code>: <code>right: -20px;</code>
+                    </li>
+                </ol>
+                
+                <div class="tip">
+                    შენიშვნა: მშობელ ელემენტს (<code>.parent-box</code>) უკვე აქვს <code>position: relative;</code>, რაც აუცილებელია, რომ შვილმა მის მიმართ გაიანგარიშოს პოზიცია.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task7.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task9.html" class="nav-btn next">შემდეგი: ფონები &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                <div class="parent-box">
+                    <div class="child-box"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

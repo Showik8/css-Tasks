@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>დავალება 10 - ანიმაცია</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 10</h1>
+                <p>ანიმაცია (Keyframes)</p>
+            </header>
+
+            <div class="content">
+                <h2>ინსტრუქცია:</h2>
+                <p>გილოცავ! ბოლო დავალებაზე ხარ. მოდი ბურთი ავამოძრაოთ.</p>
+                <p>იპოვე <code>.bouncing-ball</code> და <code>@keyframes bounce</code>.</p>
+                
+                <ol>
+                    <li>
+                        ჯერ განვსაზღვროთ მოძრაობა <code>@keyframes bounce</code>-ში:
+<pre><code>0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-100px); }</code></pre>
+                    </li>
+                    <li>
+                        ახლა მიაბი ეს ანიმაცია ბურთს (class <code>.bouncing-ball</code>):
+                        <code>animation: bounce 1s infinite ease-in-out;</code>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    ეს კოდი ბურთს აიძულებს ახტეს და დახტეს უსასრულოდ (infinite).
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task9.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="index.html" class="nav-btn next">თავიდან დაწყება &#8635;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="bouncing-ball"></div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
