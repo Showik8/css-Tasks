@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 8: Structure - CSS Pseudo-classes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <!-- Sidebar -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 8: Structure</h1>
+                <p>First, Last & Only Child</p>
+            </header>
+
+            <div class="content">
+                <h2>მიმოხილვა</h2>
+                <p>ეს სელექტორები გვეხმარება ავირჩიოთ ელემენტები მათი განლაგების მიხედვით მშობელში.</p>
+                
+                <ol>
+                    <li>
+                        <strong>პირველი და ბოლო:</strong>
+                        <pre><code>.pill-item:first-child {
+    background-color: #3b82f6; 
+    color: white;
+}
+.pill-item:last-child {
+    background-color: #ef4444; 
+    color: white;
+}</code></pre>
+                    </li>
+                    
+                    <li>
+                        <strong>ერთადერთი შვილი (:only-child):</strong>
+                        ეს მუშაობს, თუ ელემენტი მარტოა მშობელში.
+                        <pre><code>.pill-item:only-child {
+    width: 100%;
+    text-align: center;
+    background-color: #8b5cf6;
+    color: white;
+}</code></pre>
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task7.html" class="nav-btn prev">
+                        <span>&#8592;</span> Task 7
+                    </a>
+                    <a href="task9.html" class="nav-btn next">
+                        Task 9: Nth-Child <span>&#8594;</span>
+                    </a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div class="task-section">
+                    <h3>1. სიის დასაწყისი და დასასრული</h3>
+                    <div class="pill-list">
+                        <div class="pill-item">Alpha</div>
+                        <div class="pill-item">Beta</div>
+                        <div class="pill-item">Gamma</div>
+                        <div class="pill-item">Delta</div>
+                        <div class="pill-item">Omega</div>
+                    </div>
+                 </div>
+                 
+                 <div class="task-section">
+                    <h3>2. მარტოსული ელემენტი</h3>
+                    <div class="pill-list">
+                        <div class="pill-item">Solo Player</div>
+                    </div>
+                 </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

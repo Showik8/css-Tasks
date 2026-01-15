@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 9: Nth-Child - CSS Pseudo-classes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <!-- Sidebar -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 9: Advanced</h1>
+                <p>Nth-Child & Counting</p>
+            </header>
+
+            <div class="content">
+                <h2>მიმოხილვა</h2>
+                <p><code>:nth-child(formula)</code> ყველაზე ძლიერი სტრუქტურული სელექტორია.</p>
+                
+                <ol>
+                    <li>
+                        <strong>Odd / Even:</strong>
+                        <pre><code>.grid-box:nth-child(odd) {
+    background-color: #cbd5e1;
+}</code></pre>
+                    </li>
+                    
+                    <li>
+                        <strong>ფორმულა (an+b):</strong>
+                        მაგალითად, ყოველი მეოთხე ელემენტი.
+                        <pre><code>.grid-box:nth-child(4n) {
+    background-color: #f59e0b;
+    color: white;
+}</code></pre>
+                    </li>
+                    
+                    <li>
+                        <strong>პირველი 3 ელემენტი:</strong>
+                        <pre><code>.grid-box:nth-child(-n+3) {
+    border-bottom: 4px solid #3b82f6;
+}</code></pre>
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task8.html" class="nav-btn prev">
+                        <span>&#8592;</span> Task 8
+                    </a>
+                    <a href="task10.html" class="nav-btn next">
+                        Task 10: Logic <span>&#8594;</span>
+                    </a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div class="task-section">
+                    <h3>Grid System (16 items)</h3>
+                    <div class="grid-system">
+                        <div class="grid-box">1</div>
+                        <div class="grid-box">2</div>
+                        <div class="grid-box">3</div>
+                        <div class="grid-box">4</div>
+                        <div class="grid-box">5</div>
+                        <div class="grid-box">6</div>
+                        <div class="grid-box">7</div>
+                        <div class="grid-box">8</div>
+                        <div class="grid-box">9</div>
+                        <div class="grid-box">10</div>
+                        <div class="grid-box">11</div>
+                        <div class="grid-box">12</div>
+                        <div class="grid-box">13</div>
+                        <div class="grid-box">14</div>
+                        <div class="grid-box">15</div>
+                        <div class="grid-box">16</div>
+                    </div>
+                 </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4: Links - CSS Pseudo-classes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <!-- Sidebar -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 4: Links</h1>
+                <p>History & Navigation States</p>
+            </header>
+
+            <div class="content">
+                <h2>მიმოხილვა</h2>
+                <p>ბმულებს (Links) აქვთ 4 ძირითადი მდგომარეობა: <code>:link</code>, <code>:visited</code>, <code>:hover</code>, <code>:active</code>.</p>
+                <p>უსაფრთხოების გამო, <code>:visited</code>-ზე შეგვიძლია შევცვალოთ მხოლოდ ფერი.</p>
+                
+                <ol>
+                    <li>
+                        <strong>ვიზიტორთა ისტორია:</strong>
+                        იპოვე <code>.history-link</code>:
+<pre><code>/* ნანახი ლინკები */
+.history-link:visited {
+    color: #9333ea; /* Purple */
+    text-decoration: line-through;
+}
+
+/* არანახი ლინკები */
+.history-link:link {
+    color: #2563eb; /* Blue */
+}</code></pre>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    დაიმახსოვრე "LVHA" წესი: თანმიმდევრობა უნდა იყოს Link, Visited, Hover, Active, რომ სწორად იმუშაოს.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task3.html" class="nav-btn prev">
+                        <span>&#8592;</span> Task 3
+                    </a>
+                    <a href="task5.html" class="nav-btn next">
+                        Task 5: Forms (I) <span>&#8594;</span>
+                    </a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div class="task-section">
+                    <h3>1. ლინკების ისტორია</h3>
+                    <p style="margin-bottom: 20px; color: #64748b;">სცადე დააჭირო ლინკს, მერე დაარეფრეშე გვერდი:</p>
+                    
+                    <div style="display: flex; flex-direction: column;">
+                        <a href="index.html" class="history-link">მთავარი გვერდი (სავარაუდოდ ნანახი)</a>
+                        <a href="https://example.com" class="history-link" target="_blank">Example.com (გარე ლინკი)</a>
+                        <a href="#non-existent" class="history-link">არარსებული ლინკი</a>
+                    </div>
+                 </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

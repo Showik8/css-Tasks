@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3: Target & Empty - CSS Pseudo-classes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <!-- Sidebar -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 3: Target</h1>
+                <p>URL State & Empty Elements</p>
+            </header>
+
+            <div class="content">
+                <h2>მიმოხილვა</h2>
+                <ol>
+                    <li>
+                        <strong>:target</strong>
+                        ეს ფსევდო-კლასი მუშაობს მაშინ, როცა URL-ში არის ID (მაგ: <code>#info</code>). ეს იდეალურია სუფთა CSS მოდალებისთვის.
+                        იპოვე <code>.modal-window:target</code> (დაამატე ახალი სელექტორი):
+<pre><code>.modal-window:target {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}</code></pre>
+                    </li>
+                    
+                    <li>
+                        <strong>:empty</strong>
+                        სტილს აძლევს ელემენტს, რომელსაც შვილი არ ჰყავს (ტექსტიც კი).
+                        იპოვე <code>.empty-state-list li:empty</code>:
+<pre><code>.empty-state-list li:empty {
+    background-color: #fee2e2;
+    border-color: #ef4444;
+}
+/* დავამატოთ ტექსტი ცარიელებისთვის */
+.empty-state-list li:empty::after {
+    content: 'ცარიელია!';
+    color: #ef4444;
+    font-size: 14px;
+}</code></pre>
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task2.html" class="nav-btn prev">
+                        <span>&#8592;</span> Task 2
+                    </a>
+                    <a href="task4.html" class="nav-btn next">
+                        Task 4: Links <span>&#8594;</span>
+                    </a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div class="task-section">
+                    <h3>1. CSS მოდალი (:target)</h3>
+                    <p style="margin-bottom: 20px;">
+                        <a href="#secret-message" class="nav-btn next" style="display:inline-flex;">გახსენი შეტყობინება</a>
+                        <a href="#" class="nav-btn prev" style="display:inline-flex; border: none; color: #ef4444;">დახურვა</a>
+                    </p>
+                    
+                    <div id="secret-message" class="modal-window">
+                        <h4>🎉 გილოცავ!</h4>
+                        <p style="color: inherit;">შენ გახსენი "მოდალი" JavaScript-ის გარეშე.</p>
+                    </div>
+                 </div>
+
+                 <div class="task-section">
+                    <h3>2. ცარიელი სიის ელემენტები (:empty)</h3>
+                    <ul class="empty-state-list" style="list-style: none; padding: 0;">
+                        <li>პროდუქტი 1</li>
+                        <li></li> <!-- Empty -->
+                        <li>პროდუქტი 2</li>
+                        <li></li> <!-- Empty -->
+                    </ul>
+                 </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

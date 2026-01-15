@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2: Focus - CSS Pseudo-classes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <!-- Sidebar -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 2: Focus</h1>
+                <p>Accessibility & Keyboard States</p>
+            </header>
+
+            <div class="content">
+                <h2>მიმოხილვა</h2>
+                <p><code>:focus</code> არის კრიტიკული ხელმისაწვდომობისთვის (Accessibility). ის გვაჩვენებს სად არის კურსორი კლავიატურის გამოყენებისას.</p>
+                
+                <ol>
+                    <li>
+                        <strong>ინპუტის ფოკუსი:</strong>
+                        იპოვე <code>.accessible-input</code> და გაუკეთე ლამაზი ფოკუსი:
+<pre><code>.accessible-input:focus {
+    border-color: #3b82f6; 
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+    background-color: white;
+}</code></pre>
+                    </li>
+                    
+                    <li>
+                        <strong>მშობლის ფოკუსი (:focus-within):</strong>
+                        ეს ფსევდო-კლასი აქტიურდება, როცა <em>შვილ</em> ელემენტს აქვს ფოკუსი.
+                        იპოვე <code>.focus-group</code>:
+<pre><code>.focus-group:focus-within {
+    border-color: #22c55e;
+    background-color: #f0fdf4;
+    border-style: solid;
+}</code></pre>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>შენიშვნა:</strong> ყოველთვის გამოიყენე <code>outline</code> ან <code>box-shadow</code> ფოკუსისთვის. არასდროს გათიშო ის (<code>outline: none</code>) ალტერნატივის გარეშე!
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="index.html" class="nav-btn prev">
+                        <span>&#8592;</span> Task 1
+                    </a>
+                    <a href="task3.html" class="nav-btn next">
+                        Task 3: Target <span>&#8594;</span>
+                    </a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div class="task-section">
+                    <h3>1. ხელმისაწვდომი ინპუტი</h3>
+                    <p style="margin-bottom: 20px; color: #64748b;">დააჭირე ინპუტს (ან გამოიყენე Tab):</p>
+                    <input type="text" class="accessible-input" placeholder="დაწერე რამე...">
+                 </div>
+
+                 <div class="task-section">
+                    <h3>2. ჯგუფური ფოკუსი</h3>
+                    <p style="margin-bottom: 20px; color: #64748b;">დააკვირდი რა მოსდის ჩარჩოს, როცა შიგნით აკლიკებ:</p>
+                    <div class="focus-group">
+                        <label style="display:block; margin-bottom:10px; color:#475569;">Email:</label>
+                        <input type="text" class="accessible-input" placeholder="hello@example.com">
+                        <br><br>
+                        <button class="magic-button" style="font-size: 14px; padding: 8px 16px;">Subscribe</button>
+                    </div>
+                 </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

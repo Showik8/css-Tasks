@@ -1,0 +1,512 @@
+/* =========================================
+   Global System Styles
+   (Do Not Edit This Section)
+   ========================================= */
+:root {
+    --bg-dark: #0f172a;
+    --bg-panel: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent: #38bdf8;
+    --accent-hover: #0ea5e9;
+    --border: #334155;
+    --success: #22c55e;
+    --warning: #fbbf24;
+    --danger: #ef4444;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    color: var(--text-primary);
+    background-color: var(--bg-dark);
+}
+
+.layout-container {
+    display: flex;
+    height: 100%;
+}
+
+/* --- Instructions Sidebar --- */
+.instructions-panel {
+    width: 400px;
+    background-color: var(--bg-panel);
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border);
+    flex-shrink: 0;
+    box-shadow: 10px 0 30px rgba(0,0,0,0.3);
+    z-index: 20;
+}
+
+.header {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    padding: 24px;
+    border-bottom: 1px solid var(--border);
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.header p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.content {
+    padding: 24px;
+    flex-grow: 1;
+    overflow-y: auto;
+    line-height: 1.7;
+}
+
+.content h2 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    color: #fff;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 6px;
+    display: inline-block;
+}
+
+.content p {
+    margin-bottom: 16px;
+    color: #cbd5e1;
+}
+
+.content ol {
+    padding-left: 20px;
+    margin-bottom: 24px;
+}
+
+.content li {
+    margin-bottom: 16px;
+    color: #e2e8f0;
+}
+
+code {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 0.9em;
+    color: #fda4af;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+pre {
+    background-color: #0d1117;
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    margin: 10px 0;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+    color: #e6edf3;
+    border: none;
+    font-size: 0.85rem;
+}
+
+.tip {
+    background: rgba(56, 189, 248, 0.1);
+    border-left: 4px solid var(--accent);
+    padding: 16px;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    margin-top: 24px;
+    color: #e0f2fe;
+}
+
+.footer {
+    padding: 20px;
+    background-color: #0f172a;
+    border-top: 1px solid var(--border);
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-btn.next {
+    background-color: var(--accent);
+    color: #0f172a;
+}
+
+.nav-btn.next:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.nav-btn.prev {
+    background-color: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+}
+
+.nav-btn.prev:hover {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
+.nav-btn.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* --- Result Panel --- */
+.result-panel {
+    flex-grow: 1;
+    background-color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-y: auto;
+    /* Clean grid background */
+    background-image: 
+        linear-gradient(#e2e8f0 1px, transparent 1px),
+        linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.workspace {
+    padding: 60px;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.task-section {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    transition: transform 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.task-section h3 {
+    color: #1e293b;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 10px;
+}
+
+
+/* =========================================
+   STUDENT WORKSPACE
+   Write your CSS below the corresponding task headers
+   ========================================= */
+
+/* ----------------------------------
+   Task 1: Intro & Hover Interactions
+   (index.html)
+   ---------------------------------- */
+.magic-button {
+    padding: 16px 32px;
+    background-color: #3b82f6; /* Blue-500 */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+}
+
+/* Write Task 1 code here */
+
+
+.card-hover {
+    width: 250px;
+    height: 150px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Write Task 1 code here */
+
+
+
+/* ----------------------------------
+   Task 2: Focus & Keyboard
+   (task2.html)
+   ---------------------------------- */
+.accessible-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.2s;
+    background-color: #f8fafc;
+}
+
+/* Write Task 2 code here */
+
+.focus-group {
+    padding: 20px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    background-color: white;
+}
+
+/* Write Task 2 code here (focus-within) */
+
+
+
+/* ----------------------------------
+   Task 3: Value State & Target
+   (task3.html)
+   ---------------------------------- */
+/* Target Modal Styles */
+.modal-window {
+    display: none; /* Hidden by default */
+    padding: 20px;
+    background: #dcfce7;
+    border: 2px solid #22c55e;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: #14532d;
+}
+
+/* Write Task 3 code here (:target) */
+
+
+.empty-state-list li {
+    padding: 10px;
+    background: white;
+    border: 1px solid #eee;
+    margin-bottom: 5px;
+    min-height: 40px;
+}
+
+/* Write Task 3 code here (:empty) */
+
+
+
+/* ----------------------------------
+   Task 4: Links & History
+   (task4.html)
+   ---------------------------------- */
+.history-link {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: inline-block;
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+/* Write Task 4 code here */
+
+
+
+/* ----------------------------------
+   Task 5: Form States (I)
+   (task5.html)
+   ---------------------------------- */
+.state-input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Write Task 5 code here */
+
+
+
+/* ----------------------------------
+   Task 6: Form States (II) - Checked
+   (task6.html)
+   ---------------------------------- */
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.custom-toggle {
+    width: 50px;
+    height: 28px;
+    background: #cbd5e1;
+    border-radius: 100px;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.custom-toggle::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+/* Hide default checkbox */
+.toggle-wrapper input {
+    display: none;
+}
+
+/* Write Task 6 code here */
+
+
+
+/* ----------------------------------
+   Task 7: Form Validation
+   (task7.html)
+   ---------------------------------- */
+.validate-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+    background-image: none;
+}
+
+/* Write Task 7 code here */
+
+
+
+/* ----------------------------------
+   Task 8: Structural Basics
+   (task8.html)
+   ---------------------------------- */
+.pill-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pill-item {
+    padding: 8px 16px;
+    background: #f1f5f9;
+    border-radius: 100px;
+    color: #475569;
+    font-weight: 500;
+}
+
+/* Write Task 8 code here */
+
+
+
+/* ----------------------------------
+   Task 9: Advanced Counting
+   (task9.html)
+   ---------------------------------- */
+.grid-system {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.grid-box {
+    aspect-ratio: 1;
+    background: #e2e8f0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #64748b;
+}
+
+/* Write Task 9 code here */
+
+
+
+/* ----------------------------------
+   Task 10: Logical Selectors
+   (task10.html)
+   ---------------------------------- */
+.logic-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.logic-card {
+    padding: 16px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    background: #f1f5f9;
+}
+
+.badge.pro {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+.icon-box {
+    width: 40px;
+    height: 40px;
+    background: #f8fafc;
+    border-radius: 6px;
+}
+
+/* Write Task 10 code here */

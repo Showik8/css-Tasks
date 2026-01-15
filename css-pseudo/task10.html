@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 10: Logic - CSS Pseudo-classes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <!-- Sidebar -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 10: Logic</h1>
+                <p>Has, Not, Is, Where</p>
+            </header>
+
+            <div class="content">
+                <h2>მიმოხილვა</h2>
+                <p>თანამედროვე CSS გვაძლევს ლოგიკურ ოპერატორებს.</p>
+                
+                <ol>
+                    <li>
+                        <strong>:has() - მშობლის არჩევა:</strong>
+                        აირჩიე ბარათი, რომელსაც აქვს <code>.pro</code> კლასის მქონე შვილი.
+<pre><code>.logic-card:has(.pro) {
+    border-color: #0ea5e9;
+    background-color: #f0f9ff;
+    box-shadow: 0 4px 6px rgba(14, 165, 233, 0.1);
+}</code></pre>
+                    </li>
+                    
+                    <li>
+                        <strong>:not() - გამორიცხვა:</strong>
+                        აირჩიე ყველა, გარდა <code>.pro</code> ბარათისა.
+<pre><code>.logic-card:not(:has(.pro)) {
+    opacity: 0.7;
+}</code></pre>
+                    </li>
+
+                    <li>
+                        <strong>:is() - დაჯგუფება:</strong>
+<pre><code>.logic-card :is(.badge, .icon-box) {
+    border-radius: 50%; /* ორივეს ერთად */
+}</code></pre>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <code>:has()</code> არის რევოლუცია CSS-ში!
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task9.html" class="nav-btn prev">
+                        <span>&#8592;</span> Task 9
+                    </a>
+                    <a href="index.html" class="nav-btn next">
+                        დასასრული &#8635;
+                    </a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div class="task-section">
+                    <h3>Smart Selection</h3>
+                    <div class="logic-list">
+                        
+                        <!-- Card 1 -->
+                        <div class="logic-card">
+                            <div class="icon-box"></div>
+                            <div>
+                                <h4>სტანდარტული პაკეტი</h4>
+                                <span class="badge">Basic</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="logic-card">
+                            <div class="icon-box"></div>
+                            <div>
+                                <h4>პროფესიონალი</h4>
+                                <span class="badge pro">PRO</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="logic-card">
+                            <div class="icon-box"></div>
+                            <div>
+                                <h4>უფასო ვერსია</h4>
+                                <span class="badge">Free</span>
+                            </div>
+                        </div>
+
+                    </div>
+                 </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

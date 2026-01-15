@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 5: Form States - CSS Pseudo-classes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <!-- Sidebar -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 5: Form States</h1>
+                <p>Enabled, Disabled & Placeholders</p>
+            </header>
+
+            <div class="content">
+                <h2>მიმოხილვა</h2>
+                <p>ფორმის ელემენტები რეაგირებენ თავიანთ სტატუსზე.</p>
+                
+                <ol>
+                    <li>
+                        <strong>Enabled / Disabled:</strong>
+                        გათიშული ელემენტები უნდა გამოიყურებოდეს არააქტიურად.
+                        იპოვე <code>.state-input:disabled</code>:
+<pre><code>.state-input:disabled {
+    background-color: #f1f5f9;
+    color: #94a3b8;
+    cursor: not-allowed;
+    border-color: #e2e8f0;
+}
+.state-input:enabled {
+    background-color: #fff;
+    border-color: #cbd5e1;
+}</code></pre>
+                    </li>
+                    
+                    <li>
+                        <strong>Placeholder-shown:</strong>
+                        ეს ფსევდო-კლასი აქტიურია, როცა ინპუტი ცარიელია (და placeholder ჩანს).
+                        იპოვე <code>.state-input:placeholder-shown</code>:
+<pre><code>/* როცა ცარიელია */
+.state-input:placeholder-shown {
+    border-style: dashed;
+}
+
+/* როცა შევავსებთ (placeholder გაქრება) */
+.state-input:not(:placeholder-shown) {
+    border-style: solid;
+    border-color: #22c55e;
+    background-color: #f0fdf4;
+}</code></pre>
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task4.html" class="nav-btn prev">
+                        <span>&#8592;</span> Task 4
+                    </a>
+                    <a href="task6.html" class="nav-btn next">
+                        Task 6: Checked <span>&#8594;</span>
+                    </a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div class="task-section">
+                    <h3>1. Enabled vs Disabled</h3>
+                    <input type="text" class="state-input" placeholder="ეს აქტიურია (Enabled)">
+                    <input type="text" class="state-input" disabled value="ეს გათიშულია (Disabled)">
+                 </div>
+
+                 <div class="task-section">
+                    <h3>2. Placeholder Detection</h3>
+                    <p style="margin-bottom: 20px; color: #64748b;">დააკვირდი ჩარჩოს, როცა ტექსტს ჩაწერ:</p>
+                    <input type="text" class="state-input" placeholder="დაიწყე წერა...">
+                 </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

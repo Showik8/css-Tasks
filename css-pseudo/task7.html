@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 7: Validation - CSS Pseudo-classes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <!-- Sidebar -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 7: Validation</h1>
+                <p>Valid, Invalid, Required</p>
+            </header>
+
+            <div class="content">
+                <h2>მიმოხილვა</h2>
+                <p>ბრაუზერს აქვს ჩაშენებული ვალიდაცია. CSS-ით შეგვიძლია ვიზუალურად ვაჩვენოთ, სწორია თუ არა მონაცემები.</p>
+                
+                <ol>
+                    <li>
+                        <strong>Required (სავალდებულო):</strong>
+                        მონიშნე სავალდებულო ველები.
+<pre><code>.validate-input:required {
+    border-left: 4px solid #f59e0b; /* Amber */
+}</code></pre>
+                    </li>
+                    
+                    <li>
+                        <strong>Valid vs Invalid:</strong>
+                        <pre><code>.validate-input:valid {
+    border-color: #22c55e;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2322c55e'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+}
+
+.validate-input:invalid:not(:placeholder-shown) {
+    border-color: #ef4444;
+    animation: shake 0.3s;
+}</code></pre>
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task6.html" class="nav-btn prev">
+                        <span>&#8592;</span> Task 6
+                    </a>
+                    <a href="task8.html" class="nav-btn next">
+                        Task 8: Structure <span>&#8594;</span>
+                    </a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div class="task-section">
+                    <h3>ფორმის ვალიდაცია</h3>
+                    <form onsubmit="event.preventDefault();" style="display: flex; flex-direction: column; gap: 15px;">
+                        
+                        <div>
+                            <label style="display:block; margin-bottom:5px;">Email (Required):</label>
+                            <input type="email" class="validate-input" required placeholder="example@mail.com">
+                        </div>
+
+                        <div>
+                            <label style="display:block; margin-bottom:5px;">Web-site (URL):</label>
+                            <input type="url" class="validate-input" placeholder="https://example.com">
+                        </div>
+
+                    </form>
+                 </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

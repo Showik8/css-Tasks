@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1: Intro & Hover - CSS Pseudo-classes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <!-- Sidebar -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 1: Intro</h1>
+                <p>Hover & Active Interactions</p>
+            </header>
+
+            <div class="content">
+                <h2>მიმოხილვა</h2>
+                <p>ფსევდო-კლასები (Pseudo-classes) გვეხმარება ელემენტის სტილი შევცვალოთ მისი <strong>მდგომარეობის</strong> მიხედვით.</p>
+                <p>ყველაზე ხშირად გამოყენებადი მდგომარეობებია მაუსის გადატარება (Hover) და დაჭერა (Active).</p>
+                
+                <ol>
+                    <li>
+                        <strong>ღილაკის ანიმაცია:</strong>
+                        იპოვე <code>.magic-button</code> და დაამატე:
+<pre><code>.magic-button:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+}
+
+.magic-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}</code></pre>
+                    </li>
+                    
+                    <li>
+                        <strong>ბარათის ეფექტი:</strong>
+                        იპოვე <code>.card-hover</code> და დაამატე:
+<pre><code>.card-hover:hover {
+    border-color: #38bdf8;
+    background-color: #f0f9ff;
+    transform: scale(1.05) rotate(1deg);
+    color: #0284c7;
+}</code></pre>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>რჩევა:</strong> <code>transition</code> თვისება უკვე დამატებულია ძირითად კლასებზე, ამიტომ ცვლილება ავტომატურად "ანიმირებული" იქნება.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <span class="nav-btn prev disabled">
+                        <span>&#8592;</span> წინა
+                    </span>
+                    <a href="task2.html" class="nav-btn next">
+                        Task 2: Focus <span>&#8594;</span>
+                    </a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div class="task-section">
+                    <h3>1. ინტერაქტიული ღილაკი</h3>
+                    <p style="margin-bottom: 20px; color: #64748b;">მიიტანე მაუსი და დააჭირე:</p>
+                    <button class="magic-button">Hover Me!</button>
+                 </div>
+
+                 <div class="task-section">
+                    <h3>2. მცურავი ბარათი</h3>
+                    <p style="margin-bottom: 20px; color: #64748b;">ეს ბარათი ელოდება შენს შეხებას:</p>
+                    <div class="card-hover">
+                        სტატიკური ბარათი
+                    </div>
+                 </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>
