@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4: Fixed - CSS Position</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 4: Fixed</h1>
+                <p>Viewport Positioning</p>
+            </header>
+
+            <div class="content">
+                <h2>მიმოხილვა</h2>
+                <p><code>position: fixed;</code> ელემენტს აფიქსირებს ხედვის არეალის (viewport)-ის მიმართ. სქროლვის დროს ის არ მოძრაობს.</p>
+                <div class="tip">
+                     ამ სავარჯიშოში ჩვენ ვიყენებთ პატარა "ეკრანს" (div-ს), ამიტომ <code>position: sticky;</code> გამოვიყენებთ სიმულაციისთვის. რეალურ საიტზე <code>fixed</code> გამოიყენება.
+                </div>
+                
+                <ol>
+                    <li>
+                        <strong>მენიუს დაფიქსირება:</strong>
+                        იპოვე <code>.navbar</code> და მიანიჭე:
+                        <pre><code>position: sticky;
+top: 0;</code></pre>
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task3.html" class="nav-btn prev">
+                        <span>&#8592;</span> Task 3
+                    </a>
+                    <a href="task5.html" class="nav-btn next">
+                        Task 5: Sticky <span>&#8594;</span>
+                    </a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div class="task-section">
+                    <h3>4. ფიქსირებული მენიუ</h3>
+                    <p style="margin-bottom: 20px; color: #64748b;">ჩამოსქროლე და დააკვირდი როგორ იქცევა მენიუ:</p>
+                    
+                    <div class="page-container">
+                        <nav class="navbar">App Menu</nav>
+                        <div class="page-content">
+                            <h1>გრძელი გვერდი</h1>
+                            <p class="dummy-text">ჩამოსქროლე ქვემოთ...</p>
+                            <p class="dummy-text">კიდევ ტექსტი...</p>
+                            <p class="dummy-text">ბევრი ტექსტი...</p>
+                            <p class="dummy-text">კიდევ...</p>
+                            <p class="dummy-text">ნახე, მენიუ ზევით რჩება!</p>
+                            <p class="dummy-text">...</p>
+                            <p class="dummy-text">...</p>
+                            <p class="dummy-text">დასასრული.</p>
+                        </div>
+                    </div>
+                 </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 8: Profile - CSS Position</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 8: Overlay</h1>
+                <p>Profile Card</p>
+            </header>
+
+            <div class="content">
+                <h2>მიმოხილვა</h2>
+                <p>ხშირად დაგჭირდებათ ელემენტის (მაგ. პროფილის სურათის) განთავსება ნაწილობრივ ფონზე და ნაწილობრივ თეთრ ბარათზე.</p>
+                
+                <ol>
+                    <li>
+                        <strong>მშობლის კონტექსტი:</strong>
+                        <code>.profile-card</code>-ს უკვე აქვს relative.
+                    </li>
+                    <li>
+                        <strong>სურათის პოზიციონირება:</strong>
+                        იპოვე <code>.profile-pic</code> და მიანიჭე:
+                        <pre><code>position: absolute;
+left: 50%;
+transform: translateX(-50%);</code></pre>
+                    </li>
+                    <li>
+                        <strong>ვერტიკალური პოზიცია:</strong>
+                        სურათი უნდა იყოს ყდასა და ბარათს შორის:
+                        <pre><code>top: 80px;</code></pre>
+                        (Cover არის 140px, სურათი 120px. 80px = 140 - 60).
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task7.html" class="nav-btn prev">
+                        <span>&#8592;</span> Task 7
+                    </a>
+                    <a href="task9.html" class="nav-btn next">
+                        Task 9: FAB <span>&#8594;</span>
+                    </a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div class="task-section">
+                    <h3>8. პროფილის ბარათი</h3>
+                    <p style="margin-bottom: 20px; color: #64748b;">განათავსე სურათი ზუსტად შუაში:</p>
+                    
+                    <div class="profile-card">
+                        <div class="cover-photo"></div>
+                        <div class="profile-pic"></div>
+                        <div class="profile-info">
+                            <h3>გიორგი ბერიძე</h3>
+                            <p style="color: #64748b; font-size: 14px;">Senior Developer</p>
+                        </div>
+                    </div>
+                 </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

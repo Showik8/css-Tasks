@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2: Absolute Position - CSS Position</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 2: Absolute</h1>
+                <p>Parent-Child Relationship</p>
+            </header>
+
+            <div class="content">
+                <h2>მიმოხილვა</h2>
+                <p><code>position: absolute</code> ელემენტს იღებს დოკუმენტის ნაკადიდან და ათავსებს მას უახლოესი <strong>positioned</strong> წინაპრის მიმართ.</p>
+                <p>წინაპარი (Parent) უნდა იყოს relative, absolute, fixed, ან sticky.</p>
+                
+                <ol>
+                    <li>
+                        <strong>მშობლის მომზადება:</strong>
+                        დარწმუნდი რომ <code>.card</code>-ს აქვს:
+                        <pre><code>position: relative;</code></pre>
+                    </li>
+                    <li>
+                        <strong>badge-ის პოზიციონირება:</strong>
+                        იპოვე <code>.badge</code> და მიანიჭე:
+                        <pre><code>position: absolute;
+top: 15px;
+right: 15px;</code></pre>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    თუ მშობელს არ ექნება relative, badge-ი გაიქცევა body-ის კუთხეში!
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="index.html" class="nav-btn prev">
+                        <span>&#8592;</span> Task 1
+                    </a>
+                    <a href="task3.html" class="nav-btn next">
+                        Task 3: Centering <span>&#8594;</span>
+                    </a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div class="task-section">
+                    <h3>2. ბარათი Badge-ით</h3>
+                    <p style="margin-bottom: 20px; color: #64748b;">"NEW" ნიშანი უნდა იყოს სურათის ზედა მარჯვენა კუთხეში:</p>
+                    
+                    <div class="card">
+                        <div class="badge">NEW</div>
+                        <div class="card-image"></div>
+                        <div class="card-content">
+                            <h3>მთის ხედი</h3>
+                            <p style="color: #64748b; margin-top: 10px; font-size: 0.9em;">ულამაზესი ხედი მთებზე, რომელიც შეგიძლია ნახო შენი თვალით.</p>
+                        </div>
+                    </div>
+                 </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

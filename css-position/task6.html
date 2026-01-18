@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 6: Z-Index - CSS Position</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 6: Z-Index</h1>
+                <p>Stacking Order</p>
+            </header>
+
+            <div class="content">
+                <h2>მიმოხილვა</h2>
+                <p>როდესაც elements ერთმანეთს ეფარება, <code>z-index</code> განსაზღვრავს რომელი გამოჩნდება ზემოდან.</p>
+                <div class="tip">
+                    <strong>მნიშვნელოვანია:</strong> z-index მუშაობს მხოლოდ პოზიციონირებულ (relative, absolute, fixed) ელემენტებზე.
+                </div>
+                
+                <ol>
+                    <li>
+                        <strong>პრობლემა:</strong>
+                        Dropdown მენიუ იმალება წითელი ბარათის უკან.
+                    </li>
+                    <li>
+                        <strong>გადაწყვეტა:</strong>
+                        იპოვე <code>.dropdown-menu</code> და მიანიჭე:
+                        <pre><code>z-index: 10;</code></pre>
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task5.html" class="nav-btn prev">
+                        <span>&#8592;</span> Task 5
+                    </a>
+                    <a href="task7.html" class="nav-btn next">
+                        Task 7: Layout <span>&#8594;</span>
+                    </a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div class="task-section">
+                    <h3>6. ფენების მართვა</h3>
+                    <p style="margin-bottom: 60px; color: #64748b;">დააჭირე მენიუს, ის ბარათის უკან იმალება:</p>
+                    
+                    <div class="layer-container">
+                        <div class="dropdown-container">
+                            <button class="dropdown-btn">პარამეტრები &darr;</button>
+                            <div class="dropdown-menu">
+                                <p>პროფილის რედაქტირება</p>
+                                <p>უსაფრთხოება</p>
+                                <p style="color: #ef4444;">გასვლა</p>
+                            </div>
+                        </div>
+
+                        <div class="overlay-card">
+                            <h3>რეკლამა</h3>
+                            <p style="color: #991b1b; margin-top: 10px;">ეს ბარათი სპეციალურად ფარავს მენიუს.</p>
+                        </div>
+                    </div>
+                 </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

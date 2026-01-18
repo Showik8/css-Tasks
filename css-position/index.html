@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1: Static vs Relative - CSS Position</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 1: Intro</h1>
+                <p>Static vs Relative</p>
+            </header>
+
+            <div class="content">
+                <h2>მიმოხილვა</h2>
+                <p>CSS-ში ყველა ელემენტი თავდაპირველად არის <code>position: static</code>. ეს ნიშნავს, რომ ისინი თანმიმდევრობით ლაგდებიან.</p>
+                <p><code>position: relative</code> საშუალებას გვაძლევს გადავაადგილოთ ელემენტი თავდაპირველი ადგილიდან ისე, რომ სხვა ელემენტებს ხელი არ შეეშალოთ.</p>
+                
+                <ol>
+                    <li>
+                        <strong>პოზიციონირების შეცვლა:</strong>
+                        იპოვე <code>.box-2</code> სტილების ფაილში.
+                    </li>
+                    <li>
+                        მიანიჭე: 
+                        <pre><code>position: relative;</code></pre>
+                    </li>
+                    <li>
+                        გადაწიე ის თავდაპირველი ადგილიდან:
+                        <pre><code>top: -20px;
+left: 20px;</code></pre>
+                    </li>
+                </ol>
+                
+                <div class="tip">
+                    <strong>დააკვირდი:</strong> ყუთის 'ადგილი' ცარიელი რჩება, სხვა ყუთები არ ინაცვლებენ. ეს არის relative-ის მთავარი თვისება.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <span class="nav-btn prev disabled">
+                        <span>&#8592;</span> დასაწყისი
+                    </span>
+                    <a href="task2.html" class="nav-btn next">
+                        Task 2: Absolute <span>&#8594;</span>
+                    </a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <div class="task-section">
+                    <h3>1. ყუთების განლაგება</h3>
+                    <p style="margin-bottom: 20px; color: #64748b;">ლურჯი ყუთი უნდა გადაადგილდეს ისე, რომ სხვები არ შეაწუხოს:</p>
+                    
+                    <div class="box-container">
+                        <div class="box box-1">Static</div>
+                        <div class="box box-2">Relative</div>
+                        <div class="box box-3">Static</div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

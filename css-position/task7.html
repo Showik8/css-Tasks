@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 7: Layout - CSS Position</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 7: Layout</h1>
+                <p>Dashboard Structure</p>
+            </header>
+
+            <div class="content">
+                <h2>მიმოხილვა</h2>
+                <p>მოდი ავაწყოთ მარტივი ადმინ-პანელის სტრუქტურა <code>absolute</code> პოზიციონირებით.</p>
+                
+                <ol>
+                    <li>
+                        <strong>Sidebar (მარცხნივ):</strong>
+                        იპოვე <code>.sidebar</code> და მიანიჭე:
+                        <pre><code>position: absolute;
+top: 0; 
+left: 0; 
+bottom: 0;</code></pre>
+                    </li>
+                    <li>
+                        <strong>Header (ზემოთ):</strong>
+                        იპოვე <code>.top-header</code> და მიანიჭე:
+                        <pre><code>position: absolute;
+top: 0;
+right: 0;
+left: 240px; /* Sidebar width */</code></pre>
+                    </li>
+                    <li>
+                        <strong>Content (შინაარსი):</strong>
+                        <code>.dash-content</code>-ს გაუწერე დაშორებები:
+                        <pre><code>margin-left: 240px;
+margin-top: 70px;</code></pre>
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task6.html" class="nav-btn prev">
+                        <span>&#8592;</span> Task 6
+                    </a>
+                    <a href="task8.html" class="nav-btn next">
+                        Task 8: Overlay <span>&#8594;</span>
+                    </a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div class="task-section">
+                    <h3>7. Dashboard Layout</h3>
+                    <p style="margin-bottom: 20px; color: #64748b;">ააწყვე გვერდი ნაწილებისგან:</p>
+                    
+                    <div class="dashboard-container">
+                        <div class="sidebar">
+                            <h3>Admin</h3>
+                            <p>მომხმარებლები</p>
+                            <p>გაყიდვები</p>
+                            <p>ანალიტიკა</p>
+                        </div>
+
+                        <div class="top-header">
+                            <span>გამარჯობა, ადმინისტრატორ</span>
+                        </div>
+
+                        <div class="dash-content">
+                            <h2>მთავარი გვერდი</h2>
+                            <p>აქ არის თქვენი სტატისტიკა...</p>
+                            <div style="height: 100px; background: #e2e8f0; margin-top: 20px; border-radius: 8px;"></div>
+                        </div>
+                    </div>
+                 </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

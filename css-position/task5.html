@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 5: Sticky - CSS Position</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 5: Sticky</h1>
+                <p>Position: Sticky</p>
+            </header>
+
+            <div class="content">
+                <h2>მიმოხილვა</h2>
+                <p><code>position: sticky;</code> არის ნაზავი relative და fixed პოზიციებს შორის. ელემენტი იქცევა როგორც relative, სანამ არ მიაღწევს სქროლის გარკვეულ წერტილს.</p>
+                
+                <ol>
+                    <li>
+                        <strong>სათაურების მიწებება:</strong>
+                        იპოვე <code>.list-section-header</code> და მიანიჭე:
+                        <pre><code>position: sticky;
+top: 0;</code></pre>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    ჩამოსქროლე სია და ნახე როგორ "ეწებება" სათაურები (A, B, C) ზედა ნაწილს და შემდეგ ახალი სათაური როგორ ანაცვლებს ძველს.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task4.html" class="nav-btn prev">
+                        <span>&#8592;</span> Task 4
+                    </a>
+                    <a href="task6.html" class="nav-btn next">
+                        Task 6: Z-Index <span>&#8594;</span>
+                    </a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div class="task-section">
+                    <h3>5. Sticky Headers</h3>
+                    <p style="margin-bottom: 20px; color: #64748b;">დააკვირდი ასოებს სქროლვისას:</p>
+                    
+                    <div class="contacts-list">
+                        <div class="list-section-header">A</div>
+                        <div class="contact-item"><div class="avatar"></div> ანა</div>
+                        <div class="contact-item"><div class="avatar"></div> ალექსანდრე</div>
+                        <div class="contact-item"><div class="avatar"></div> ანდრია</div>
+                        
+                        <div class="list-section-header">B</div>
+                        <div class="contact-item"><div class="avatar"></div> ბარბარე</div>
+                        <div class="contact-item"><div class="avatar"></div> ბექა</div>
+                        <div class="contact-item"><div class="avatar"></div> ბაჩო</div>
+                        <div class="contact-item"><div class="avatar"></div> ბესო</div>
+
+                        <div class="list-section-header">C</div>
+                        <div class="contact-item"><div class="avatar"></div> ცოტნე</div>
+                        <div class="contact-item"><div class="avatar"></div> ცისიკო</div>
+                        <div class="contact-item"><div class="avatar"></div> ცირა</div>
+                    </div>
+                 </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

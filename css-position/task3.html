@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3: Centering - CSS Position</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 3: Centering</h1>
+                <p>Absolute Center</p>
+            </header>
+
+            <div class="content">
+                <h2>მიმოხილვა</h2>
+                <p>ერთ-ერთი ყველაზე პოპულარული ხერხი ელემენტის ცენტრში მოსათავსებლად (მაგალითად, მოდალური ფანჯრისთვის) არის absolute position.</p>
+                
+                <ol>
+                    <li>
+                        <strong>პოზიციონირება:</strong>
+                        იპოვე <code>.modal</code> და მიანიჭე:
+                        <pre><code>position: absolute;
+top: 50%;
+left: 50%;</code></pre>
+                    </li>
+                    <li>
+                        <strong>კორექცია:</strong>
+                        ამ დროს ელემენტის მარცხენა ზედა კუთხე იქნება ცენტრში. ზუსტი ცენტრირებისთვის დაამატე:
+                        <pre><code>transform: translate(-50%, -50%);</code></pre>
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task2.html" class="nav-btn prev">
+                        <span>&#8592;</span> Task 2
+                    </a>
+                    <a href="task4.html" class="nav-btn next">
+                        Task 4: Fixed <span>&#8594;</span>
+                    </a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div class="task-section">
+                    <h3>3. მოდალური ფანჯარა</h3>
+                    <p style="margin-bottom: 20px; color: #64748b;">ეს ფანჯარა ზუსტად შუაში უნდა იყოს:</p>
+                    
+                    <div class="modal-overlay">
+                        <div class="modal">
+                            <h2>შეტყობინება</h2>
+                            <p>თქვენ წარმატებით დარეგისტრირდით სისტემაში!</p>
+                            <button>დახურვა</button>
+                        </div>
+                    </div>
+                 </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

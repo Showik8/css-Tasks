@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 9: FAB - CSS Position</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 9: FAB</h1>
+                <p>Floating Action Button</p>
+            </header>
+
+            <div class="content">
+                <h2>მიმოხილვა</h2>
+                <p>მცურავი ღილაკი (FAB) არის UI ელემენტი, რომელიც, როგორც წესი, ეკრანის კუთხეშია "მიწებებული".</p>
+                
+                <ol>
+                    <li>
+                        <strong>პოზიციონირება:</strong>
+                        იპოვე <code>.fab</code> და მიანიჭე:
+                        <pre><code>position: absolute;
+bottom: 24px;
+right: 24px;</code></pre>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    ჩვენ ვიყენებთ absolute-ს რომ ღილაკი დარჩეს <code>.fab-container</code>-ის შიგნით.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task8.html" class="nav-btn prev">
+                        <span>&#8592;</span> Task 8
+                    </a>
+                    <a href="task10.html" class="nav-btn next">
+                        Task 10: Nested <span>&#8594;</span>
+                    </a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div class="task-section">
+                    <h3>9. მცურავი ღილაკი</h3>
+                    <p style="margin-bottom: 20px; color: #64748b;">ღილაკი უნდა იყოს მარჯვენა ქვედა კუთხეში:</p>
+                    
+                    <div class="fab-container">
+                        <div style="padding: 24px;">
+                            <h2 style="color: #1e293b; margin-bottom: 10px;">შეტყობინებები</h2>
+                            <p style="color: #64748b;">აქ არის თქვენი საუბრები...</p>
+                        </div>
+                        
+                        <div class="fab">+</div>
+                    </div>
+                 </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

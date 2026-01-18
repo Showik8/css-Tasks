@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 10: Nested - CSS Position</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 10: Nested</h1>
+                <p>Multi-level Dropdown</p>
+            </header>
+
+            <div class="content">
+                <h2>მიმოხილვა</h2>
+                <p>ბოლო დავალება: "Nested Dropdown" - მენიუ მენიუში.</p>
+                <p>მიიტანე მაუსი "Products"-ზე, შემდეგ კი "Software"-ზე. შენ უნდა გამოაჩინო მესამე დონის მენიუ მის გვერდით.</p>
+                
+                <ol>
+                    <li>
+                        <strong>ქვემენიუს პოზიციონირება:</strong>
+                        იპოვე <code>.nested-submenu</code> და მიანიჭე:
+                        <pre><code>top: 0;
+left: 100%; /* მშობლის მარჯვნივ */</code></pre>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    left: 100% ნიშნავს, რომ ის დაიწყება ზუსტად იქ, სადაც მშობელი მთავრდება.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task9.html" class="nav-btn prev">
+                        <span>&#8592;</span> Task 9
+                    </a>
+                    <a href="index.html" class="nav-btn next">
+                        დასრულება <span>&#8594;</span>
+                    </a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div class="task-section">
+                    <h3>10. რთული მენიუ</h3>
+                    <p style="margin-bottom: 40px; color: #64748b;">მიიტანე მაუსი <strong>Products > Software</strong>-ზე:</p>
+                    
+                    <div style="height: 300px;">
+                        <div class="menu-bar">
+                            <div class="menu-item">Home</div>
+                            <div class="menu-item">
+                                Products &darr;
+                                <div class="submenu">
+                                    <div class="submenu-item">Hardware</div>
+                                    <div class="submenu-item">
+                                        Software &rsaquo;
+                                        <div class="nested-submenu">
+                                            <div class="submenu-item">OS</div>
+                                            <div class="submenu-item">Apps</div>
+                                            <div class="submenu-item">Games</div>
+                                        </div>
+                                    </div>
+                                    <div class="submenu-item">Accessories</div>
+                                </div>
+                            </div>
+                            <div class="menu-item">About</div>
+                        </div>
+                    </div>
+                 </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>
