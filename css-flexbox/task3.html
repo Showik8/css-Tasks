@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox - დავალება 3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 3</h1>
+                <p>Justify Content</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p><code>justify-content</code> ათანაბრებს ელემენტებს ძირითადი ღერძის (main axis) გასწვრივ (ჰორიზონტალურად, თუ <code>flex-direction: row</code>).</p>
+
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        იპოვე კლასი <code>.task3-container</code> css ფაილში.
+                    </li>
+                    <li>
+                        ამჟამად არის <code>flex-start</code> (დასაწყისში).
+                    </li>
+                    <li>
+                        შეცვალე და სცადე შემდეგი მნიშვნელობები:
+                        <ul>
+                            <li><code>center</code> (ცენტრში)</li>
+                            <li><code>flex-end</code> (ბოლოში)</li>
+                            <li><code>space-between</code> (თანაბარი დაშორება, კიდეებში მიკროკა)</li>
+                            <li><code>space-around</code> (თანაბარი დაშორება გარშემო)</li>
+                            <li><code>space-evenly</code> (აბსოლუტურად თანაბარი დაშორება)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        საბოლოოდ დატოვე <code>space-between</code>, რომ დავალება შესრულებულად ჩაითვალოს.
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task2.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task4.html" class="nav-btn next">შემდეგი: Align Items &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <div class="task3-container">
+                    <div class="task3-item">Start</div>
+                    <div class="task3-item">Middle</div>
+                    <div class="task3-item">End</div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

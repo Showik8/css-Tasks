@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox - დავალება 11</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 11</h1>
+                <p>მაგალითი: ნავიგაცია</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>ახლა ავაწყოთ რეალური ნავიგაციის პანელი (Navbar). ეს Flexbox-ის ერთ-ერთი ყველაზე ხშირი გამოყენებაა.</p>
+
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        იპოვე კლასი <code>.nav-container</code>.
+                    </li>
+                    <li>
+                        გააქტიურე Flexbox: <code>display: flex;</code>
+                    </li>
+                    <li>
+                        გაშალე ლოგო და ლინკები კიდეებზე: <code>justify-content: space-between;</code>
+                    </li>
+                    <li>
+                        გააცენტრე ვერტიკალურად: <code>align-items: center;</code>
+                    </li>
+                    <li>
+                        ახლა იპოვე <code>.nav-links</code> (ul ელემენტი).
+                    </li>
+                    <li>
+                        მასაც მიეცი <code>display: flex;</code> რომ ლინკები გვერდიგვერდ დადგეს.
+                    </li>
+                    <li>
+                        დაამატე დაშორება: <code>gap: 20px;</code>
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task10.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task12.html" class="nav-btn next">შემდეგი: Card Grid &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <header class="nav-container">
+                    <div class="logo">MyLogo</div>
+                    <ul class="nav-links">
+                        <li><a href="#">მთავარი</a></li>
+                        <li><a href="#">ჩვენ შესახებ</a></li>
+                        <li><a href="#">სერვისები</a></li>
+                        <li><a href="#">კონტაქტი</a></li>
+                    </ul>
+                </header>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

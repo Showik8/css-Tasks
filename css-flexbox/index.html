@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox - დავალება 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- MARCXENA MXARE: INSTRUKCIEBI -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 1</h1>
+                <p>შესავალი: display: flex</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>Flexbox არის განლაგების მოდელი, რომელიც საშუალებას გვაძლევს მარტივად განვათავსოთ ელემენტები ერთ განზომილებაში (სტრიქონში ან სვეტში).</p>
+
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        იპოვე კლასი <code>.task1-container</code> css ფაილში.
+                    </li>
+                    <li>
+                        ამჟამად ელემენტები ერთმანეთის ქვემოთაა (ბლოკური განლაგება). შეცვალე <code>display: block</code> და გახადე <code>display: flex</code>.
+                    </li>
+                    <li>
+                        დააკვირდი როგორ დალაგდებიან ელემენტები გვერდიგვერდ ავტომატურად.
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>შენიშვნა:</strong> როდესაც კონტეინერს ანიჭებ <code>display: flex</code>-ს, მისი შვილი ელემენტები ხდებიან "flex item"-ები.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <span class="placeholder"></span>
+                    <a href="task2.html" class="nav-btn next">შემდეგი: Flex Direction &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- MARJVENA MXARE: SHEDEGI -->
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <div class="task1-container">
+                    <div class="task1-item">Item 1</div>
+                    <div class="task1-item">Item 2</div>
+                    <div class="task1-item">Item 3</div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox - დავალება 16</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 16</h1>
+                <p>Mosaic Gallery</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>შევქმნათ საინტერესო გალერეა, სადაც სურათები ავტომატურად ავსებენ ადგილს, მაგრამ სხვადასხვა პროპორციებით (მოზაიკის ეფექტი).</p>
+
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        იპოვე <code>.gallery-container</code>.
+                    </li>
+                    <li>
+                        მიეცი <code>display: flex; flex-wrap: wrap;</code>.
+                    </li>
+                    <li>
+                        იპოვე <code>.gallery-item</code>.
+                    </li>
+                    <li>
+                        მიეცი <code>flex-grow: 1;</code>. ეს აიძულებს ყველა სურათს გაიზარდოს და შეავსოს ცარიელი ადგილი.
+                    </li>
+                    <li>
+                        შედეგად მიიღებ მაგარ ეფექტს, სადაც ბოლო ხაზზე სურათები იწელება, ხოლო სხვა ხაზებზე სხვადასხვა ზომისაა (რადგან <code>flex-basis</code> სხვადასხვა აქვთ კლასებით w-1, w-2).
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    ეს არის Flexbox-ის "magic" layout!
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task15.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="index.html" class="nav-btn next">დასრულება 🏁</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <div class="gallery-container">
+                    <div class="gallery-item w-1" style="background-image: url('https://picsum.photos/id/1015/300/200')"></div>
+                    <div class="gallery-item w-2" style="background-image: url('https://picsum.photos/id/1016/300/200')"></div>
+                    <div class="gallery-item w-1" style="background-image: url('https://picsum.photos/id/1018/300/200')"></div>
+                    <div class="gallery-item w-3" style="background-image: url('https://picsum.photos/id/1019/300/200')"></div>
+                    <div class="gallery-item w-1" style="background-image: url('https://picsum.photos/id/1020/300/200')"></div>
+                    <div class="gallery-item w-2" style="background-image: url('https://picsum.photos/id/1021/300/200')"></div>
+                    <div class="gallery-item w-1" style="background-image: url('https://picsum.photos/id/1022/300/200')"></div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

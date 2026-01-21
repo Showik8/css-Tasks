@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox - დავალება 8</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 8</h1>
+                <p>Flex Sizing</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>ეს თვისებები აკონტროლებენ ელემენტის ზომას:</p>
+                <ul>
+                    <li><code>flex-grow</code>: რამდენად გაიზარდოს (ნაგულისხმევი 0)</li>
+                    <li><code>flex-shrink</code>: რამდენად შეიკუმშოს (ნაგულისხმევი 1)</li>
+                    <li><code>flex-basis</code>: საწყისი ზომა (ნაგულისხმევი auto)</li>
+                </ul>
+
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        იპოვე კლასი <code>.task8-item</code> და დააკვირდი <code>flex-grow: 0</code>-ს.
+                    </li>
+                    <li>
+                        შეცვალე <code>flex-grow: 1</code>-ით. ყველა ელემენტი გაიზრდება და შეავსებს ადგილს თანაბრად.
+                    </li>
+                    <li>
+                        იპოვე <code>.grow-target</code> და მიუთითე <code>flex-grow: 2</code>. ეს ელემენტი დაიკავებს 2-ჯერ მეტ ადგილს ვიდრე სხვები.
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task7.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task9.html" class="nav-btn next">შემდეგი: Flex Shorthand &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <div class="task8-container">
+                    <div class="task8-item">1</div>
+                    <div class="task8-item grow-target">Target</div>
+                    <div class="task8-item">1</div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

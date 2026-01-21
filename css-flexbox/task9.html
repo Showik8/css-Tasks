@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox - დავალება 9</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 9</h1>
+                <p>Flex Shorthand</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p><code>flex</code> არის შორთქათი სამი თვისებისთვის: grow, shrink და basis. <br> მაგ: <code>flex: 1 1 auto;</code></p>
+                <p>ხშირად ვიყენებთ <code>flex: 1;</code> რაც ნიშნავს რომ ელემენტმა უნდა დაიკავოს დარჩენილი სივრცე.</p>
+
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გვაქვს "საიდბარი" და "მეინ კონტენტი".
+                    </li>
+                    <li>
+                        <code>.task9-sidebar</code>-ს მიანიჭე <code>flex: 1;</code>
+                    </li>
+                    <li>
+                        <code>.task9-main</code>-ს მიანიჭე <code>flex: 3;</code>
+                    </li>
+                    <li>
+                        შედეგად, მთავარი კონტენტი 3-ჯერ უფრო განიერი იქნება ვიდრე საიდბარი.
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task8.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task10.html" class="nav-btn next">შემდეგი: Align Self &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <div class="task9-container">
+                    <div class="task9-sidebar">Sidebar</div>
+                    <div class="task9-main">Main Content</div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

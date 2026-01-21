@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox - დავალება 6</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 6</h1>
+                <p>Align Content</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p><code>align-content</code> მუშაობს <strong>მხოლოდ მაშინ</strong>, როცა გვაქვს მრავალი ხაზი (flex-wrap: wrap). ის ათანაბრებს ხაზებს შორის დაშორებას.</p>
+
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        იპოვე კლასი <code>.task6-container</code>.
+                    </li>
+                    <li>
+                        ამჟამად არის <code>stretch</code>. ხაზები იწელება რომ მაქსიმალური ადგილი დაიკავონ.
+                    </li>
+                    <li>
+                        მიუთითე <code>align-content: center;</code>. ხაზები შეიკრიბება ცენტრში.
+                    </li>
+                    <li>
+                        სცადე ასევე <code>space-between</code>, <code>flex-start</code>.
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    არ აგერიოს <code>align-items</code>-ში! align-items ათანაბრებს ელემენტებს ხაზის შიგნით, align-content ათანაბრებს თვითონ ხაზებს.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task5.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task7.html" class="nav-btn next">შემდეგი: Gap & Order &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <div class="task6-container">
+                    <!-- ბევრი ელემენტი რომ გადაიხვიოს -->
+                    <div class="task6-item">1</div>
+                    <div class="task6-item">2</div>
+                    <div class="task6-item">3</div>
+                    <div class="task6-item">4</div>
+                    <div class="task6-item">5</div>
+                    <div class="task6-item">6</div>
+                    <div class="task6-item">7</div>
+                    <div class="task6-item">8</div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

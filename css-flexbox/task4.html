@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox - დავალება 4</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 4</h1>
+                <p>Align Items</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p><code>align-items</code> ათანაბრებს ელემენტებს ჯვარედინი ღერძის (cross axis) გასწვრივ (ვერტიკალურად, თუ <code>flex-direction: row</code>).</p>
+
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        იპოვე კლასი <code>.task4-container</code> css ფაილში.
+                    </li>
+                    <li>
+                        ამჟამად არის <code>stretch</code> (გაწელვა მთელ სიმაღლეზე, თუ სიმაღლე არ აქვს მითითებული).
+                    </li>
+                    <li>
+                        შეცვალე და სცადე:
+                        <ul>
+                            <li><code>center</code> (ცენტრში)</li>
+                            <li><code>flex-start</code> (ზემოთ)</li>
+                            <li><code>flex-end</code> (ქვემოთ)</li>
+                            <li><code>baseline</code> (ტექსტის ხაზზე)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        დატოვე <code>center</code>.
+                    </li>
+                </ol>
+                <div class="tip">
+                     ყურადღება მიაქციე, რომ ელემენტებს სხვადასხვა სიმაღლე აქვთ, რათა ეფექტი უკეთ დაინახო.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task3.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task5.html" class="nav-btn next">შემდეგი: Flex Wrap &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <div class="task4-container">
+                    <div class="task4-item h-50">Sort</div>
+                    <div class="task4-item h-100">Tall</div>
+                    <div class="task4-item h-auto">Auto</div>
+                    <div class="task4-item h-50">Short</div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

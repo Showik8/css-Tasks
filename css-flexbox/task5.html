@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox - დავალება 5</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 5</h1>
+                <p>Flex Wrap & Flow</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p><code>flex-wrap</code> განსაზღვრავს, გადავიდეს თუ არა ელემენტები ახალ ხაზზე, თუ ადგილი არ ჰყოფნით.</p>
+
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        იპოვე კლასი <code>.task5-container</code>.
+                    </li>
+                    <li>
+                        ამჟამად <code>flex-wrap: nowrap</code> (ნაგულისხმევი). ელემენტები იკუმშებიან რომ ჩაეტიონ.
+                    </li>
+                    <li>
+                        შეცვალე <code>wrap</code>-ით. ელემენტები ახალ ხაზზე გადავლენ.
+                    </li>
+                    <li>
+                        ასევე არსებობს <code>wrap-reverse</code>.
+                    </li>
+                </ol>
+
+                <h3>Bonus: Flex Flow</h3>
+                <p><code>flex-flow</code> არის <code>flex-direction</code> და <code>flex-wrap</code>-ის შორთქათი. <br> მაგ: <code>flex-flow: column wrap;</code></p>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task4.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task6.html" class="nav-btn next">შემდეგი: Align Content &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <div class="task5-container">
+                    <div class="task5-item">1</div>
+                    <div class="task5-item">2</div>
+                    <div class="task5-item">3</div>
+                    <div class="task5-item">4</div>
+                    <div class="task5-item">5</div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
