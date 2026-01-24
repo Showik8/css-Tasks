@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Task 4</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Generic+Mono&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Task 4 Specific Styles */
+        .task4-container {
+            display: grid;
+            grid-template-columns: repeat(2, 100px);
+            grid-template-rows: repeat(2, 100px);
+            gap: 15px;
+            height: 400px; /* Big container to show alignment */
+            border: 2px dashed #94a3b8;
+            border-radius: 8px;
+            
+            /* Student to edit these */
+            justify-content: start; /* Change to center or space-between */
+            align-content: start;   /* Change to center */
+            justify-items: stretch; /* Change to center */
+            align-items: stretch;   /* Change to center */
+        }
+
+        .t4-item {
+            background: linear-gradient(135deg, #f472b6, #ec4899);
+            color: white;
+            padding: 10px;
+            border-radius: 50%; /* Circle items */
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: INSTRUCTIONS -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 4: Alignment</h1>
+                <p>სწორება: justify & align</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა</h2>
+                <p>Grid გვაძლევს საშუალებას გავასწოროთ როგორც უჯრები კონტეინერში, ისე შიგთავსი უჯრებში.</p>
+
+                <h2>ინსტრუქცია</h2>
+                <ol>
+                    <li>
+                        ამჟამად Grid არის მარცხენა ზედა კუთხეში.
+                    </li>
+                    <li>
+                        გააცენტრე მთლიანი Grid კონტეინერის ცენტრში:
+                        <br><code>justify-content: center;</code>
+                        <br><code>align-content: center;</code>
+                    </li>
+                    <li>
+                        ახლა გააცენტრე თვითონ ელემენტები თავიანთ უჯრებში:
+                        <br><code>justify-items: center;</code>
+                        <br><code>align-items: center;</code>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>შენიშვნა:</strong> 
+                    <ul>
+                        <li><code>-content</code> სუფიქსი - მთლიან Grid-ს ეხება.</li>
+                        <li><code>-items</code> სუფიქსი - უჯრის შიგნით ელემენტს ეხება.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task3.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task5.html" class="nav-btn next">შემდეგი: Implicit Grid &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: WORKSPACE -->
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <h2 style="color: var(--text-primary); margin-bottom: 20px;">შედეგი:</h2>
+
+                <div class="task4-container">
+                    <div class="t4-item">1</div>
+                    <div class="t4-item">2</div>
+                    <div class="t4-item">3</div>
+                    <div class="t4-item">4</div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

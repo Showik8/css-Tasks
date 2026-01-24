@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Task 17 (Calendar)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Generic+Mono&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Task 17 Specific Styles */
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr); /* 7 days of week */
+            gap: 2px;
+            background: #334155; /* border color effect */
+            border: 1px solid #334155;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .day-name {
+            background: #1e293b;
+            color: var(--accent-secondary);
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .day {
+            background: #0f172a;
+            height: 100px;
+            padding: 10px;
+            color: #fff;
+            position: relative;
+        }
+        
+        .day:hover { background: #1e293b; }
+
+        .date-num {
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        /* Events */
+        .event {
+            font-size: 0.75rem;
+            padding: 2px 5px;
+            border-radius: 4px;
+            margin-top: 5px;
+            background: var(--accent-primary);
+            color: #000;
+        }
+
+        /* Placement Logic - Student will do this */
+        .first-day {
+            /* If month starts on Wednesday (4th day) */
+            grid-column-start: 4; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: INSTRUCTIONS -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 17: Calendar UI</h1>
+                <p>7 Columns & Offset</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა</h2>
+                <p>კალენდარი Grid-ის კლასიკური მაგალითია. გვაქვს 7 სვეტი (კვირის დღეები).</p>
+
+                <h2>ინსტრუქცია</h2>
+                <ol>
+                    <li>
+                        თვის პირველი დღე (1 რიცხვი) იწყება ოთხშაბათს.
+                    </li>
+                    <li>
+                        როგორ გადავწიოთ პირველი დღე სწორ ადგილას ისე რომ ცარიელი <code>div</code>-ები არ დავწეროთ?
+                    </li>
+                    <li>
+                        იპოვე <code>.first-day</code> და მიანიჭე:
+                        <br><code>grid-column-start: 4;</code> (რადგან ოთხშაბათი მე-4 დღეა).
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    Grid ავტომატურად დატოვებს ცარიელ უჯრებს პირველ სამ დღეზე! ეს არის Grid-ის უნიკალური უნარი.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task16.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task18.html" class="nav-btn next">Task 18: Kanban App &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: WORKSPACE -->
+        <main class="result-panel">
+            <div class="workspace">
+                <h2 style="color: var(--text-primary); margin-bottom: 20px;">January 2026</h2>
+
+                <div class="calendar">
+                    <!-- Headers -->
+                    <div class="day-name">Sun</div>
+                    <div class="day-name">Mon</div>
+                    <div class="day-name">Tue</div>
+                    <div class="day-name">Wed</div>
+                    <div class="day-name">Thu</div>
+                    <div class="day-name">Fri</div>
+                    <div class="day-name">Sat</div>
+
+                    <!-- Days -->
+                    <!-- 1st starts on Wednesday -->
+                    <div class="day first-day">
+                        <span class="date-num">1</span>
+                        <div class="event">New Year</div>
+                    </div>
+                    <div class="day"><span class="date-num">2</span></div>
+                    <div class="day"><span class="date-num">3</span></div>
+                    <div class="day"><span class="date-num">4</span></div>
+                    <div class="day"><span class="date-num">5</span></div>
+                    <div class="day"><span class="date-num">6</span></div>
+                    <div class="day">
+                        <span class="date-num">7</span>
+                        <div class="event" style="background: var(--accent-success)">Meeting</div>
+                    </div>
+                    <div class="day"><span class="date-num">8</span></div>
+                    <div class="day"><span class="date-num">9</span></div>
+                    <div class="day"><span class="date-num">10</span></div>
+                    <!-- ... truncated for brevity often, but let's add a few more -->
+                    <div class="day"><span class="date-num">11</span></div>
+                    <div class="day"><span class="date-num">12</span></div>
+                    <div class="day"><span class="date-num">13</span></div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

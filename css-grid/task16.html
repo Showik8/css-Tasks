@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Task 16 (Gallery)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Generic+Mono&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Task 16 Specific Styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-auto-flow: dense; /* Critical for mosaic */
+            gap: 10px;
+            width: 100%;
+        }
+
+        .g-item {
+            border-radius: 8px;
+            background-size: cover;
+            background-position: center;
+            min-height: 150px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .g-item:hover { transform: scale(1.02); z-index: 2; }
+
+        .h-2 { grid-row: span 2; }
+        .w-2 { grid-column: span 2; }
+        
+        /* Images */
+        .img-1 { background-image: url('https://images.unsplash.com/photo-1542038782534-18b380a7966d?q=80&w=600'); }
+        .img-2 { background-image: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca4?q=80&w=600'); }
+        .img-3 { background-image: url('https://images.unsplash.com/photo-1550258987-190a2d41a8ba?q=80&w=600'); background-color: #333; }
+        .img-4 { background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600'); }
+        .img-5 { background-image: url('https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=600'); }
+        .img-6 { background-image: url('https://images.unsplash.com/photo-1481349518771-20055b2a7b24?q=80&w=600'); }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: INSTRUCTIONS -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 16: Mosaic Gallery</h1>
+                <p>Dense packing & spans</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა</h2>
+                <p>შევქმნათ "Pinterest"-ის სტილის (Masonry მსგავსი) გალერეა. Grid ამას სრულყოფილად ვერ აკეთებს (JavaScript გარეშე სვეტებში სიმაღლეები ვერ იცვლება), მაგრამ <code>dense</code> და <code>span</code> გვაძლევს ძალიან ლამაზი მოზაიკის ეფექტს.</p>
+
+                <h2>ინსტრუქცია</h2>
+                <ol>
+                    <li>
+                        გვაქვს ბევრი სურათი. ზოგს აქვს კლასი <code>.h-2</code> (სიმაღლეში 2), ზოგს <code>.w-2</code> (სიგანეში 2).
+                    </li>
+                    <li>
+                        ამჟამად ისინი ტოვებენ ცარიელ ადგილებს.
+                    </li>
+                    <li>
+                        დაამატე: <code>grid-auto-flow: dense;</code> კონტეინერს.
+                    </li>
+                    <li>
+                        ცადე შეცვალო <code>minmax(150px, 1fr)</code> 200px-ზე და ნახე როგორ გადალაგდება მოზაიკა.
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task15.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task17.html" class="nav-btn next">Task 17: Calendar &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: WORKSPACE -->
+        <main class="result-panel">
+            <div class="workspace">
+                <h2 style="color: var(--text-primary); margin-bottom: 20px;">შედეგი:</h2>
+
+                <div class="gallery-grid">
+                    <div class="g-item img-1 h-2"></div>
+                    <div class="g-item img-2"></div>
+                    <div class="g-item img-3 w-2"></div>
+                    <div class="g-item img-4"></div>
+                    <div class="g-item img-5 h-2"></div>
+                    <div class="g-item img-6 w-2"></div>
+                    <div class="g-item img-1"></div>
+                    <div class="g-item img-2 h-2 w-2"></div> <!-- Big block -->
+                    <div class="g-item img-3"></div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Task 18 (Kanban)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Generic+Mono&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Task 18 Specific Styles */
+        .app-layout {
+            /* Full layout */
+            display: grid;
+            width: 100%;
+            height: 600px; /* Simulation height */
+            /* Student to build this map */
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 60px 1fr;
+            grid-template-areas: 
+                "sidebar header"
+                "sidebar board";
+            
+            border: 1px solid #334155;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .kanban-sidebar {
+            grid-area: sidebar;
+            background: #0f172a;
+            border-right: 1px solid #334155;
+            padding: 20px;
+        }
+
+        .kanban-header {
+            grid-area: header;
+            background: #1e293b;
+            border-bottom: 1px solid #334155;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .kanban-board {
+            grid-area: board;
+            background: #0f172a;
+            padding: 20px;
+            overflow-x: auto;
+            /* Inner Grid */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 lists */
+            gap: 20px;
+            align-items: start;
+        }
+
+        .list {
+            background: #1e293b;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .list h4 { margin-bottom: 15px; color: #94a3b8; }
+
+        .k-card {
+            background: #334155;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: INSTRUCTIONS -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 18: Kanban App</h1>
+                <p>Full Application Layout</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა</h2>
+                <p>ბოლო დავალებისთვის ავაწყოთ სრული აპლიკაციის განლაგება (მაგ: Trello ან Jira).</p>
+
+                <h2>ინსტრუქცია</h2>
+                <ol>
+                    <li>
+                        გვაქვს მთავარი განლაგება: Sidebar (მარცხნივ, 200px) და Header (ზემოთ). დანარჩენი არის Board.
+                    </li>
+                    <li>
+                        შექმენი სტრუქტურა <code>grid-template-areas</code>-ის გამოყენებით:
+                        <pre><code>"sidebar header"
+"sidebar board"</code></pre>
+                    </li>
+                    <li>
+                        გაუწერე ზომები: 
+                        <br><code>grid-template-columns: 200px 1fr;</code>
+                        <br><code>grid-template-rows: 60px 1fr;</code>
+                    </li>
+                    <li>
+                        Board-ის შიგნით (<code>.kanban-board</code>) უკვე განსაზღვრულია შიდა grid სვეტებისთვის.
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>დასასრული:</strong> გილოცავ! შენ წარმატებით გაიარე CSS Grid Masterclass და შექმენი 18 სხვადასხვა სირთულის პროექტი. 
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task17.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="index.html" class="nav-btn next">მთავარი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: WORKSPACE -->
+        <main class="result-panel">
+            <div class="workspace">
+                <h2 style="color: var(--text-primary); margin-bottom: 20px;">Kanban App</h2>
+
+                <div class="app-layout">
+                    <div class="kanban-sidebar">
+                        <div style="margin-bottom: 20px; font-weight: bold; color: var(--accent-primary);">DevBoard</div>
+                        <div style="color: #94a3b8;">My Projects</div>
+                        <div style="color: #94a3b8;">Team</div>
+                        <div style="color: #94a3b8;">Settings</div>
+                    </div>
+
+                    <div class="kanban-header">
+                        Project: Alpha Release
+                    </div>
+
+                    <div class="kanban-board">
+                        <div class="list">
+                            <h4>To Do</h4>
+                            <div class="k-card">Fix login bug</div>
+                            <div class="k-card">Update documentation</div>
+                            <div class="k-card">Research Grid APIs</div>
+                        </div>
+                        <div class="list">
+                            <h4>In Progress</h4>
+                            <div class="k-card">Create Bento Grid</div>
+                            <div class="k-card">Refactor CSS</div>
+                        </div>
+                        <div class="list">
+                            <h4>Done</h4>
+                            <div class="k-card">Setup Repo</div>
+                            <div class="k-card">Initial Design</div>
+                            <div class="k-card">User Research</div>
+                            <div class="k-card">Coffee Break</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

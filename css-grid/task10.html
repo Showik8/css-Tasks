@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Task 10</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Generic+Mono&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Task 10 Specific Styles */
+        .task10-container {
+            display: grid;
+            gap: 20px;
+            /* Student edits this */
+            grid-template-columns: 1fr 1fr 1fr;
+            border: 1px dashed #475569;
+            padding: 10px;
+        }
+
+        .t10-col {
+            background: #1e293b;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid var(--accent-primary);
+        }
+
+        .long-text {
+            white-space: nowrap; /* Forces wide width */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: INSTRUCTIONS -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 10: Intrinsic Sizing</h1>
+                <p>ზომები: min-content, max-content, fit-content</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა</h2>
+                <p>Grid გვაძლევს საშუალებას განვსაზღვროთ სვეტის ზომა მისი შიგთავსის მიხედვით. ეს არის Intrinsic Sizing.</p>
+
+                <h2>ინსტრუქცია</h2>
+                <p>შეცვალე <code>grid-template-columns</code> შემდეგი მნიშვნელობებით და დააკვირდი შედეგს:</p>
+                
+                <ol>
+                    <li>
+                        <strong>max-content</strong>: პირველი სვეტი გახადე <code>max-content</code>. ის გაიწელება იმდენზე, რამდენიც საჭიროა რომ ტექსტი არ ჩამოვარდეს.
+                    </li>
+                    <li>
+                        <strong>min-content</strong>: მეორე სვეტი გახადე <code>min-content</code>. ის დაპატარავდება მაქსიმალურად (ყველაზე გრძელი სიტყვის ზომამდე).
+                    </li>
+                    <li>
+                        <strong>fit-content(300px)</strong>: მესამე სვეტი. ის იქცევა როგორც auto, მაგრამ არასდროს იქნება 300px-ზე მეტი.
+                    </li>
+                </ol>
+
+                <div class="code-block">
+                    <code>grid-template-columns: max-content min-content fit-content(200px);</code>
+                </div>
+
+                <div class="tip">
+                    <strong>გამოყენება:</strong> ეს იდეალურია Sidebar-ებისთვის ან ცხრილებისთვის, სადაც ზომა შინაარსზეა დამოკიდებული.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task9.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task11.html" class="nav-btn next">შემდეგი: Named Lines &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: WORKSPACE -->
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <h2 style="color: var(--text-primary); margin-bottom: 20px;">შედეგი:</h2>
+
+                <div class="task10-container">
+                    <div class="t10-col">
+                        <p class="long-text">ეს არის ძალიან გრძელი ტექსტი რომელიც არ ჩამოვარდება</p>
+                    </div>
+                    <div class="t10-col">
+                        <p>ეს ტექსტი ჩამოვარდება სიტყვებზე</p>
+                    </div>
+                    <div class="t10-col">
+                        <p>ეს სვეტი გაიწელება 200px-მდე და შემდეგ ტექსტი ჩამოვარდება.</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

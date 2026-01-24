@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Task 7</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Generic+Mono&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Task 7 Specific Styles */
+        .task7-container {
+            display: grid;
+            width: 100%;
+            gap: 20px;
+            /* The Magic Sauce - Student fills this in */
+            grid-template-columns: repeat(3, 1fr); /* Static column count (bad for responsive) */
+        }
+
+        .card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .card-img {
+            height: 120px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 { color: #f8fafc; margin: 0; }
+        .card p { color: #94a3b8; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: INSTRUCTIONS -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 7: Responsive Cards</h1>
+                <p>რეზპონსიული დიზაინი: auto-fit</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა</h2>
+                <p>ეს არის ყველაზე ცნობილი და გამოსადეგი Grid ტექნიკა: ბარათები, რომლებიც ავტომატურად გადადიან ახალ ხაზზე ეკრანის დაპატარავებისას, Media Query-ს გარეშე!</p>
+
+                <h2>ინსტრუქცია</h2>
+                <ol>
+                    <li>
+                        ჩვენ გვინდა რომ ბარათებს ჰქონდეთ მინიმუმ 250px სიგანე.
+                    </li>
+                    <li>
+                        თუ ეკრანზე ადგილია, ისინი უნდა გაიწელონ (1fr).
+                    </li>
+                    <li>
+                        თუ ადგილი არაა, უნდა ჩამოვიდნენ ქვემოთ.
+                    </li>
+                    <li>
+                        შეცვალე <code>grid-template-columns</code> შემდეგნაირად:
+                        <pre><code>repeat(auto-fit, minmax(250px, 1fr));</code></pre>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>დასრულება:</strong> გილოცავ! შენ გაიარე CSS Grid-ის საბაზისო და საშუალო კურსი. ახლა შეგიძლია შექმნა რთული და მოქნილი განლაგებები.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task6.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task8.html" class="nav-btn next">შემდეგი: Advanced &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: WORKSPACE -->
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <h2 style="color: var(--text-primary); margin-bottom: 20px;">შედეგი (Responsive Grid):</h2>
+
+                <div class="task7-container">
+                    <div class="card">
+                        <div class="card-img"></div>
+                        <h3>Card Title 1</h3>
+                        <p>This card will resize automatically based on the available space.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-img"></div>
+                        <h3>Card Title 2</h3>
+                        <p>No media queries required for this layout magic.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-img"></div>
+                        <h3>Card Title 3</h3>
+                        <p>Resize your browser window to see the effect.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-img"></div>
+                        <h3>Card Title 4</h3>
+                        <p>Using auto-fit and minmax together is powerful.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-img"></div>
+                        <h3>Card Title 5</h3>
+                        <p>CSS Grid makes layouting visibly easier.</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

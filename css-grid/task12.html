@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Task 12</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Generic+Mono&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Task 12 Specific Styles */
+        .task12-outer {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .sidebar { background: #334155; height: 300px; border-radius: 8px; }
+        
+        .main-content {
+            background: #475569;
+            border-radius: 8px;
+            padding: 10px;
+            /* This is a grid item, but we want it to be a container too */
+            /* Student: display: grid; ... */
+        }
+
+        .inner-card {
+            background: white;
+            color: #333;
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: INSTRUCTIONS -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 12: Nested Grids</h1>
+                <p>ბუდეები: Grid შიგნით Grid</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა</h2>
+                <p>Grid Item თავის მხრივ შეიძლება გახდეს Grid Container. ეს აუცილებელია რთული კომპონენტების ასაწყობად.</p>
+
+                <h2>ინსტრუქცია</h2>
+                <ol>
+                    <li>
+                        მარჯვენა მხარე (<code>.main-content</code>) არის Grid Item. მაგრამ ჩვენ გვინდა რომ მის შიგნით ელემენტებიც Grid-ით დალაგდეს.
+                    </li>
+                    <li>
+                        გადააქციე <code>.main-content</code> Grid კონტეინერად:
+                        <br><code>display: grid;</code>
+                    </li>
+                    <li>
+                        გაუწერე მას 2 სვეტი და დაშორება:
+                        <br><code>grid-template-columns: 1fr 1fr;</code>
+                        <br><code>gap: 10px;</code>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>შენიშვნა:</strong> უახლესი CSS მხარს უჭერს <code>display: subgrid</code>-საც, რაც საშუალებას აძლევს შვილს გამოიყენოს მშობლის Grid ხაზები, მაგრამ ჯერჯერობით Nested Grid ყველაზე უსაფრთხო გზაა.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task11.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task13.html" class="nav-btn next">Masterclass: Bento &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: WORKSPACE -->
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <h2 style="color: var(--text-primary); margin-bottom: 20px;">შედეგი:</h2>
+
+                <div class="task12-outer">
+                    <div class="sidebar">Sidebar</div>
+                    <div class="main-content">
+                        <div class="inner-card">Card 1</div>
+                        <div class="inner-card">Card 2</div>
+                        <div class="inner-card">Card 3</div>
+                        <div class="inner-card">Card 4</div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

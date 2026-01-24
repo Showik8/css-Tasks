@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Task 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Generic+Mono&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Task 2 Specific Styles */
+        .task2-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns */
+            grid-template-rows: repeat(4, 100px); /* 4 rows */
+            gap: 15px;
+            /* Background grid guide */
+            background-image: linear-gradient(to right, #334155 1px, transparent 1px),
+                              linear-gradient(to bottom, #334155 1px, transparent 1px);
+            background-size: calc((100% - 45px)/4 + 15px) 115px; /* approximate calc for visual guide */
+            border: 1px solid #334155;
+        }
+
+        .t2-item {
+            background: rgba(129, 140, 248, 0.2);
+            border: 2px solid var(--accent-secondary);
+            color: white;
+            padding: 20px;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        /* Target Items to Move */
+        .item-to-move {
+            background: var(--accent-primary);
+            color: #0f172a;
+            border-color: #fff;
+            z-index: 10;
+        }
+
+        /* The styles expected from student */
+        /*
+        .item-1 { grid-column: 1 / 5; } // Header like
+        .item-2 { grid-column: 1 / 2; grid-row: 2 / 4; } // Sidebar
+        */
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: INSTRUCTIONS -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 2: Grid Placement</h1>
+                <p>ელემენტების განლაგება: grid-column & grid-row</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა</h2>
+                <p>Grid-ში ელემენტები შეგვიძლია გავწელოთ ან გადავაადგილოთ "ხაზების" (lines) ნომრების მიხედვით.</p>
+
+                <h2>ინსტრუქცია</h2>
+                <ol>
+                    <li>
+                        გვაქვს 4x4 ბადე (grid).
+                    </li>
+                    <li>
+                        იპოვე ელემენტი კლასით <code>.header-item</code>. გაწელე ის მთელ სიგანეზე (1-დან 5-მდე ხაზამდე):
+                        <br><code>grid-column: 1 / 5;</code>
+                    </li>
+                    <li>
+                        იპოვე ელემენტი კლასით <code>.sidebar-item</code>. განათავსე ის მარცხენა მხარეს, მე-2 რიგიდან ბოლომდე:
+                        <br><code>grid-row: 2 / 5;</code>
+                    </li>
+                    <li>
+                        იპოვე <code>.main-item</code> და გაწელე დარჩენილ სივრცეში: 
+                        <br><code>grid-column: 2 / 5;</code>
+                        <br><code>grid-row: 2 / 5;</code>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>შენიშვნა:</strong> ხაზების ნომრები იწყება 1-დან. 4 სვეტიან grid-ს აქვს 5 ხაზი (1, 2, 3, 4, 5).
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task1.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task3.html" class="nav-btn next">შემდეგი: Grid Areas &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: WORKSPACE -->
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <h2 style="color: var(--text-primary); margin-bottom: 20px;">შედეგი:</h2>
+
+                <div class="task2-container">
+                    <div class="t2-item item-to-move header-item">Header</div>
+                    <div class="t2-item item-to-move sidebar-item">Sidebar</div>
+                    <div class="t2-item item-to-move main-item">Main Content</div>
+                    <!-- Helper items to show grid structure if needed, or just keep empty grid visualization via BG -->
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

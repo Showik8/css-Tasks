@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Task 3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Generic+Mono&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Task 3 Specific Styles */
+        .task3-container {
+            display: grid;
+            grid-template-columns: 200px 1fr 200px;
+            grid-template-rows: 80px 1fr 60px;
+            gap: 15px;
+            height: 500px;
+        }
+
+        .t3-item {
+            background: #1e293b;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px dashed #475569;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-family: var(--font-mono);
+        }
+
+        .area-header { background: var(--accent-primary); color: #0f172a; border-style: solid; }
+        .area-sidebar { background: var(--accent-secondary); border-style: solid; }
+        .area-main { background: var(--accent-success); color: #0f172a; border-style: solid; }
+        .area-ads { background: var(--accent-warning); color: #0f172a; border-style: solid; }
+        .area-footer { background: #64748b; border-style: solid; }
+
+        /* Expected Students Code will be applied here usually via inspector or imagined editing */
+        /*
+        .task3-container {
+            grid-template-areas:
+                "header header header"
+                "sidebar main ads"
+                "footer footer footer";
+        }
+        .area-header { grid-area: header; }
+        .area-sidebar { grid-area: sidebar; }
+        .area-main { grid-area: main; }
+        .area-ads { grid-area: ads; }
+        .area-footer { grid-area: footer; }
+        */
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: INSTRUCTIONS -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 3: Grid Areas</h1>
+                <p>სახელებით განლაგება: grid-template-areas</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა</h2>
+                <p>Grid Areas საშუალებას გვაძლევს შევქმნათ განლაგება ვიზუალური "რუკის" დახატვით CSS-ში.</p>
+
+                <h2>ინსტრუქცია</h2>
+                <ol>
+                    <li>
+                        მიანიჭე შესაბამისი <code>grid-area</code> სახელები შვილ ელემენტებს:
+                        <ul>
+                            <li><code>.area-header</code> -> <code>grid-area: header;</code></li>
+                            <li><code>.area-sidebar</code> -> <code>grid-area: sidebar;</code></li>
+                            <li><code>.area-main</code> -> <code>grid-area: main;</code></li>
+                            <li><code>.area-ads</code> -> <code>grid-area: ads;</code></li>
+                            <li><code>.area-footer</code> -> <code>grid-area: footer;</code></li>
+                        </ul>
+                    </li>
+                    <li>
+                        ახლა კონტეინერზე (<code>.task3-container</code>) განსაზღვრე რუკა:
+                        <pre><code>grid-template-areas: 
+  "header header header"
+  "sidebar main ads"
+  "footer footer footer";</code></pre>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>რჩევა:</strong> ტექსტი ბრჭყალებში უნდა ემთხვეოდეს ზუსტად იმ სახელებს, რომლებიც ელემენტებს მიანიჭეთ.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task2.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task4.html" class="nav-btn next">შემდეგი: Alignment &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: WORKSPACE -->
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <h2 style="color: var(--text-primary); margin-bottom: 20px;">შედეგი:</h2>
+
+                <div class="task3-container">
+                    <div class="t3-item area-header">Header</div>
+                    <div class="t3-item area-sidebar">Sidebar</div>
+                    <div class="t3-item area-main">Main Content</div>
+                    <div class="t3-item area-ads">Ads</div>
+                    <div class="t3-item area-footer">Footer</div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

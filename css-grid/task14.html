@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Task 14 (Magazine)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Generic+Mono&family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Task 14 Specific Styles */
+        .magazine-grid {
+            display: grid;
+            gap: 20px;
+            /* Student to build this map */
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            /* 
+            grid-template-areas: 
+                "hero hero hero list"
+                "hero hero hero list"
+                "ad   ad   quote quote";
+            */
+            width: 100%;
+        }
+
+        .mag-item {
+            padding: 20px;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1493612270928-873b22295669?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            min-height: 400px;
+            display: flex;
+            align-items: flex-end;
+            /* grid-area: hero; */
+        }
+
+        .hero h1 {
+            background: rgba(0,0,0,0.7);
+            padding: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            width: 100%;
+        }
+
+        .article-list {
+            background: #1e293b;
+            /* grid-area: list; */
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .ad-banner {
+            background: var(--accent-warning);
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            /* grid-area: ad; */
+            min-height: 150px;
+        }
+
+        .quote {
+            background: var(--accent-primary);
+            color: #000;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-style: italic;
+            /* grid-area: quote; */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: INSTRUCTIONS -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 14: Magazine Layout</h1>
+                <p>Editorial Design & Grid Areas</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა</h2>
+                <p>ჟურნალის ტიპის საიტებისთვის Grid შეუცვლელია. მოდი ავაწყოთ ასიმეტრიული განლაგება.</p>
+
+                <h2>ინსტრუქცია</h2>
+                <ol>
+                    <li>
+                        მიანიჭე <code>grid-area</code> სახელები:
+                        <ul>
+                            <li><code>.hero</code> -> <code>hero</code></li>
+                            <li><code>.article-list</code> -> <code>list</code></li>
+                            <li><code>.ad-banner</code> -> <code>ad</code></li>
+                            <li><code>.quote</code> -> <code>quote</code></li>
+                        </ul>
+                    </li>
+                    <li>
+                        გამოიყენე <code>grid-template-areas</code> რომ შექმნა სტრუქტურა:
+                        <pre><code>"hero hero hero list"
+"hero hero hero list"
+"ad   ad   quote quote"</code></pre>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                     ეს განლაგება 4 სვეტს იყენებს. "hero" იკავებს 3x2 ადგილს, "list" არის ვიწრო სვეტი მარჯვნივ, ხოლო ქვედა ნაწილი ორად იყოფა.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task13.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task15.html" class="nav-btn next">Task 15: Footer &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: WORKSPACE -->
+        <main class="result-panel">
+            <div class="workspace">
+                <h2 style="color: var(--text-primary); margin-bottom: 20px;">შედეგი:</h2>
+
+                <div class="magazine-grid">
+                    <div class="mag-item hero">
+                        <h1>The Future of Web Design</h1>
+                    </div>
+                    
+                    <div class="mag-item article-list">
+                        <h3>Top Stories</h3>
+                        <div style="border-bottom:1px solid #333; padding-bottom:10px;">New Grid Features</div>
+                        <div style="border-bottom:1px solid #333; padding-bottom:10px;">CSS vs JS Animation</div>
+                        <div style="border-bottom:1px solid #333; padding-bottom:10px;">Dark Mode UX</div>
+                        <div style="border-bottom:1px solid #333; padding-bottom:10px;">Typography Trends</div>
+                    </div>
+
+                    <div class="mag-item ad-banner">
+                        BUY PRO SUBSCRIPTION
+                    </div>
+
+                    <div class="mag-item quote">
+                        "Grid is the very structure of design."
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Task 9</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Generic+Mono&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Task 9 Specific Styles */
+        .task9-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 15px;
+            /* The magic property student needs to add */
+            grid-auto-flow: row; /* Default */
+        }
+
+        .t9-item {
+            background: #1e293b;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .t9-item:nth-child(2) { grid-column: span 2; background: var(--accent-primary); color: #0f172a; }
+        .t9-item:nth-child(4) { grid-column: span 2; grid-row: span 2; background: var(--accent-secondary); }
+        .t9-item:nth-child(6) { grid-column: span 3; background: var(--accent-success); color: #0f172a; }
+
+        /* The gaps will appear because large items leave holes. 'dense' fixes this. */
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: INSTRUCTIONS -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 9: Dense Packing</h1>
+                <p>ალგორითმი: grid-auto-flow: dense</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა</h2>
+                <p>ნაგულისხმევად, Grid ტოვებს ცარიელ ადგილებს (holes) თუ ელემენტი არ ეტევა დარჩენილ სივრცეში. <code>dense</code> ალგორითმი აიძულებს Grid-ს, რომ მოძებნოს პატარა ელემენტები და შეავსოს ეს ცარიელი ადგილები გადაადგილებით.</p>
+
+                <h2>ინსტრუქცია</h2>
+                <ol>
+                    <li>
+                        დააკვირდი შედეგს. ელემენტები (2), (4) და (6) დიდია, რის გამოც ჩნდება ცარიელი ადგილები.
+                    </li>
+                    <li>
+                        შეცვალე <code>grid-auto-flow</code> კონტეინერზე:
+                        <pre><code>grid-auto-flow: dense;</code></pre>
+                    </li>
+                    <li>
+                        ნახე როგორ "ჩაიჭედა" პატარა ელემენტები დიდებს შორის არსებულ სიცარიელეში.
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>გაფრთხილება:</strong> Dense ცვლის ელემენტების ვიზუალურ თანმიმდევრობას DOM-ის თანმიმდევრობის მიუხედავად. ეს შეიძლება პრობლემა იყოს Accessibility-სთვის (ეკრანის მკითხველებისთვის).
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task8.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task10.html" class="nav-btn next">შემდეგი: Sizing &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: WORKSPACE -->
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <h2 style="color: var(--text-primary); margin-bottom: 20px;">შედეგი (შევსებამდე):</h2>
+
+                <div class="task9-container">
+                    <div class="t9-item">1</div>
+                    <div class="t9-item">2</div>
+                    <div class="t9-item">3</div>
+                    <div class="t9-item">4</div>
+                    <div class="t9-item">5</div>
+                    <div class="t9-item">6</div>
+                    <div class="t9-item">7</div>
+                    <div class="t9-item">8</div>
+                    <div class="t9-item">9</div>
+                    <div class="t9-item">10</div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

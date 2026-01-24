@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Task 6</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Generic+Mono&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Task 6 Specific Styles */
+        .task6-container {
+            display: grid;
+            gap: 15px;
+            /* Student will edit this */
+            grid-template-columns: 1fr 1fr 1fr; /* Boring way */
+        }
+
+        .t6-item {
+            background-color: #f59e0b; /* Amber */
+            color: #0f172a;
+            padding: 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: INSTRUCTIONS -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 6: Functions</h1>
+                <p>ფუნქციები: repeat() და minmax()</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა</h2>
+                <p>Grid-ის წერის გასამარტივებლად და უფრო მოქნილი დიზაინისთვის ვიყენებთ ფუნქციებს.</p>
+
+                <h2>ინსტრუქცია</h2>
+                <ol>
+                    <li>
+                        ამჟამად გვაქვს 3 სვეტი: <code>1fr 1fr 1fr</code>.
+                    </li>
+                    <li>
+                        გადაწერე ეს <code>repeat()</code> ფუნქციის გამოყენებით:
+                        <br><code>grid-template-columns: repeat(3, 1fr);</code>
+                    </li>
+                    <li>
+                        ახლა სცადე <code>minmax()</code>. გააკეთე ისე რომ სვეტები არასდროს იყოს 100px-ზე პატარა, მაგრამ გაიზარდოს დარჩენილ ადგილამდე:
+                        <br><code>grid-template-columns: repeat(3, minmax(100px, 1fr));</code>
+                    </li>
+                    <li>
+                        სცადე შეავიწროვო ბრაუზერის ფანჯარა და დააკვირდი როგორ იქცევიან სვეტები.
+                    </li>
+                </ol>
+
+                <div class="tip">
+                     <code>minmax(min, max)</code> ძალიან სასარგებლოა მობილური დიზაინისთვის, რათა ელემენტები ძალიან არ დაპატარავდნენ.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task5.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task7.html" class="nav-btn next">შემდეგი: Auto-Fit & Fill &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: WORKSPACE -->
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <h2 style="color: var(--text-primary); margin-bottom: 20px;">შედეგი:</h2>
+
+                <div class="task6-container">
+                    <div class="t6-item">Item 1</div>
+                    <div class="t6-item">Item 2</div>
+                    <div class="t6-item">Item 3</div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

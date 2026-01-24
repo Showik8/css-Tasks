@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Task 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Generic+Mono&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Task 1 Specific Styles */
+        .task1-container {
+            /* Students will edit this in the inspector or imagining they are editing a file */
+            /* Default 'broken' state */
+            display: block; 
+            width: 100%;
+        }
+        
+        .t1-item {
+            background: var(--accent-primary);
+            color: #0f172a;
+            padding: 30px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px; /* simulating block overlap layout */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: INSTRUCTIONS -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 1: Grid Basics</h1>
+                <p>შესავალი: display: grid & templates</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა</h2>
+                <p>Grid არის ორგანზომილებიანი სისტემა. ჩვენ შეგვიძლია განვსაზღვროთ როგორც სვეტები (columns), ისე სტრიქონები (rows).</p>
+
+                <h2>ინსტრუქცია</h2>
+                <ol>
+                    <li>
+                        იპოვე კონტეინერი კლასით <code>.task1-container</code>.
+                    </li>
+                    <li>
+                        შეცვალე <code>display: block</code> და გახადე <code>display: grid</code>.
+                    </li>
+                    <li>
+                        განსაზღვრე 3 სვეტი: <code>grid-template-columns: 1fr 1fr 1fr;</code> (ანუ სამი თანაბარი ნაწილი).
+                    </li>
+                    <li>
+                        დაამატე დაშორება: <code>gap: 20px;</code>.
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>შენიშვნა:</strong> <code>fr</code> (fraction) არის სპეციალური ერთეული grid-ისთვის, რომელიც იკავებს დარჩენილ თავისუფალ ადგილს.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="index.html" class="nav-btn prev">&larr; Cheat Sheet</a>
+                    <a href="task2.html" class="nav-btn next">შემდეგი: Grid Placement &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: WORKSPACE -->
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <h2 style="color: var(--text-primary); margin-bottom: 20px;">შედეგი:</h2>
+
+                <!-- The Container to Edit -->
+                <div class="task1-container">
+                    <div class="t1-item">1</div>
+                    <div class="t1-item">2</div>
+                    <div class="t1-item">3</div>
+                    <div class="t1-item">4</div>
+                    <div class="t1-item">5</div>
+                    <div class="t1-item">6</div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

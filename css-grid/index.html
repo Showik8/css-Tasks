@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Masterclass - Cheat Sheet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Generic+Mono&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Cheat Sheet Specific Mini-Demos */
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            background: #1e293b;
+            padding: 10px;
+            border-radius: 6px;
+            height: 120px;
+        }
+        .preview-item {
+            background: rgba(56, 189, 248, 0.4);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: NAVIGATION -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>CSS Grid Masterclass</h1>
+                <p>სრული გზამკვლევი და სავარჯიშოები</p>
+            </header>
+
+            <div class="content">
+                <p>მოგესალმებით CSS Grid-ის შემსწავლელ კურსში. ეს გვერდი არის თქვენი <strong>Cheat Sheet</strong>.</p>
+                <p>აქ თავმოყრილია ყველა მნიშვნელოვანი property და ფუნქცია. გამოიყენეთ ეს გვერდი როგორც დამხმარე მასალა დავალებების შესრულებისას.</p>
+                
+                <h2>შინაარსი</h2>
+                <ul>
+                    <li><a href="#container-props" style="color: var(--accent-primary)">Grid Container Properties</a></li>
+                    <li><a href="#item-props" style="color: var(--accent-primary)">Grid Item Properties</a></li>
+                    <li><a href="#functions" style="color: var(--accent-primary)">Grid Functions</a></li>
+                </ul>
+
+                <div class="tip">
+                    <strong>რჩევა:</strong> დაიწყეთ დავალებების შესრულება თანმიმდევრობით.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <span class="placeholder"></span>
+                    <a href="task1.html" class="nav-btn next">დაწყება: Task 1 &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: CHEAT SHEET CONTENT -->
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <!-- HEADER TITLE -->
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <h1 style="font-size: 2.5rem; background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; color: transparent; margin-bottom: 20px;">CSS GRID CHEAT SHEET</h1>
+                    <p style="color: var(--text-secondary);">შექმნილია თანამედროვე ვებ დიზაინისთვის</p>
+                </div>
+
+                <!-- SECTION 1: GRID CONTAINER PROPERTIES -->
+                <section id="container-props" class="cheatsheet-section">
+                    <h2 class="cheatsheet-title">Grid Container Properties</h2>
+                    <p style="color: #94a3b8; margin-bottom: 25px;">ეს თვისებები იწერება მშობელ ელემენტზე (Container).</p>
+
+                    <!-- display -->
+                    <div class="property-group">
+                        <span class="property-name">display</span>
+                        <p class="property-desc">განსაზღვრავს ელემენტს როგორც grid კონტეინერს.</p>
+                        <pre><code>.container {
+  display: grid; /* ან inline-grid */
+}</code></pre>
+                    </div>
+
+                    <!-- grid-template-columns / rows -->
+                    <div class="property-group">
+                        <span class="property-name">grid-template-columns / grid-template-rows</span>
+                        <p class="property-desc">განსაზღვრავს სვეტების და სტრიქონების ზომებს. შეგვიძლია გამოვიყენოთ <code>px</code>, <code>%</code>, <code>fr</code>, <code>auto</code>.</p>
+                        <pre><code>.container {
+  grid-template-columns: 100px 1fr 2fr; /* 3 სვეტი */
+  grid-template-rows: 50px auto;       /* 2 სტრიქონი */
+}</code></pre>
+                        
+                        <div class="demo-box" style="height: 100px;">
+                            <div style="display: grid; grid-template-columns: 100px 1fr 2fr; height: 100%; gap: 5px;">
+                                <div class="grid-cell">100px</div>
+                                <div class="grid-cell">1fr</div>
+                                <div class="grid-cell">2fr</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- grid-template-areas -->
+                    <div class="property-group">
+                        <span class="property-name">grid-template-areas</span>
+                        <p class="property-desc">ქმნის ვიზუალურ სტრუქტურას სახელების გამოყენებით.</p>
+                        <pre><code>.container {
+  grid-template-areas: 
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+}</code></pre>
+                    </div>
+
+                    <!-- gap -->
+                    <div class="property-group">
+                        <span class="property-name">gap (row-gap, column-gap)</span>
+                        <p class="property-desc">განსაზღვრავს დაშორებას უჯრებს შორის.</p>
+                        <pre><code>.container {
+  gap: 20px; /* ორივე მხარეს */
+  /* ან */
+  row-gap: 10px;
+  column-gap: 30px;
+}</code></pre>
+                    </div>
+
+                    <!-- Justify / Align Items -->
+                    <div class="property-group">
+                        <span class="property-name">justify-items / align-items</span>
+                        <p class="property-desc">ასწორებს შიგთავსს უჯრის შიგნით (X და Y ღერძზე).</p>
+                        <ul style="list-style: none; margin-bottom: 10px; color: var(--text-secondary);">
+                            <li><code>start</code> - დასაწყისში</li>
+                            <li><code>end</code> - ბოლოში</li>
+                            <li><code>center</code> - ცენტრში</li>
+                            <li><code>stretch</code> - გაწელვა (default)</li>
+                        </ul>
+                        <pre><code>.container {
+  justify-items: center; /* ჰორიზონტალურად */
+  align-items: center;   /* ვერტიკალურად */
+  /* შემოკლებით: */
+  place-items: center center;
+}</code></pre>
+                    </div>
+
+                    <!-- Justify / Align Content -->
+                    <div class="property-group">
+                        <span class="property-name">justify-content / align-content</span>
+                        <p class="property-desc">ასწორებს მთლიან grid-ს კონტეინერის მიმართ (თუ grid კონტეინერზე პატარაა).</p>
+                        <pre><code>.container {
+  justify-content: space-between;
+  align-content: center;
+  /* შემოკლებით: */
+  place-content: center space-between;
+}</code></pre>
+                    </div>
+
+                    <!-- Auto Flow & Implicit Grid -->
+                    <div class="property-group">
+                        <span class="property-name">grid-auto-flow / grid-auto-columns / grid-auto-rows</span>
+                        <p class="property-desc">აკონტროლებს ავტომატურად შექმნილ უჯრებს (implicit grid).</p>
+                        <pre><code>.container {
+  grid-auto-flow: row; /* ან column, row dense */
+  grid-auto-columns: 100px;
+  grid-auto-rows: minmax(50px, auto);
+}</code></pre>
+                    </div>
+                </section>
+
+                <!-- SECTION 2: GRID ITEM PROPERTIES -->
+                <section id="item-props" class="cheatsheet-section">
+                    <h2 class="cheatsheet-title">Grid Item Properties</h2>
+                    <p style="color: #94a3b8; margin-bottom: 25px;">ეს თვისებები იწერება შვილ ელემენტებზე (Items).</p>
+
+                    <!-- Grid Column / Row Start/End -->
+                    <div class="property-group">
+                        <span class="property-name">grid-column / grid-row</span>
+                        <p class="property-desc">განსაზღვრავს სად იწყება და სად მთავრდება ელემენტი (ხაზების ნომრებით).</p>
+                        <pre><code>.item {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  /* შემოკლებით: */
+  grid-column: 1 / 3; /* ან 1 / span 2 */
+  
+  grid-row: 2 / 4;
+}</code></pre>
+                    </div>
+
+                    <!-- Grid Area -->
+                    <div class="property-group">
+                        <span class="property-name">grid-area</span>
+                        <p class="property-desc">ანიჭებს სახელს ელემენტს (template-areas-სთვის) ან გამოიყენება როგორც შემოკლება (row-start / col-start / row-end / col-end).</p>
+                        <pre><code>.item {
+  grid-area: header;
+  /* ან კოორდინატებით: */
+  grid-area: 1 / 2 / 3 / 4;
+}</code></pre>
+                    </div>
+
+                    <!-- Justify / Align Self -->
+                    <div class="property-group">
+                        <span class="property-name">justify-self / align-self</span>
+                        <p class="property-desc">ცვლის ინდივიდუალური ელემენტის განლაგებას უჯრაში (გადააწერს მშობლის justify-items-ს).</p>
+                        <pre><code>.item {
+  justify-self: end;
+  align-self: start;
+  /* შემოკლებით: */
+  place-self: start end;
+}</code></pre>
+                    </div>
+                </section>
+
+                <!-- SECTION 3: FUNCTIONS -->
+                <section id="functions" class="cheatsheet-section">
+                    <h2 class="cheatsheet-title">Grid Functions (ფუნქციები)</h2>
+                    
+                    <div class="property-group">
+                        <span class="property-name">repeat()</span>
+                        <p class="property-desc">იმეორებს ზომებს მითითებული რაოდენობით.</p>
+                        <pre><code>grid-template-columns: repeat(3, 1fr); 
+/* იგივეა რაც: 1fr 1fr 1fr */</code></pre>
+                    </div>
+
+                    <div class="property-group">
+                        <span class="property-name">minmax()</span>
+                        <p class="property-desc">განსაზღვრავს მინიმალურ და მაქსიმალურ ზომას.</p>
+                        <pre><code>grid-template-columns: minmax(100px, 1fr);
+/* მინიმუმ 100px, მაგრამ თუ ადგილია, გაიწელოს 1fr-მდე */</code></pre>
+                    </div>
+
+                    <div class="property-group">
+                        <span class="property-name">auto-fit vs auto-fill</span>
+                        <p class="property-desc">გამოიყენება რეზპონსიული დიზაინისთვის repeat()-თან ერთად.</p>
+                        <ul style="list-style: none; margin-bottom: 10px; color: var(--text-secondary);">
+                            <li><code>auto-fill</code> - ქმნის იმდენ სვეტს რამდენიც ეტევა, თუნდაც ცარიელი იყოს.</li>
+                            <li><code>auto-fit</code> - იგივეა, ოღონდ ცარიელ სვეტებს აქრობს და არსებულებს წელავს.</li>
+                        </ul>
+                        <pre><code>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</code></pre>
+                    </div>
+                </section>
+
+                <div style="text-align: center; margin-top: 50px; padding: 40px; border-top: 1px solid var(--border-color);">
+                    <h3 style="color: var(--text-primary); margin-bottom: 20px;">მზად ხარ პრაქტიკისთვის?</h3>
+                    <div style="display: flex; gap: 20px; justify-content: center;">
+                        <a href="task1.html" class="nav-btn next" style="font-size: 1.1rem; padding: 15px 30px;">დაწყება (Basics)</a>
+                        <a href="task8.html" class="nav-btn next" style="background: linear-gradient(135deg, #f472b6, #818cf8); font-size: 1.1rem; padding: 15px 30px;">Advanced Masterclass &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

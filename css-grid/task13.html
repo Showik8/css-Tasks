@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Task 13 (Bento)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Generic+Mono&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Task 13 Specific Styles */
+        .bento-grid {
+            display: grid;
+            /* 4 columns responsive */
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 150px);
+            gap: 20px;
+            width: 100%;
+        }
+
+        .widget {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px; /* Apple-like */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: white;
+            transition: transform 0.2s;
+        }
+
+        .widget:hover {
+            background: rgba(30, 41, 59, 0.8);
+            transform: scale(1.02);
+        }
+
+        /* Classes to implement */
+        .w-large { /* 2x2 */
+            grid-column: span 2;
+            grid-row: span 2;
+            background: linear-gradient(135deg, var(--accent-primary), #3b82f6);
+        }
+
+        .w-wide { /* 2x1 */
+            grid-column: span 2;
+            background: #2dd4bf; 
+            color: #0f172a;
+        }
+
+        .w-tall { /* 1x2 */
+            grid-row: span 2;
+            background: #f472b6;
+            color: #0f172a;
+        }
+        
+        .w-media { /* 2x2 right bottom */
+            grid-column: span 2;
+            grid-row: span 2;
+            background-image: url('https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=2670&auto=format&fit=crop');
+            background-size: cover;
+        }
+
+        /* Default is 1x1 */
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: INSTRUCTIONS -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 13: Bento Dashboard</h1>
+                <p>Masterclass: Apple-style Layout</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა</h2>
+                <p>"Bento Grid" არის პოპულარული დიზაინ ტრენდი (Apple, Microsoft), სადაც ვიჯეტები სხვადასხვა ზომის უჯრებს იკავებენ.</p>
+
+                <h2>ინსტრუქცია</h2>
+                <p>გვაქვს 4x4 ბადე. გამოიყენე <code>span</code> რომ შექმნა მოზაიკა.</p>
+                <ol>
+                    <li>
+                        <strong>.w-large (Weather)</strong>: უნდა იყოს 2x2. <br><code>grid-column: span 2; grid-row: span 2;</code>
+                    </li>
+                    <li>
+                        <strong>.w-wide (Music)</strong>: უნდა იყოს 2x1 სიგანეში. <br><code>grid-column: span 2;</code>
+                    </li>
+                    <li>
+                        <strong>.w-tall (Activity)</strong>: უნდა იყოს 1x2 სიმაღლეში. <br><code>grid-row: span 2;</code>
+                    </li>
+                    <li>
+                        <strong>.w-media (Photo)</strong>: დიდი სურათი მარჯვნივ ქვემოთ 2x2.
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>დიზაინი:</strong> დააკვირდი როგორ ქმნის ზომების ვარიაცია ვიზუალურ რიტმს. ეს Grid-ის გარეშე ძალიან რთული იქნებოდა.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task12.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task14.html" class="nav-btn next">Task 14: Magazine &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: WORKSPACE -->
+        <main class="result-panel">
+            <div class="workspace">
+                <h2 style="color: var(--text-primary); margin-bottom: 20px;">შედეგი (Bento Grid):</h2>
+
+                <div class="bento-grid">
+                    <!-- Row 1 -->
+                    <div class="widget w-large">
+                        <h3>Weather</h3>
+                        <div style="font-size: 3rem;">24°C</div>
+                    </div>
+                    <div class="widget">Time</div>
+                    <div class="widget">Date</div>
+                    
+                    <!-- Row 2 -->
+                    <!-- w-large fills row 1 and 2 of col 1 and 2 -->
+                    <!-- Tall widget -->
+                    <div class="widget w-tall">Activity</div> 
+                    <!-- normal -->
+                    <div class="widget">Notes</div>
+
+                    <!-- Row 3 -->
+                    <div class="widget w-wide">Music Player</div>
+                    <div class="widget w-media"></div>
+
+                    <!-- Row 4 -->
+                    <div class="widget">Settings</div>
+                    <div class="widget">Battery</div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

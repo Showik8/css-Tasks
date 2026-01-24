@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Task 11</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Generic+Mono&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Task 11 Specific Styles */
+        .task11-container {
+            display: grid;
+            gap: 15px;
+            /* Defining names inside brackets [] */
+            /* Student will uncomment or write this */
+            /* 
+            grid-template-columns: [main-start] 1fr [content-start] 2fr [content-end] 1fr [main-end];
+            */
+            grid-template-columns: 1fr 2fr 1fr; /* Default without names */
+        }
+
+        .t11-item {
+            background: #1e293b;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .feature-item {
+            background: var(--accent-primary);
+            color: #0f172a;
+            /* Student will use names here */
+            /* grid-column: content-start / content-end; */
+        }
+
+        .full-item {
+            background: var(--accent-secondary); 
+            /* grid-column: main-start / main-end; */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: INSTRUCTIONS -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 11: Named Lines</h1>
+                <p>მოწინავე: ხაზების სახელები</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა</h2>
+                <p>ნომრების (1, 2, 3) ნაცვლად, Grid საშუალებას გვაძლევს ხაზებს დავარქვათ სახელები <code>[]</code> ფრჩხილებში. ეს კოდს ბევრად უფრო გასაგებს ხდის.</p>
+
+                <h2>ინსტრუქცია</h2>
+                <ol>
+                    <li>
+                        განსაზღვრე სვეტები სახელებით:
+                        <br><code>grid-template-columns: [main-start] 1fr [content-start] 2fr [content-end] 1fr [main-end];</code>
+                    </li>
+                    <li>
+                        ახლა განათავსე <code>.feature-item</code> კონტენტის ზონაში:
+                        <br><code>grid-column: content-start / content-end;</code>
+                    </li>
+                    <li>
+                        განათავსე <code>.full-item</code> მთლიან სიგანეზე:
+                        <br><code>grid-column: main-start / main-end;</code>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>უპირატესობა:</strong> თუ სვეტების რაოდენობა შეიცვლება, სახელები იგივე დარჩება, ხოლო ნომრები აირეოდა.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task10.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task12.html" class="nav-btn next">შემდეგი: Nested Grids &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: WORKSPACE -->
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <h2 style="color: var(--text-primary); margin-bottom: 20px;">შედეგი:</h2>
+
+                <div class="task11-container">
+                    <div class="t11-item">1</div>
+                    <div class="t11-item feature-item">Middle Content</div>
+                    <div class="t11-item">3</div>
+                    <div class="t11-item full-item">Full Width Banner</div>
+                    <div class="t11-item">5</div>
+                    <div class="t11-item">6</div>
+                    <div class="t11-item">7</div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

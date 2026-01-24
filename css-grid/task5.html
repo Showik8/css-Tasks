@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - Task 5</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Generic+Mono&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Task 5 Specific Styles */
+        .task5-container {
+            display: grid;
+            grid-template-columns: 100px 100px;
+            /* Only 2 columns defined! */
+            gap: 10px;
+            border: 1px solid #475569;
+            padding: 10px;
+        }
+
+        .t5-item {
+            background: var(--accent-success);
+            color: #0f172a;
+            padding: 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Differentiating implicit items visually if needed via js, but here logic is enough */
+        .implicit-demo-box {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: INSTRUCTIONS -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>Task 5: Implicit Grid</h1>
+                <p>ავტომატური განლაგება: auto-flow</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა</h2>
+                <p>როცა ელემენტები არ ეტევა განსაზღვრულ ბადეში, Grid ქმნის implicit (ნაგულისხმევ) უჯრებს. ჩვენ შეგვიძლია ვმართოთ ისინი.</p>
+
+                <h2>ინსტრუქცია</h2>
+                <ol>
+                    <li>
+                        გვაქვს განსაზღვრული მხოლოდ 2 სვეტი. მაგრამ გვაქვს 6 ელემენტი. ისინი ავტომატურად ჩამოდიან ქვემოთ (ახალ სტრიქონზე).
+                    </li>
+                    <li>
+                        შეცვალე ნაკადი ისე, რომ ახალი ელემენტები დაემატონ მარჯვნივ (ახალ სვეტებად):
+                        <br><code>grid-auto-flow: column;</code>
+                    </li>
+                    <li>
+                        განუსაზღვრე ამ ავტომატურ სვეტებს ზომა:
+                        <br><code>grid-auto-columns: 100px;</code>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>შენიშვნა:</strong> 
+                    Grid ავტომატურად ზრდის ზომას (rows) ჩვენ კი ვუთხარით რომ ზომა გაზარდოს სიგანეში (columns).
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task4.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task6.html" class="nav-btn next">შემდეგი: Grid Functions &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: WORKSPACE -->
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <h2 style="color: var(--text-primary); margin-bottom: 20px;">შედეგი:</h2>
+
+                <div class="implicit-demo-box">
+                    <div class="task5-container">
+                        <div class="t5-item">1</div>
+                        <div class="t5-item">2</div>
+                        <div class="t5-item">3</div>
+                        <div class="t5-item">4</div>
+                        <div class="t5-item">5</div>
+                        <div class="t5-item">6</div>
+                    </div>
+                </div>
+                <p style="color: grey; font-size: 0.8rem;">(სცადე გაწერა: <code>grid-auto-flow: column;</code>)</p>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
