@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Task 22</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 22</h1>
+                <p>Infinite Marquee (Seamless Loop)</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>უსასრულო სქროლინგი (Marquee) ძალიან პოპულარულია თანამედროვე ვებში, განსაკუთრებით ლოგოების ან ტექსტის სადემონსტრაციოდ.</p>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        ჩვენ გვაქვს ორი იდენტური სია (<code>.marquee-content</code>). ეს საჭიროა, რომ როცა ერთი გავა ეკრანიდან, მეორე მომენტალურად ჩაენაცვლოს.
+                    </li>
+                    <li>
+                        იპოვე <code>@keyframes scroll</code> ანიმაცია.
+                    </li>
+                    <li>
+                        შენი მიზანია გააკეთო ისე, რომ კონტენტი მარცხნივ მოძრაობდეს <code>translateX(-100%)</code>-მდე.
+                    </li>
+                    <li>
+                        მიანიჭე <code>linear</code> თაიმინგი, რომ მოძრაობა თანაბარი იყოს და არ "გაჩერდეს".
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task21.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task23.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="marquee-container">
+                     <div class="marquee-content">
+                         <span>HTML</span>
+                         <span>CSS</span>
+                         <span>JavaScript</span>
+                         <span>React</span>
+                         <span>Node.js</span>
+                         <span>Python</span>
+                     </div>
+                     <!-- Duplicate used for seamless loop -->
+                     <div class="marquee-content">
+                         <span>HTML</span>
+                         <span>CSS</span>
+                         <span>JavaScript</span>
+                         <span>React</span>
+                         <span>Node.js</span>
+                         <span>Python</span>
+                     </div>
+                 </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

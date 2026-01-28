@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Task 23</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 23</h1>
+                <p>Glitch Effect (Cyberpunk)</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>"Glitch" ეფექტი ძალიან პოპულარულია და ის იყენებს <code>text-shadow</code>-სა და <code>clip-path</code>-ს ანიმაციას.</p>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გვაქვს ტექსტი <code>data-text="CYBERPUNK"</code> ატრიბუტით. ეს ატრიბუტი გვჭირდება CSS-ში შინაარსის დუბლირებისთვის (pseudo-elements).
+                    </li>
+                    <li>
+                        იპოვე <code>.glitch</code> კლასი.
+                    </li>
+                    <li>
+                        შენი მიზანია დაამატო "ნახტომები" ტექსტს <code>clip-path</code>-ით.
+                    </li>
+                    <li>
+                        გამოიყენე <code>steps()</code> თაიმინგი, რომ მოძრაობა იყოს მკვეთრი და არა გლუვი, როგორც ნამდვილი glitch.
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task22.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task24.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace" style="background: #0f172a;">
+                 <h1 class="glitch" data-text="CYBERPUNK">CYBERPUNK</h1>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

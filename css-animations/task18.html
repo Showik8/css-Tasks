@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Task 18</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 18</h1>
+                <p>Premium Loaders (Spinner)</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>ანიმაციები აუცილებელია ჩატვირთვის ინდიკატორებისთვის. შევქმნათ two popular style loaders.</p>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        <strong>Material Spinner:</strong> უბრალო წრე, რომელიც ტრიალებს.
+                    </li>
+                    <li>
+                        <strong>iOS Spinner:</strong> 8 ხაზი, რომელიც ნელ-ნელა ქრება (fade).
+                    </li>
+                    <li>
+                        იპოვე <code>@keyframes spin</code> (მატერიალისთვის) და <code>@keyframes spinner-fade</code> (iOS-ისთვის).
+                    </li>
+                    <li>
+                        ორივე უკვე გაწერილია, უბრალოდ დააკვირდი კოდს <code>style.css</code>-ში. განსაკუთრებით <code>animation-delay</code> გამოყენებას iOS spinner-ში.
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task17.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task19.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="loader-container">
+                     <!-- Material -->
+                     <div class="spinner-material"></div>
+                     
+                     <!-- iOS -->
+                     <div class="spinner-ios">
+                        <div></div><div></div><div></div><div></div>
+                        <div></div><div></div><div></div><div></div>
+                     </div>
+                 </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

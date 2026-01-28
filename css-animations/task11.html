@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Task 11</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 11</h1>
+                <p>@keyframes (percentages)</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>რთული ანიმაციებისთვის, მხოლოდ <code>from</code> და <code>to</code> არ არის საკმარისი. შეგვიძლია გამოვიყენოთ პროცენტები: <code>0%</code>, <code>25%</code>, <code>50%</code>, <code>100%</code> და ა.შ.</p>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გვინდა ყუთმა შემოუაროს პერიმეტრს და ფერები იცვალოს.
+                    </li>
+                    <li>
+                        შექმენი <code>@keyframes around</code> შემდეგი კადრებით:
+                        <ul>
+                            <li>0%: მარცხენა-ზედა კუთხე, წითელი</li>
+                            <li>25%: მარჯვენა-ზედა კუთხე, ყვითელი</li>
+                            <li>50%: მარჯვენა-ქვედა კუთხე, მწვანე</li>
+                            <li>75%: მარცხენა-ქვედა კუთხე, ლურჯი</li>
+                            <li>100%: უკან დაბრუნება (იგივე რაც 0%)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        მიანიჭე <code>.moving-box</code>-ს: 
+                        <br>
+                        <code>animation: around 4s linear infinite;</code>
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task10.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task12.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="box-container">
+                     <div class="moving-box">BOX</div>
+                 </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

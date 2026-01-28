@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Task 5</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 5</h1>
+                <p>animation-delay</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p><code>animation-delay</code> განსაზღვრავს რამდენი ხანი უნდა დაიცადოს ელემენტმა ანიმაციის დაწყებამდე.</p>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        ამ ფაილში (ან style.css-ში) იპოვე <code>.card</code> კლასი.
+                    </li>
+                    <li>
+                        მიანიჭე ყველა ბარათს: 
+                        <br>
+                        <code>animation: popUp 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;</code>
+                    </li>
+                    <li>
+                        ახლა გამოიყენე <code>:nth-child()</code> სელექტორები რომ მისცე სხვადასხვა დაყოვნება:
+                        <br>
+                        1-ლი ბარათი: <code>animation-delay: 0.1s;</code>
+                        <br>
+                        მე-2 ბარათი: <code>animation-delay: 0.2s;</code>
+                        <br>
+                        მე-3 ბარათი: <code>animation-delay: 0.3s;</code>
+                    </li>
+                    <li>
+                        ამ ეფექტს "Staggering" (დაქანცული, არათანაბარი გამოჩენა) ეწოდება და ძალიან პოპულარულია.
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task4.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task6.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="task5-container">
+                     <div class="card" style="animation-delay: 0.1s">1</div>
+                     <div class="card" style="animation-delay: 0.2s">2</div>
+                     <div class="card" style="animation-delay: 0.3s">3</div>
+                     <div class="card" style="animation-delay: 0.4s">4</div>
+                 </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

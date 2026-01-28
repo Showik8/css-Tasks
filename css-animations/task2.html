@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Task 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 2</h1>
+                <p>animation-name & @keyframes</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p><code>animation-name</code> განსაზღვრავს რომელი @keyframes ანიმაცია უნდა შესრულდეს. @keyframes აღწერს რა უნდა მოხდეს ანიმაციის დროს.</p>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გახსენი <code>style.css</code> და იპოვე <code>@keyframes slideRight</code>.
+                    </li>
+                    <li>
+                        განსაზღვრე ანიმაცია:
+                        <br>
+                        <code>0% { transform: translateX(0); }</code>
+                        <br>
+                        <code>100% { transform: translateX(400px); }</code>
+                    </li>
+                    <li>
+                        შემდეგ იპოვე კლასი <code>.task2-box</code> და მიანიჭე:
+                        <br>
+                        <code>animation-name: slideRight;</code>
+                        <br>
+                        <code>animation-duration: 3s;</code>
+                        <br>
+                        <code>animation-fill-mode: forwards;</code>
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task1.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task3.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                <div class="task2-track">
+                    <div class="task2-box"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

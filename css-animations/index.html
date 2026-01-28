@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations Mastery - Cheat Sheet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .cheatsheet-section {
+            margin-bottom: 40px;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .cheatsheet-title {
+            font-size: 1.2rem;
+            color: #1e293b;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f1f5f9;
+        }
+        .property-group {
+            margin-bottom: 20px;
+        }
+        .property-name {
+            font-family: 'Monaco', monospace;
+            color: #6366f1;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .property-desc {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        pre {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid #e2e8f0;
+        }
+        pre code {
+            font-family: 'Monaco', monospace;
+            color: #334155;
+            background: none;
+            padding: 0;
+            border: none;
+        }
+        .demo-box {
+            margin-top: 15px;
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* Mini Demos */
+        .demo-item {
+            width: 40px;
+            height: 40px;
+            background: #6366f1;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: NAVIGATION -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>CSS Animations</h1>
+                <p>სრული გზამკვლევი (Cheat Sheet)</p>
+            </header>
+
+            <div class="content">
+                <p>მოგესალმებით CSS Animations-ის შემსწავლელ კურსში.</p>
+                <p>აქ ვისწავლით როგორ გავაცოცხლოთ ვებ-გვერდები ანიმაციების დახმარებით.</p>
+                
+                <h2>სარჩევი:</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;"><a href="#shorthand" style="text-decoration: none; color: #6366f1;">• Shorthand Property</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#keyframes" style="text-decoration: none; color: #6366f1;">• @keyframes</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#properties" style="text-decoration: none; color: #6366f1;">• Animation Properties</a></li>
+                </ul>
+
+                <div class="tip">
+                    <strong>რჩევა:</strong> გამოიყენე ეს გვერდი როგორც "შპარგალკა" დავალებების შესრულებისას.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <span class="placeholder"></span>
+                    <a href="task1.html" class="nav-btn next">დაწყება: Task 1 &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: CHEAT SHEET CONTENT -->
+        <main class="result-panel" style="display: block; overflow-y: auto;">
+            <div class="workspace" style="display: block; max-width: 900px; margin: 0 auto;">
+                
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <h1 style="font-size: 2.5rem; background: linear-gradient(to right, #6366f1, #ec4899); background-clip: text; -webkit-background-clip: text; color: transparent; margin-bottom: 10px;">CSS ANIMATIONS</h1>
+                    <p style="color: #64748b;">Visual Cheat Sheet</p>
+                </div>
+
+                <!-- SECTION 1: SHORTHAND -->
+                <section id="shorthand" class="cheatsheet-section">
+                    <h2 class="cheatsheet-title">Animation Shorthand</h2>
+                    <p class="property-desc">ყველა პარამეტრის ერთ ხაზში ჩაწერის წესი:</p>
+                    <pre><code>animation: [name] [duration] [timing-function] [delay] [iteration-count] [direction] [fill-mode] [play-state];
+
+/* მაგალითი: */
+animation: bounce 2s ease-in-out 0.5s infinite alternate forwards running;</code></pre>
+                </section>
+
+                <!-- SECTION 2: KEYFRAMES -->
+                <section id="keyframes" class="cheatsheet-section">
+                    <h2 class="cheatsheet-title">@keyframes</h2>
+                    <p class="property-desc">განსაზღვრავს ანიმაციის კადრებს.</p>
+                    
+                    <div class="property-group">
+                        <span class="property-name">From / To</span>
+                        <pre><code>@keyframes slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(100px); }
+}</code></pre>
+                    </div>
+
+                    <div class="property-group">
+                        <span class="property-name">Percentages (პროცენტები)</span>
+                        <pre><code>@keyframes colorChange {
+  0% { background: red; }
+  50% { background: yellow; }
+  100% { background: red; }
+}</code></pre>
+                    </div>
+                </section>
+
+                <!-- SECTION 3: PROPERTIES -->
+                <section id="properties" class="cheatsheet-section">
+                    <h2 class="cheatsheet-title">Properties Detail</h2>
+
+                    <div class="property-group">
+                        <span class="property-name">animation-duration</span>
+                        <p class="property-desc">რამდენ ხანს გრძელდება 1 ციკლი (s ან ms).</p>
+                        <pre><code>animation-duration: 2s;      /* 2 წამი */
+animation-duration: 500ms;   /* 0.5 წამი */</code></pre>
+                    </div>
+
+                    <div class="property-group">
+                        <span class="property-name">animation-timing-function</span>
+                        <p class="property-desc">სიჩქარის განაწილება დროში.</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <code>ease</code> (default)
+                            <code>linear</code> (თანაბარი)
+                            <code>ease-in</code> (აჩქარება)
+                            <code>ease-out</code> (შენელება)
+                            <code>steps(n)</code> (ბიჯები)
+                            <code>cubic-bezier(n,n,n,n)</code>
+                        </div>
+                    </div>
+
+                    <div class="property-group">
+                        <span class="property-name">animation-delay</span>
+                        <p class="property-desc">დაყოვნება დაწყებამდე.</p>
+                        <pre><code>animation-delay: 1s; /* დაიწყება 1 წამის შემდეგ */</code></pre>
+                    </div>
+
+                    <div class="property-group">
+                        <span class="property-name">animation-iteration-count</span>
+                        <p class="property-desc">რამდენჯერ განმეორდეს.</p>
+                        <pre><code>animation-iteration-count: 3;        /* 3-ჯერ */
+animation-iteration-count: infinite; /* უსასრულოდ */</code></pre>
+                    </div>
+
+                    <div class="property-group">
+                        <span class="property-name">animation-direction</span>
+                        <p class="property-desc">ანიმაციის მიმართულება.</p>
+                        <pre><code>animation-direction: normal;            /* წინ */
+animation-direction: reverse;           /* უკან */
+animation-direction: alternate;         /* წინ -> უკან */
+animation-direction: alternate-reverse; /* უკან -> წინ */</code></pre>
+                    </div>
+
+                    <div class="property-group">
+                        <span class="property-name">animation-fill-mode</span>
+                        <p class="property-desc">სტილები დაწყებამდე/დასრულების შემდეგ.</p>
+                        <pre><code>animation-fill-mode: forwards;  /* ინარჩუნებს ბოლო კადრს */
+animation-fill-mode: backwards; /* იღებს პირველ კადრს delay-ს დროს */
+animation-fill-mode: both;      /* ორივე */</code></pre>
+                    </div>
+                </section>
+
+                <div style="text-align: center; margin-top: 50px; padding: 40px;">
+                    <h3 style="color: #334155; margin-bottom: 20px;">მზად ხარ პრაქტიკისთვის?</h3>
+                    <a href="task1.html" class="nav-btn next" style="background: linear-gradient(135deg, #6366f1, #a855f7); font-size: 1.1rem; padding: 15px 30px;">დაწყება (Task 1) &rarr;</a>
+                    <br><br>
+                    <a href="task21.html" class="nav-btn" style="background: white; color: #6366f1; border: 2px solid #6366f1; font-size: 1rem; padding: 10px 20px;">ახალი: ამოცანები 21-25 &rarr;</a>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

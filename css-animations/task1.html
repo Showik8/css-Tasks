@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Task 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 1</h1>
+                <p>შესავალი: animation shorthand</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p><code>animation</code> არის shorthand property, რომელიც აერთიანებს ყველა ანიმაციის პარამეტრს ერთ ხაზში. ყველაზე ხშირად ვიყენებთ ასე: <code>animation: [name] [duration] [timing-function] [delay] [iteration-count] [direction] [fill-mode] [play-state]</code>.</p>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გახსენი <code>style.css</code> და იპოვე კლასი <code>.task1-container</code>.
+                    </li>
+                    <li>
+                        ამჟამად ელემენტი უხილავია (<code>opacity: 0</code>).
+                    </li>
+                    <li>
+                        დაამატე შემდეგი კოდი:
+                        <br>
+                        <code>animation: fadeIn 2s forwards;</code>
+                    </li>
+                    <li>
+                        <code>fadeIn</code> არის ანიმაციის სახელი (რომელიც უკვე შექმნილია @keyframes-ით), <code>2s</code> არის ხანგრძლივობა, ხოლო <code>forwards</code> ნიშნავს რომ დასრულებისას დარჩეს ბოლო კადრზე.
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>შენიშვნა:</strong> <code>forwards</code> ძალიან მნიშვნელოვანია, როცა გვინდა რომ ანიმაციის შედეგი შენარჩუნდეს.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="index.html" class="nav-btn prev">&larr; მთავარი</a>
+                    <a href="task2.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                <div class="task1-container">
+                    გამარჯობა! 👋
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

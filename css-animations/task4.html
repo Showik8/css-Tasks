@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Task 4</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 4</h1>
+                <p>animation-timing-function</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p><code>animation-timing-function</code> განსაზღვრავს ანიმაციის სიჩქარის განაწილებას დროში.</p>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გახსენი <code>style.css</code> და იპოვე <code>.racer</code>.
+                    </li>
+                    <li>
+                        ორივე მრბოლელს მიანიჭე <code>animation-name: race;</code> და <code>animation-duration: 4s;</code> <code>animation-fill-mode: forwards;</code>.
+                    </li>
+                    <li>
+                        პირველ მრბოლელს (<code>.racer.ease</code>) დაუმატე:
+                        <br>
+                        <code>animation-timing-function: ease;</code> (ნაგულისხმევი - ნელა იწყებს, შუაში ჩქარდება, ნელა ამთავრებს).
+                    </li>
+                    <li>
+                        მეორე მრბოლელს (<code>.racer.linear</code>) დაუმატე:
+                        <br>
+                        <code>animation-timing-function: linear;</code> (თანაბარი სიჩქარე სულ).
+                    </li>
+                    <li>
+                        დააკვირდი ფინიშთან განსხვავებას.
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task3.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task5.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="task4-race-track">
+                     <div class="racer ease">Ease</div>
+                     <div class="racer linear">Linear</div>
+                 </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

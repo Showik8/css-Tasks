@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Task 15</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 15</h1>
+                <p>steps() timing function</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p><code>steps(n)</code> არის timing function, რომელიც ანიმაციას ყოფს n რაოდენობის ნაბიჯად, ნაცვლად გლუვი გადასვლისა. იდეალურია "საბეჭდი მანქანის" ეფექტისთვის.</p>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გვინდა ტექსტი "Hello World, I am CSS!" დაიბეჭდოს ასო-ასო.
+                    </li>
+                    <li>
+                        ტექსტი არის 22 სიმბოლო.
+                    </li>
+                    <li>
+                        იპოვე <code>.typing-container</code> და დაამატე:
+                        <br>
+                        <code>animation: typing 3s steps(22), blinkCursor 0.5s step-end infinite;</code>
+                    </li>
+                    <li>
+                        <code>steps(22)</code> ყოფს 3 წამს 22 თანაბარ ნაბიჯად, რაც ქმნის ბეჭდვის ეფექტს.
+                    </li>
+                    <li>
+                        <code>step-end</code> კურსორისთვის ნიშნავს, რომ უცებ გაქრეს და გამოჩნდეს (გლუვი გაქრობის გარეშე).
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task14.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task16.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="typing-container">Hello World, I am CSS!</div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

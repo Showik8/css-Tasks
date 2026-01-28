@@ -1,0 +1,1361 @@
+/* BASE STYLES & LAYOUT */
+:root {
+    --primary-color: #4F46E5;
+    --primary-hover: #4338CA;
+    --accent-color: #EC4899;
+    --bg-color: #F8FAFC;
+    --text-primary: #1E293B;
+    --text-secondary: #64748B;
+    --sidebar-width: 420px;
+    --sidebar-bg: rgba(255, 255, 255, 0.9);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.4);
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.08); /* Darker shadow */
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-primary);
+    background-color: #F1F5F9;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.layout-container {
+    display: flex;
+    height: 100%;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.1) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.1) 0px, transparent 50%);
+}
+
+/* SIDEBAR - INSTRUCTIONS */
+.instructions-panel {
+    width: var(--sidebar-width);
+    background: var(--sidebar-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(226, 232, 240, 0.8);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: 10;
+    box-shadow: 10px 0 40px rgba(0,0,0,0.03);
+}
+
+.header {
+    padding: 2.5rem 2rem;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+    background: rgba(255,255,255,0.5);
+}
+
+.header h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+}
+
+.header p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.content {
+    flex: 1;
+    padding: 2.5rem 2rem;
+    overflow-y: auto;
+}
+
+.content h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: 2.5rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.content h2::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 16px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+.content h2:first-child {
+    margin-top: 0;
+}
+
+.content p {
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    color: #475569;
+    font-size: 1rem;
+}
+
+.content ol {
+    margin-left: 0;
+    margin-bottom: 2rem;
+    list-style: none;
+    counter-reset: tasks;
+}
+
+.content li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #475569;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.content li::before {
+    counter-increment: tasks;
+    content: counter(tasks);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background: #E0E7FF;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+code {
+    background: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.85em;
+    color: var(--primary-color);
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.tip {
+    background: linear-gradient(to right, #EFF6FF, #F5F3FF);
+    border: 1px solid #C7D2FE;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 2.5rem;
+    font-size: 0.95rem;
+    color: #3730A3;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.tip::before {
+    content: '💡';
+    font-size: 1.2rem;
+}
+
+/* FOOTER NAV */
+.footer {
+    padding: 1.5rem 2rem;
+    border-top: 1px solid rgba(226, 232, 240, 0.6);
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-btn {
+    text-decoration: none;
+    padding: 0.85rem 1.5rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-btn.prev {
+    color: var(--text-secondary);
+    background: transparent;
+}
+
+.nav-btn.prev:hover {
+    background: #F1F5F9;
+    color: var(--text-primary);
+}
+
+.nav-btn.next {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.nav-btn.next:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
+}
+
+/* MAIN - RESULT PANEL */
+.result-panel {
+    flex: 1;
+    background-color: #f8fafc;
+    background-image: 
+        radial-gradient(#e2e8f0 1px, transparent 1px),
+        radial-gradient(#e2e8f0 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.workspace {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* --- TASKS STYLES --- */
+
+/* Task 1: Fade In */
+.task1-container {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+    opacity: 0; 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Task 2: Slide In */
+.task2-track {
+    width: 100%;
+    max-width: 600px;
+    height: 100px;
+    border-bottom: 2px dashed #cbd5e1;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.task2-box {
+    width: 80px;
+    height: 80px;
+    background: #ec4899;
+    border-radius: 12px;
+}
+
+/* 
+@keyframes slideRight {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(400px); }
+}
+*/
+
+/* Task 3: Traffic Light */
+/* Task 3: Status Indicator (was Traffic Light) */
+.server-status-card {
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 280px;
+}
+
+.status-light {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #22c55e;
+    position: relative;
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+}
+
+.status-light::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: inherit;
+    animation: pulseStatus 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    z-index: -1;
+}
+
+.status-info h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+    color: var(--text-primary);
+}
+
+.status-info p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+@keyframes pulseStatus {
+    0% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(3); }
+}
+
+/* Task 4: Race */
+.task4-race-track {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.racer {
+    width: 50px;
+    height: 50px;
+    background: #3b82f6;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+    left: 0;
+    animation-name: race;    
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+.racer.ease { background: #8b5cf6; }
+.racer.linear { background: #10b981; }
+
+@keyframes race {
+    to { left: calc(100% - 50px); }
+}
+
+/* Task 5: Delay */
+.task5-container {
+    display: flex;
+    gap: 20px;
+}
+.card {
+    width: 100px; 
+    height: 140px; 
+    background: white; 
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    opacity: 0;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    font-size: 2rem;
+}
+
+@keyframes popUp {
+    0% { opacity: 0; transform: translateY(50px) scale(0.8); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Task 6: Iteration */
+/* Task 6: Radar Scan (was Orbit) */
+.radar-container {
+    width: 200px;
+    height: 200px;
+    background: #111827;
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid #374151;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+}
+
+.radar-grid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(transparent 30%, #374151 30%, #374151 31%, transparent 31%),
+        radial-gradient(transparent 60%, #374151 60%, #374151 61%, transparent 61%),
+        linear-gradient(90deg, transparent 49.5%, #374151 49.5%, #374151 50.5%, transparent 50.5%),
+        linear-gradient(0deg, transparent 49.5%, #374151 49.5%, #374151 50.5%, transparent 50.5%);
+}
+
+.radar-sweep {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: conic-gradient(from 0deg, transparent 0deg, rgba(34, 197, 94, 0.5) 360deg);
+    border-radius: 100% 0 0 0; /* Sector */
+    transform-origin: top left;
+    animation: radarSpin 2s linear infinite;
+}
+
+/* Simulated blip */
+.radar-blip {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #4ade80;
+    border-radius: 50%;
+    top: 30%;
+    left: 60%;
+    box-shadow: 0 0 8px #4ade80;
+    animation: blipFade 2s linear infinite;
+}
+
+@keyframes radarSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes blipFade {
+    0%, 50% { opacity: 0; }
+    55% { opacity: 1; transform: scale(1.5); }
+    60% { transform: scale(1); }
+    100% { opacity: 0; }
+}
+
+/* Task 7: Pendulum */
+/* Task 7: Notification Bell (was Pendulum) */
+.notification-container {
+    padding: 30px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    position: relative;
+}
+
+.bell-icon {
+    font-size: 2.5rem;
+    color: var(--text-secondary);
+    display: inline-block;
+    transform-origin: top center;
+    /* User will apply animation here */
+    /* animation: swing 1s ease-in-out infinite alternate; */
+}
+
+.notification-badge {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 12px;
+    height: 12px;
+    background: #ef4444;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.notification-container:hover .bell-icon {
+    animation: swing 0.5s ease-in-out infinite alternate;
+    color: var(--primary-color);
+}
+
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(15deg); }
+    40% { transform: rotate(-10deg); }
+    60% { transform: rotate(5deg); }
+    80% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Task 8: Fill Mode */
+/* Task 8: Morphing Success Button (was Fill Mode) */
+.success-btn {
+    background: #4F46E5;
+    color: white;
+    border: none;
+    width: 140px;
+    height: 48px;
+    border-radius: 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.success-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px -1px rgba(79, 70, 229, 0.3);
+}
+
+.btn-text {
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.btn-icon {
+    position: absolute;
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+/* User will apply animation-fill-mode here */
+@keyframes buttonComplete {
+    0% { width: 140px; background: #4F46E5; }
+    40% { width: 48px; background: #4F46E5; transform: scale(0.9); }
+    100% { width: 48px; background: #22c55e; transform: scale(1.1); box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2); }
+}
+
+@keyframes showCheck {
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Task 9: Play State */
+/* Task 9: Music Visualizer (was Play State) */
+.music-player {
+    background: #111827;
+    padding: 20px 30px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.play-icon {
+    width: 40px;
+    height: 40px;
+    background: #374151;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9CA3AF;
+}
+
+.equalizer {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    height: 40px;
+}
+.bar {
+    width: 6px;
+    height: 10px;
+    background: linear-gradient(to top, #818cf8, #c084fc);
+    border-radius: 3px;
+    animation: bounce 0.6s ease-in-out infinite alternate;
+}
+.bar:nth-child(2) { animation-duration: 0.7s; height: 15px; }
+.bar:nth-child(3) { animation-duration: 0.5s; height: 25px; }
+.bar:nth-child(4) { animation-duration: 0.8s; height: 12px; }
+.bar:nth-child(5) { animation-duration: 0.6s; height: 20px; }
+
+@keyframes bounce {
+    to { height: 40px; filter: brightness(1.2); }
+}
+
+/* Task 10: Growing Plant */
+.pot-container {
+    position: relative;
+    width: 100px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.pot {
+    width: 60px;
+    height: 50px;
+    background: #d97706;
+    border-radius: 4px 4px 10px 10px;
+    z-index: 2;
+}
+.plant {
+    width: 10px;
+    height: 0px; 
+    background: #22c55e;
+    position: absolute;
+    bottom: 50px; 
+    z-index: 1;
+    transform-origin: bottom center;
+}
+.leaf {
+    width: 30px;
+    height: 30px;
+    background: #22c55e;
+    border-radius: 50% 0 50% 0;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+.leaf.left { left: -20px; transform: rotate(-45deg); }
+.leaf.right { right: -20px; transform: rotate(135deg); bottom: 10px; top: auto; }
+@keyframes grow {
+    from { height: 0; }
+    to { height: 100px; }
+}
+@keyframes showLeaf {
+    from { opacity: 0; transform: scale(0); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Task 11: Percentages */
+.box-container {
+    width: 300px;
+    height: 300px;
+    border: 2px dashed #cbd5e1;
+    position: relative;
+}
+.moving-box {
+    width: 50px;
+    height: 50px;
+    background: #ef4444;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+/* Task 12: Rocket */
+/* Task 12: Flight Button (was Rocket) */
+.flight-btn {
+    background: #3B82F6;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    transition: transform 0.2s;
+    position: relative;
+    width: 180px;
+    /* overflow: hidden; Removed to let plane fly out */
+}
+
+.flight-btn:hover {
+    transform: translateY(-2px);
+}
+
+.plane-icon {
+    font-size: 1.4rem;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* User will add animation to .plane-icon or .flight-btn */
+.flight-btn:active .plane-icon {
+    /* animation: flyAway 0.8s ease-in forwards; */
+}
+
+@keyframes flyAway {
+    0% { transform: translate(0, 0) rotate(0); }
+    100% { transform: translate(200px, -100px) rotate(45deg); opacity: 0; }
+}
+
+/* Task 13: Pulse */
+.heart-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heart {
+    font-size: 5rem;
+    color: #ef4444;
+    z-index: 2;
+}
+.pulse-ring {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(239, 68, 68, 0.4);
+    z-index: 1;
+}
+
+/* Task 14: Day Night */
+/* Task 14: Dark Mode Switch (was Day Night) */
+.switch-container {
+    width: 200px; 
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white; /* Will change */
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    animation: bgChange 5s infinite alternate;
+}
+
+.toggle-track {
+    width: 60px;
+    height: 30px;
+    background: #E2E8F0;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.toggle-thumb {
+    width: 26px;
+    height: 26px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    /* Animation usage */
+    animation: toggleMove 5s infinite alternate;
+}
+
+@keyframes bgChange {
+    0%, 45% { background: white; }
+    55%, 100% { background: #1E293B; } /* Dark mode */
+}
+
+@keyframes toggleMove {
+    0%, 45% { transform: translateX(0); background: white; }
+    55%, 100% { transform: translateX(30px); background: #3B82F6; }
+}
+
+/* Task 15: Typing */
+.typing-container {
+    font-family: 'Monaco', monospace;
+    font-size: 1.5rem;
+    color: #334155;
+    width: 22ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #334155;
+    width: 0;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 22ch; }
+}
+@keyframes blinkCursor {
+    50% { border-color: transparent; }
+}
+
+/* Task 16: Bouncing Ball */
+.floor {
+    width: 100%;
+    height: 300px;
+    border-bottom: 4px solid #334155;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 0;
+    position: relative;
+}
+.bouncing-ball {
+    width: 50px;
+    height: 50px;
+    background: #ec4899;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+}
+@keyframes bounceBall {
+    0% { bottom: 250px; animation-timing-function: ease-in; }
+    50% { bottom: 0; animation-timing-function: ease-out; }
+    100% { bottom: 250px; animation-timing-function: ease-in; }
+}
+
+/* Task 17: Shake */
+/* Task 17: Modern Floating Form (was Shake) */
+.login-form {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 320px;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px 16px 16px 16px;
+    border: 2px solid #E2E8F0;
+    border-radius: 12px;
+    outline: none;
+    font-size: 1rem;
+    background: #F8FAFC;
+    transition: all 0.2s;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-color);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+.input-group input:invalid {
+    /* border-color: #EF4444; */
+}
+
+.submit-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.submit-btn:hover {
+    background: var(--primary-hover);
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+    20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+
+/* User applies this on error class or hover for demo */
+.login-form:hover {
+    animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+    border-color: #EF4444;
+}
+
+/* Task 18: Spinner */
+/* Task 18: Premium Spinner (was Spinner) */
+.loader-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+/* iOS Style Spinner */
+.spinner-ios {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    /* animation: spin 1s steps(8) infinite; */
+}
+
+.spinner-ios div {
+    transform-origin: 20px 20px;
+    animation: spinner-fade 0.8s linear infinite;
+}
+
+.spinner-ios div::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 18px;
+    width: 4px;
+    height: 10px;
+    border-radius: 20%;
+    background: #475569;
+}
+
+.spinner-ios div:nth-child(1) { transform: rotate(0deg); animation-delay: -0.7s; }
+.spinner-ios div:nth-child(2) { transform: rotate(45deg); animation-delay: -0.6s; }
+.spinner-ios div:nth-child(3) { transform: rotate(90deg); animation-delay: -0.5s; }
+.spinner-ios div:nth-child(4) { transform: rotate(135deg); animation-delay: -0.4s; }
+.spinner-ios div:nth-child(5) { transform: rotate(180deg); animation-delay: -0.3s; }
+.spinner-ios div:nth-child(6) { transform: rotate(225deg); animation-delay: -0.2s; }
+.spinner-ios div:nth-child(7) { transform: rotate(270deg); animation-delay: -0.1s; }
+.spinner-ios div:nth-child(8) { transform: rotate(315deg); animation-delay: 0s; }
+
+@keyframes spinner-fade {
+    0% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+
+/* Material Style Spinner */
+.spinner-material {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid #E2E8F0;
+    border-top-color: var(--primary-color);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Task 19: Flip */
+.flip-card-container {
+    perspective: 1000px;
+    width: 200px;
+    height: 280px;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-card-container:hover .flip-card-inner {
+    /* TODO: Add transform rotateY(180deg) here */
+    /* transform: rotateY(180deg); */
+}
+/* Task 19: Premium Credit Card Flip (was Flip) */
+.flip-card-container {
+    perspective: 1000px;
+    width: 320px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 16px;
+}
+
+/* User adds hover effect */
+.flip-card-container:hover .flip-card-inner {
+    /* TODO: Add transform rotateY(180deg) here */
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: white;
+    text-align: left;
+}
+
+.flip-card-front {
+    /* Front styling */
+}
+
+.card-chip {
+    width: 40px;
+    height: 30px;
+    background: linear-gradient(135deg, #fbbf24, #d97706);
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.card-number {
+    font-family: 'Monaco', monospace;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.card-holder {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, #334155, #1e293b);
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.strip {
+    width: 100%;
+    height: 40px;
+    background: black;
+    margin-top: 20px;
+}
+
+.cvv-box {
+    background: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-family: 'Monaco', monospace;
+    margin-top: 10px;
+}
+
+/* Task 20: Composition */
+/* Task 20: Hero Section (was Composition) */
+.hero-scene {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    background: linear-gradient(to right, #ffffff, #f1f5f9);
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-text {
+    z-index: 2;
+    animation: slideUpFade 1s ease-out forwards;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1E293B;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.hero-text p {
+    color: #64748B;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.cta-button {
+    background: #4F46E5;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+}
+
+.floating-shapes {
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.6;
+    animation: floatShape 6s infinite alternate;
+}
+
+.shape-1 { width: 200px; height: 200px; background: #818CF8; top: 0; right: 0; }
+.shape-2 { width: 150px; height: 150px; background: #EC4899; bottom: 0; left: 0; animation-delay: -3s; }
+
+@keyframes slideUpFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatShape {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-20px, 20px); }
+}
+
+/* Task 21: Liquid Morph */
+.liquid-blob {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(45deg, #4f46e5, #0ea5e9);
+    animation: morph 8s ease-in-out infinite;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transition: all 1s ease-in-out;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        background: linear-gradient(45deg, #4f46e5, #0ea5e9);
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        background: linear-gradient(45deg, #ec4899, #8b5cf6);
+    }
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        background: linear-gradient(45deg, #4f46e5, #0ea5e9);
+    }
+}
+
+/* Task 22: Infinite Marquee */
+.marquee-container {
+    width: 400px;
+    overflow: hidden;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    white-space: nowrap;
+    position: relative;
+    box-shadow: var(--shadow-md);
+    padding: 20px 0;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 40px;
+    animation: scroll 10s linear infinite;
+    padding-right: 40px; /* Space between end and start of next loop */
+}
+
+.marquee-content span {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    text-transform: uppercase;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+/* Task 23: Glitch Effect */
+.glitch {
+    font-size: 5rem;
+    font-weight: 900;
+    color: white;
+    position: relative;
+    letter-spacing: 0.1em;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 #ff00c1;
+    clip-path: inset(44% 0 61% 0);
+    animation: glitch-anim-1 2.5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 #00fff9;
+    clip-path: inset(50% 0 30% 0);
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+    0% { clip-path: inset(20% 0 80% 0); }
+    20% { clip-path: inset(60% 0 10% 0); }
+    40% { clip-path: inset(40% 0 50% 0); }
+    60% { clip-path: inset(80% 0 5% 0); }
+    80% { clip-path: inset(10% 0 70% 0); }
+    100% { clip-path: inset(30% 0 20% 0); }
+}
+
+@keyframes glitch-anim-2 {
+    0% { clip-path: inset(10% 0 60% 0); }
+    20% { clip-path: inset(80% 0 5% 0); }
+    40% { clip-path: inset(30% 0 20% 0); }
+    60% { clip-path: inset(10% 0 80% 0); }
+    80% { clip-path: inset(40% 0 40% 0); }
+    100% { clip-path: inset(50% 0 30% 0); }
+}
+
+/* Task 24: Accordion Reveal */
+.accordion-item {
+    width: 350px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.accordion-header {
+    padding: 20px;
+    background: white;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
+}
+
+.accordion-item:hover .accordion-header {
+    background: #F8FAFC;
+    color: var(--primary-color);
+}
+
+.accordion-item:hover .arrow {
+    transform: rotate(180deg);
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.accordion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease-out;
+}
+
+.accordion-item:hover .accordion-content {
+    grid-template-rows: 1fr;
+}
+
+.inner-content {
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.accordion-item:hover .inner-content {
+    padding-bottom: 20px; /* Add padding only when open */
+}
+
+/* Task 25: 3D Tilt & Holo Effect */
+.holo-card {
+    width: 260px;
+    height: 360px;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.5s ease;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.holo-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+    transform: skewX(-25deg);
+}
+
+.holo-card:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateZ(20px);
+    box-shadow: 
+        -20px 20px 50px rgba(0,0,0,0.5),
+        0 0 20px rgba(99, 102, 241, 0.5); /* Glow */
+}
+
+.holo-card:hover::before {
+    left: 100%;
+}
+
+.holo-content {
+    z-index: 2;
+    transform: translateZ(20px); /* Parallax Effect */
+}
+
+.holo-content h3 {
+    font-size: 1.8rem;
+    background: linear-gradient(to right, #fbbf24, #d97706);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+}

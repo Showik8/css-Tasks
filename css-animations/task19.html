@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Task 19</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 19</h1>
+                <p>Credit Card Flip (3D)</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>3D ანიმაციები ძალიან ეფექტურია ბარათებისთვის. შევქმნათ რეალისტური საკრედიტო ბარათი.</p>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        მიიტანე მაუსი ბარათთან. ჩვენ გვინდა რომ ის ამოტრიალდეს და გამოაჩინოს უკანა მხარე (CVV კოდით).
+                    </li>
+                    <li>
+                        იპოვე <code>.flip-card-container:hover .flip-card-inner</code> სელექტორი <code>style.css</code>-ში.
+                    </li>
+                    <li>
+                        დაკომენტარებული კოდი (// transform...) უნდა განბლოკო ან თავიდან დაწერო:
+                    </li>
+                    <li>
+                        დაამატე:
+                        <br>
+                        <code>transform: rotateY(180deg);</code>
+                    </li>
+                    <li>
+                        ეს შექმნის სრულ 3D ამოტრიალების ეფექტს.
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task18.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task20.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="flip-card-container">
+                     <div class="flip-card-inner">
+                         <div class="flip-card-front">
+                             <div class="card-chip"></div>
+                             <div class="card-number">4145 9821 3241 4521</div>
+                             <div class="card-holder">Giorgi Giorgadze</div>
+                         </div>
+                         <div class="flip-card-back">
+                             <div class="strip"></div>
+                             <div class="cvv-box">123</div>
+                         </div>
+                     </div>
+                 </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

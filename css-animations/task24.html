@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Task 24</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 24</h1>
+                <p>Accordion Reveal (Grid Transition)</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>აკორდეონის (ჩამოსაშლელი ტექსტის) ანიმაცია `height: auto`-ზე რთულია, მაგრამ `grid` ამას აგვარებს.</p>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გვაქვს აკორდეონი <code>.accordion-content</code>, რომელიც თავიდან დამალულია (height: 0 ვერსია).
+                    </li>
+                    <li>
+                        იპოვე <code>.accordion-item:hover .accordion-content</code> სელექტორი.
+                    </li>
+                    <li>
+                        შენი მიზანია შეცვალო <code>grid-template-rows</code> 0fr-დან 1fr-მდე.
+                    </li>
+                    <li>
+                        დააკვირდი როგორ "გამოჩოჩდება" კონტენტი ავტომატურად.
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task23.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task25.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="accordion-item">
+                     <div class="accordion-header">
+                         <span>Why use CSS Grid for Animation?</span>
+                         <span class="arrow">▼</span>
+                     </div>
+                     <div class="accordion-content">
+                         <div class="inner-content">
+                             Because it allows us to transition from 0 to auto height using the fractional unit (fr) trick, which was impossible with height property alone!
+                         </div>
+                     </div>
+                 </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Task 12</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 12</h1>
+                <p>Flight Button (Transform)</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>ანიმაციებში ყველაზე ხშირად ვიყენებთ <code>transform</code> პროპერთის, რადგან ის არ იწვევს გვერდის გადახატვას (repaint).</p>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        ეს არის "Flight Button". დაწკაპუნებისას თვითმფრინავი უნდა გაფრინდეს.
+                    </li>
+                    <li>
+                        იპოვე <code>@keyframes flyAway</code> <code>style.css</code>-ში.
+                    </li>
+                    <li>
+                        დაამატე:
+                        <ul>
+                            <li>100%: <code>transform: translate(200px, -100px) rotate(45deg); opacity: 0;</code></li>
+                        </ul>
+                    </li>
+                    <li>
+                        შემდეგ მიანიჭე ის <code>.flight-btn:active .plane-icon</code>-ს: 
+                        <br>
+                        <code>animation: flyAway 0.8s ease-in forwards;</code>
+                    </li>
+                    <li>
+                        დააკვირდი რომ თვითმფრინავი ღილაკის საზღვრებს გარეთ გადის (overflow: hidden მოხსნილია).
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task11.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task13.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                <button class="flight-btn">
+                    <span>Book Flight</span>
+                    <span class="plane-icon">✈️</span>
+                </button>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
