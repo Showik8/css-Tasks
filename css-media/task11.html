@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Task 11: Real World Nav</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 11</h1>
+                <p>პროექტი: Responsive Navigation</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>ეს არის რეალური პროექტის სიმულაცია. გვაქვს ნავიგაციის პანელი (Header).</p>
+                <p>დესკტოპზე ბმულები ჩანს, მაგრამ მობილურზე ისინი უნდა დაიმალოს და გამოჩნდეს "Hamburger" მენიუ.</p>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გახსენი <code>style.css</code> და იპოვე <code>.nav-demo</code> სექცია.
+                    </li>
+                    <li>
+                        დაწერე მედია ქუერი <strong>768px-ის ქვემოთ</strong> (<code>max-width: 768px</code>).
+                    </li>
+                    <li>
+                         ამ ზომაზე:
+                        <ul>
+                            <li>დამალე <code>.nav-links</code> (<code>display: none</code>).</li>
+                            <li>გამოაჩინე <code>.hamburger</code> (<code>display: block</code>).</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>ბონუსი:</strong> სცადე <code>.nav-links</code>-ის ისე შეცვლა, რომ არ გაქრეს, არამედ ჩამოვიდეს ახალ ხაზზე (<code>flex-direction: column</code>) და დაიკავოს 100% სიგანე.
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>შენიშვნა:</strong> რეალურ პროექტებში Hamburger-ზე დაჭერისას JavaScript-ით ვამატებთ კლასს (მაგ: <code>.open</code>), რომელიც აჩენს მენიუს. აქ მხოლოდ CSS Layout-ზე ვმუშაობთ.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task10.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task12.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                <div class="nav-demo">
+                    <div class="nav-header">
+                        <div class="brand">LOGO.</div>
+                        <nav class="nav-links">
+                            <a href="#">მთავარი</a>
+                            <a href="#">სერვისები</a>
+                            <a href="#">ჩვენს შესახებ</a>
+                            <a href="#">კონტაქტი</a>
+                        </nav>
+                        <div class="hamburger">☰</div>
+                    </div>
+                    <div style="padding: 40px; text-align: center; color: #64748b;">
+                        Hero Content Area...
+                    </div>
+                </div>
+                <style>
+                    /* Mobile Nav Styles */
+                </style>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

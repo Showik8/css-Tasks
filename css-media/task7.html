@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Task 7: Aspect Ratio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 7</h1>
+                <p>თემა: Aspect Ratio</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p><code>aspect-ratio</code> მედია ქუერი გვაძლევს საშუალებას გავიგოთ ეკრანის პროპორცია. ეს სასარგებლოა ვიდეო პლეერებისთვის ან სრული ეკრანის თამაშებისთვის.</p>
+                <ul style="list-style: disc; padding-left: 20px; margin-bottom: 20px;">
+                    <li><code>min-aspect-ratio: 16/9</code> – ფართო ეკრანები (კინემატოგრაფიული).</li>
+                    <li><code>max-aspect-ratio: 1/1</code> – კვადრატული ან პორტრეტული ეკრანები.</li>
+                </ul>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გახსენი <code>style.css</code>.
+                    </li>
+                    <li>
+                        იპოვე <code>.video-container</code>. მას აქვს ნაგულისხმევი <code>max-width: 600px</code>.
+                    </li>
+                    <li>
+                        როდესაც ეკრანი არის ძალიან ფართო (<code>min-aspect-ratio: 16/9</code>), გაზარდე კონტეინერის სიგანე 100%-მდე და სიმაღლე გახადე 500px.
+                    </li>
+                    <li>
+                        შეცვალე ბრაუზერის ზომა ისე, რომ იყოს ძალიან განიერი და დაბალი.
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>რჩევა:</strong> თანამედროვე CSS-ში ელემენტებზეც შეგვიძლია გამოვიყენოთ <code>aspect-ratio</code> property (არა როგორც media query, არამედ ჩვეულებრივი წესი).
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task6.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task8.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace" style="flex-direction: column;">
+                <div class="video-container">
+                    <div style="padding: 40px; text-align: center;">
+                        <h3>Cinema Mode</h3>
+                        <p>Resize to 16/9 ratio</p>
+                    </div>
+                </div>
+                <style>
+                    /* Code here */
+                </style>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

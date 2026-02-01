@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Task 3: Resolution & Display</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 3</h1>
+                <p>თემა: Resolution & Display</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>ეს პარამეტრები ეკრანის ხარისხს და ფერების შესაძლებლობებს განსაზღვრავს.</p>
+                <ul style="list-style: disc; padding-left: 20px; margin-bottom: 20px;">
+                    <li><code>resolution</code> – პიქსელების სიმკვრივე (DPI / dppx). მაგ: Retina ეკრანები.</li>
+                    <li><code>aspect-ratio</code> – ეკრანის პროპორცია (მაგ: 16/9).</li>
+                    <li><code>monochrome</code> – შავ-თეთრი ეკრანები.</li>
+                    <li><code>color</code> – ფერების ბიტები.</li>
+                </ul>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გახსენი <code>style.css</code>.
+                    </li>
+                    <li>
+                        იპოვე ელემენტი <code>.resolution-box</code>.
+                    </li>
+                    <li>
+                        დაწერე მედია ქუერი მაღალი გაფართოების ეკრანებისთვის (Retina):
+                        <br>
+                        <code>@media (min-resolution: 2dppx) { ... }</code>
+                    </li>
+                    <li>
+                        შეცვალე <code>.resolution-box</code>-ის ბორდერი: <code>border: 5px solid white;</code>.
+                    </li>
+                    <li>
+                        (სურვილისამებრ) სცადე <code>monochrome</code>-ის ტესტირებაც (Chrome DevTools-ში Rendering ტაბიდან შეიძლება ემულაცია).
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>შენიშვნა:</strong> <code>dppx</code> ნიშნავს dots per pixel unit. 1dppx არის სტანდარტული, 2dppx არის Retina (High DPI).
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task2.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task4.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                <div class="resolution-box">
+                    Resolution Check
+                </div>
+                <style>
+                    /* ადგილი შენი კოდისთვის */
+                </style>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

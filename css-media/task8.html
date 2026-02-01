@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Task 8: Print Styles</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 8</h1>
+                <p>თემა: Print Media</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>ვებ-გვერდების ბეჭდვის დროს (Ctrl+P / Cmd+P) ხშირად გვინდა ზედმეტი ელემენტების დამალვა (მაგ: ნავიგაცია, ღილაკები, ფერადი ფონები).</p>
+                <div style="background: #f1f5f9; padding: 10px; border-radius: 6px; font-family: monospace; margin-bottom: 20px;">
+                    @media print { ... }
+                </div>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გახსენი <code>style.css</code>.
+                    </li>
+                    <li>
+                        დაწერე <code>@media print</code> ბლოკი.
+                    </li>
+                    <li>
+                        ამ ბლოკში:
+                        <ul>
+                            <li>დამალე მარცხენა მენიუ (<code>.instructions-panel { display: none; }</code>).</li>
+                            <li><code>.print-card</code>-ს მოაშორე ჩრდილი და ბორდერი.</li>
+                            <li>გამოაჩინე <code>.print-only</code> კლასის მქონე ელემენტი (<code>display: block</code>).</li>
+                        </ul>
+                    </li>
+                    <li>
+                        დააჭირე <strong>Cmd+P</strong> (Mac) ან <strong>Ctrl+P</strong> (Windows) და ნახე Preview.
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>რჩევა:</strong> ბეჭდვის დროს ფერადი ფონები ავტომატურად ითიშება ბრაუზერის მიერ, თუ მომხმარებელმა არ ჩართო "Background graphics".
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task7.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task9.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                <div class="print-card">
+                    <h2>Invoice #1024</h2>
+                    <p>ეს დოკუმენტი განკუთვნილია ბეჭდვისთვის.</p>
+                    <br>
+                    <p>ბეჭდვის დროს მენიუ უნდა გაქრეს და გამოჩნდეს ქვედა წარწერა.</p>
+                    <br>
+                    <div class="print-only" style="border-top: 2px solid black; padding-top: 10px; font-weight: bold;">
+                        (ეს ჩანს მხოლოდ ბეჭდვის დროს)
+                    </div>
+                </div>
+                <style>
+                    /* Print styles */
+                </style>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

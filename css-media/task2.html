@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Task 2: Device & Orientation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 2</h1>
+                <p>თემა: Device & Orientation</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>ეს მახასიათებლები ეხება ფიზიკურ მოწყობილობას და არა მხოლოდ ბრაუზერის ფანჯარას.</p>
+                <ul style="list-style: disc; padding-left: 20px; margin-bottom: 20px;">
+                    <li><code>device-width/height</code> – ეკრანის ფიზიკური რეზოლუცია</li>
+                    <li><code>orientation</code> – <code>portrait</code> (ვერტიკალური) ან <code>landscape</code> (ჰორიზონტალური)</li>
+                </ul>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გახსენი <code>style.css</code>.
+                    </li>
+                    <li>
+                        იპოვე ელემენტი <code>.device-box</code>.
+                    </li>
+                    <li>
+                        დაწერე მედია ქუერი ორიენტაციისთვის:
+                        <br>
+                        <code>@media (orientation: landscape) { ... }</code>
+                    </li>
+                    <li>
+                        Landscape რეჟიმში შეცვალე <code>.device-box</code>-ის სიგანე <code>width: 500px;</code>-ზე და ფერი სხვა ფერზე.
+                    </li>
+                    <li>
+                        <strong>შენიშვნა:</strong> დესკტოპზე ეს მარტივია – თუ ფანჯრის სიგანე მეტია სიმაღლეზე, ეს ითვლება landscape-ად.
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>რჩევა:</strong> <code>device-width</code> ხშირად გამოიყენებოდა ძველ მობილურ საიტებში, თუმცა დღესდღეობით უმჯობესია ჩვეულებრივი <code>width</code>-ის გამოყენება.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task1.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task3.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                <div class="device-box">
+                    Orientation Test Box
+                </div>
+                <style>
+                    /* ადგილი შენი კოდისთვის */
+                </style>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

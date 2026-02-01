@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries Mastery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .cheatsheet-section {
+            margin-bottom: 40px;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .cheatsheet-title {
+            font-size: 1.2rem;
+            color: #1e293b;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f1f5f9;
+        }
+        .property-group {
+            margin-bottom: 20px;
+        }
+        .property-name {
+            font-family: 'Monaco', monospace;
+            color: #6366f1;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .property-desc {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        pre {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid #e2e8f0;
+        }
+        pre code {
+            font-family: 'Monaco', monospace;
+            color: #334155;
+            background: none;
+            padding: 0;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: NAVIGATION -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>CSS Media Queries</h1>
+                <p>სრული გზამკვლევი (Cheat Sheet)</p>
+            </header>
+
+            <div class="content">
+                <p>მოგესალმებით CSS Media Queries-ის შემსწავლელ კურსში.</p>
+                <p>აქ ვისწავლით როგორ გავხადოთ ვებ-გვერდები რესპონსიული.</p>
+                
+                <h2>სარჩევი:</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;"><a href="#width-height" style="text-decoration: none; color: #6366f1;">• Width/Height</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#device" style="text-decoration: none; color: #6366f1;">• Device Characteristics</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#resolution" style="text-decoration: none; color: #6366f1;">• Resolution & Display</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#interaction" style="text-decoration: none; color: #6366f1;">• Light & Interaction</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#real-world" style="text-decoration: none; color: #6366f1;">• Real World</a></li>
+                </ul>
+
+                <div class="tip">
+                    <strong>რჩევა:</strong> გამოიყენე ეს გვერდი როგორც "შპარგალკა" დავალებების შესრულებისას.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <span class="placeholder"></span>
+                    <a href="task1.html" class="nav-btn next">დაწყება: Task 1 &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: CHEAT SHEET CONTENT -->
+        <main class="result-panel" style="display: block; overflow-y: auto;">
+            <div class="workspace" style="display: block; max-width: 900px; margin: 0 auto;">
+                
+                <div style="text-align: center; margin-bottom: 40px; margin-top: 40px;">
+                    <h1 style="font-size: 2.5rem; background: linear-gradient(to right, #6366f1, #ec4899); background-clip: text; -webkit-background-clip: text; color: transparent; margin-bottom: 10px;">CSS MEDIA QUERIES</h1>
+                    <p style="color: #64748b;">Visual Cheat Sheet</p>
+                </div>
+
+                <!-- SECTION 1: Width/Height -->
+                <section id="width-height" class="cheatsheet-section">
+                    <h2 class="cheatsheet-title">Width & Height</h2>
+                    <p class="property-desc">ეკრანის (viewport) ზომებზე რეაგირება:</p>
+                    <pre><code>@media (min-width: 768px) { ... }
+@media (max-width: 1200px) { ... }
+@media (height: 500px) { ... }
+@media (orientation: landscape) { ... }</code></pre>
+                </section>
+
+                <!-- SECTION 2: Device -->
+                <section id="device" class="cheatsheet-section">
+                    <h2 class="cheatsheet-title">Device Characteristics</h2>
+                    <p class="property-desc">მოწყობილობის ფიზიკური პარამეტრები:</p>
+                    <pre><code>@media (min-device-width: 320px) { ... }
+@media (orientation: portrait) { ... }</code></pre>
+                </section>
+
+                 <!-- SECTION 3: Other -->
+                 <section id="resolution" class="cheatsheet-section">
+                    <h2 class="cheatsheet-title">Resolution & Color</h2>
+                    <p class="property-desc">ეკრანის ხარისხი და ფერების მხარდაჭერა:</p>
+                    <pre><code>@media (min-resolution: 2dppx) { ... }
+@media (monochrome) { ... }
+@media (prefers-color-scheme: dark) { ... }</code></pre>
+                </section>
+
+                <section id="real-world" class="cheatsheet-section">
+                    <h2 class="cheatsheet-title">Advanced & Real World</h2>
+                    <p class="property-desc">რეალურ პროექტებში გამოყენებული პრაქტიკები:</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 5px;">• Breakpoint Ranges (Task 6)</li>
+                        <li style="margin-bottom: 5px;">• Aspect Ratio (Task 7)</li>
+                        <li style="margin-bottom: 5px;">• Print Styles (Task 8)</li>
+                        <li style="margin-bottom: 5px;">• Responsive Navigation (Task 11)</li>
+                        <li style="margin-bottom: 5px;">• Responsive Grid (Task 12)</li>
+                    </ul>
+                </section>
+
+                 <div style="text-align: center; margin-top: 50px; padding: 40px;">
+                    <h3 style="color: #334155; margin-bottom: 20px;">მზად ხარ პრაქტიკისთვის?</h3>
+                    <a href="task1.html" class="nav-btn next" style="background: linear-gradient(135deg, #6366f1, #a855f7); font-size: 1.1rem; padding: 15px 30px;">დაწყება (Task 1) &rarr;</a>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

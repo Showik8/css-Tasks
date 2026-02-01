@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Task 6: Ranges</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 6</h1>
+                <p>თემა: Breakpoint Ranges</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>ხშირად გვჭირდება სტილები, რომლებიც მოქმედებს მხოლოდ გარკვეულ შუალედში (მაგალითად, მხოლოდ პლანშეტებზე - 600px-დან 900px-მდე).</p>
+                <p>ამისათვის ვიყენებთ <code>and</code> ოპერატორს:</p>
+                <div style="background: #f1f5f9; padding: 10px; border-radius: 6px; font-family: monospace; margin-bottom: 20px; font-size: 0.85rem;">
+                    @media (min-width: 600px) and (max-width: 900px) { ... }
+                </div>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გახსენი <code>style.css</code> (ან დაწერე <code>&lt;style&gt;</code>-ში).
+                    </li>
+                    <li>
+                        იპოვე ელემენტი <code>.range-box</code>.
+                    </li>
+                    <li>
+                        დაწერე მედია ქუერი, რომელიც გააქტიურდება <strong>600px-სა და 900px-ს შორის</strong>.
+                    </li>
+                    <li>
+                        ამ შუალედში შეუცვალე <code>.range-box</code>-ს ფერი ყვითელზე (<code>#f59e0b</code>) და ტექსტი გახადე "Tablet Mode".
+                    </li>
+                    <li>
+                        დაამატე მეორე მედია ქუერი <strong>900px-ის ზევით</strong>, სადაც ფერი გახდება მწვანე (<code>#10b981</code>) და ტექსტი "Desktop Mode".
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>შენიშვნა:</strong> ახალ CSS სინტაქსში შეგვიძლია დავწეროთ: <code>@media (600px <= width <= 900px)</code>, რაც უფრო იკითხებადია.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task5.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task7.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                <div class="range-box">
+                    Mobile Defaults (< 600px)
+                </div>
+                <style>
+                    /* Space for your code */
+                </style>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

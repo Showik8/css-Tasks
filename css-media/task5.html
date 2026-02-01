@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Task 5: Other Features</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #e2e8f0;
+            border-top-color: #6366f1;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 5</h1>
+                <p>თემა: Other Features</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>სხვა მნიშვნელოვანი მედია მახასიათებლები:</p>
+                <ul style="list-style: disc; padding-left: 20px; margin-bottom: 20px;">
+                    <li><code>update</code> – ეკრანის განახლების სიჩქარე (none, slow, fast). მაგ: ელექტრონული წიგნები (Kindle) არის <code>slow</code>.</li>
+                    <li><code>grid</code> – განსაზღვრავს მოწყობილობა ბადისებრია (tty) თუ ბიტმაპური (ეკრანი).</li>
+                </ul>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გახსენი <code>style.css</code>.
+                    </li>
+                    <li>
+                        იპოვე <code>.feature-item</code> რომელშიც სპინერი ტრიალებს.
+                    </li>
+                    <li>
+                        დაწერე კოდი, რომელიც შეაჩერებს ანიმაციას თუ ეკრანი არის <code>slow</code> (მაგ: e-ink):
+                        <br>
+                        <code>@media (update: slow) { .spinner { animation: none; } }</code>
+                    </li>
+                    <li>
+                        <strong>დამატებით:</strong> შეგიძლია შეამოწმო <code>@media (grid: 0)</code> (რაც ნიშნავს რომ ჩვეულებრივი ბიტმაპ ეკრანია).
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>რჩევა:</strong> <code>update: slow</code>-ს დროს კარგი პრაქტიკაა ანიმაციების გამორთვა, რადგან e-ink ეკრანებზე ეს ცუდად ჩანს.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task4.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task6.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h3>Animation Status</h3>
+                        <br>
+                        <div class="spinner"></div>
+                        <p style="margin-top: 10px; font-size: 0.8rem; color: #64748b;">ტრიალებს?</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Device Type</h3>
+                        <p>Grid: <span id="grid-status">Unknown</span></p>
+                    </div>
+                </div>
+                <style>
+                    /* ადგილი შენი კოდისთვის */
+                </style>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

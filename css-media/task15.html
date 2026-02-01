@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Task 15: Pro Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 15</h1>
+                <p>პროექტი: Dashboard Layout</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>ადმინისტრატორის პანელებს (Dashboard) აქვთ გვერდითი მენიუ (Sidebar) და მთავარი კონტენტი.</p>
+                <p>ამჟამად: <code>grid-template-columns: 240px 1fr</code> (ფიქსირებული მენიუ).</p>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გახსენი <code>style.css</code> და იპოვე <code>.dashboard-container</code>.
+                    </li>
+                    <li>
+                        დაწერე მედია ქუერი <strong>Tablet (1024px-მდე)</strong>:
+                        <ul>
+                            <li>Sidebar დააპატარავე 80px-მდე (მხოლოდ აიკონები რომ დარჩეს).</li>
+                            <li><code>.dash-nav-text</code> კლასი დამალე (<code>display: none</code>).</li>
+                            <li><code>.nav-icon</code> გააცენტრე.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        დაწერე მედია ქუერი <strong>Mobile (768px-მდე)</strong>:
+                        <ul>
+                            <li>Grid გახადე 1 სვეტი.</li>
+                            <li>Sidebar გადაიტანე ქვემოთ (როგორც Bottom Navigation) ან სულ ზემოთ.</li>
+                            <li><code>.stats-grid</code> (სტატისტიკის 3 ბარათი) გახადე 1 სვეტი.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>გილოცავ!</strong> შენ დაასრულე CSS Media Queries კურსი და მზად ხარ რესპონსიული საიტების შესაქმნელად! 🎉
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task14.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="index.html" class="nav-btn next">დასრულება 🏠</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                <div class="dashboard-container">
+                    <aside class="dash-sidebar">
+                        <div style="font-weight: bold; margin-bottom: 30px; font-size: 1.2rem; color: #4f46e5;">Dash.</div>
+                        <div class="dash-nav-item active">
+                            <span class="nav-icon">📊</span>
+                            <span class="dash-nav-text">Overview</span>
+                        </div>
+                        <div class="dash-nav-item">
+                            <span class="nav-icon">👥</span>
+                            <span class="dash-nav-text">Users</span>
+                        </div>
+                        <div class="dash-nav-item">
+                            <span class="nav-icon">⚙️</span>
+                            <span class="dash-nav-text">Settings</span>
+                        </div>
+                    </aside>
+                    <main class="dash-main">
+                        <h2 style="margin-bottom: 20px;">Overview</h2>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <h3 style="font-size: 0.9rem; color: #64748b;">Total Users</h3>
+                                <p style="font-size: 1.5rem; font-weight: bold;">12,345</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3 style="font-size: 0.9rem; color: #64748b;">Revenue</h3>
+                                <p style="font-size: 1.5rem; font-weight: bold;">$45.2k</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3 style="font-size: 0.9rem; color: #64748b;">Active Now</h3>
+                                <p style="font-size: 1.5rem; font-weight: bold;">1,203</p>
+                            </div>
+                        </div>
+                        <div style="background: #f1f5f9; height: 200px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #94a3b8;">
+                            Chart Placeholder
+                        </div>
+                    </main>
+                </div>
+                <style>
+                    /* Dashboard Responsiveness */
+                </style>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

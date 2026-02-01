@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Task 13: Hero Section</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 13</h1>
+                <p>პროექტი: Hero Section</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>Hero სექცია არის საიტის პირველი ნაწილი. დესკტოპზე ხშირად გვაქვს ტექსტი მარცხნივ და სურათი მარჯვნივ (2 სვეტი).</p>
+                <p>მობილურზე ეს უნდა შეიცვალოს: სურათი ავიდეს ზემოთ, ტექსტი ჩამოვიდეს ქვემოთ (1 სვეტი).</p>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გახსენი <code>style.css</code> და იპოვე <code>.hero-section</code>.
+                    </li>
+                    <li>
+                        ამჟამად ის არის <code>grid-template-columns: 1fr 1fr</code> (2 სვეტი).
+                    </li>
+                    <li>
+                        დაწერე მედია ქუერი <strong>800px-ის ქვემოთ</strong> (<code>max-width: 800px</code>).
+                    </li>
+                    <li>
+                        ამ ზომაზე:
+                        <ul>
+                            <li>შეცვალე Grid 1 სვეტად (<code>grid-template-columns: 1fr</code>).</li>
+                            <li>შეცვალე <code>.hero-image</code>-ის სიმაღლე (მაგ: <code>height: 200px</code>).</li>
+                            <li>დაამატე <code>order: -1;</code> სურათს, რომ ის ტექსტის ზემოთ გამოჩნდეს (grid-ში შეგვიძლია ელემენტების თანმიმდევრობის შეცვლა HTML-ის შეუცვლელად).</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>რჩევა:</strong> <code>order</code> ძალიან მძლავრი ინსტრუმენტია Flexbox და Grid-ში რესპონსიული დიზაინისთვის.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task12.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task14.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                <div class="hero-section">
+                    <div class="hero-content">
+                        <div class="hero-title">Discover Future</div>
+                        <p style="color: #64748b; margin-bottom: 20px;">
+                            ჩვენ ვქმნით მომავლის ტექნოლოგიებს დღევანდელობისთვის. შემოგვიერთდით ინოვაციების სამყაროში.
+                        </p>
+                        <button class="interaction-btn" style="width: fit-content; font-size: 1rem; padding: 12px 24px;">გაიგე მეტი</button>
+                    </div>
+                    <div class="hero-image"></div>
+                </div>
+                <style>
+                    /* Mobile Hero Styles */
+                </style>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

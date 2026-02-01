@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Task 9: Dark Mode</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 9</h1>
+                <p>თემა: Dark Mode</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>თანამედროვე OS-ებს (macOS, Windows, iOS, Android) აქვთ სისტემური Dark Mode. ჩვენ შეგვიძლია ამას მოვუსმინოთ.</p>
+                <div style="background: #f1f5f9; padding: 10px; border-radius: 6px; font-family: monospace; margin-bottom: 20px;">
+                    @media (prefers-color-scheme: dark) { ... }
+                </div>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გახსენი <code>style.css</code>.
+                    </li>
+                    <li>
+                        იპოვე <code>.theme-card</code>.
+                    </li>
+                    <li>
+                        დაწერე მედია ქუერი <code>prefers-color-scheme: dark</code>.
+                    </li>
+                    <li>
+                        Dark Mode-ში:
+                        <ul>
+                            <li><code>.theme-card</code>-ის ფონი გახადე შავი (<code>#1e293b</code>).</li>
+                            <li>ტექსტის ფერი გახადე თეთრი.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>ტესტირება:</strong> Chrome DevTools -> Rendering -> Emulate CSS media feature prefers-color-scheme: dark (ან შეცვალე სისტემური პარამეტრები).
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>რჩევა:</strong> საუკეთესო პრაქტიკაა CSS ცვლადების (Custom Properties) გამოყენება და მათი შეცვლა <code>:root</code> ბლოკში მედია ქუერის შიგნით.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task8.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task10.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                <div class="theme-card">
+                    <h2>Theme Switcher</h2>
+                    <p>ეს ბარათი ავტომატურად იცვლის ფერს თქვენი სისტემური პარამეტრების მიხედვით.</p>
+                </div>
+                <style>
+                    /* Dark mode logic here */
+                </style>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

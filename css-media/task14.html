@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Task 14: Fluid Footer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 14</h1>
+                <p>პროექტი: Multi-col Footer</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>რთული ფუტერები ხშირად 4-5 სვეტისგან შედგება. მობილურზე ისინი ერთმანეთის ქვეშ უნდა განლაგდეს.</p>
+                <p>ამჟამად ფუტერი დაყოფილია: <code>2fr 1fr 1fr 1fr</code> (სულ 4 სვეტი).</p>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გახსენი <code>style.css</code> და იპოვე <code>.footer-demo</code>.
+                    </li>
+                    <li>
+                        გვჭირდება 3 საფეხურიანი ადაპტაცია:
+                    </li>
+                    <li>
+                         <strong>Mobile (600px-მდე):</strong> 1 სვეტი (ყველა ერთმანეთის ქვეშ). ტექსტი გაცენტრებული.
+                    </li>
+                    <li>
+                        <strong>Tablet (600px - 900px):</strong> 2 სვეტი (grid-template-columns: 1fr 1fr). ამ შემთხვევაში პირველი დიდი სვეტი (Company) დაიკავებს მთელ სიგანეს (<code>grid-column: 1 / -1</code>).
+                    </li>
+                    <li>
+                        <strong>Desktop:</strong> დარჩეს ისე, როგორც არის.
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>რჩევა:</strong> <code>gap</code> property Grid-ში ავტომატურად აკეთებს დაშორებებს, რაც ძალიან მოსახერხებელია მობილურზეც.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task13.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task15.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                <div class="footer-demo">
+                    <div class="footer-col" style="grid-column: span 1;"> <!-- Will span full on tablet if we set specific rule -->
+                        <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 20px;">COMPANY.</h3>
+                        <p style="color: #94a3b8; line-height: 1.6;">საუკეთესო ციფრული გამოცდილების შექმნა მომხმარებლებისთვის მთელს მსოფლიოში.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>პროდუქტი</h4>
+                        <ul>
+                            <li>თვისებები</li>
+                            <li>ფასები</li>
+                            <li>ინტეგრაცია</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>რესურსები</h4>
+                        <ul>
+                            <li>ბლოგი</li>
+                            <li>დოკუმენტაცია</li>
+                            <li>საზოგადოება</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>კომპანია</h4>
+                        <ul>
+                            <li>ჩვენს შესახებ</li>
+                            <li>კარიერა</li>
+                            <li>კონტაქტი</li>
+                        </ul>
+                    </div>
+                </div>
+                <style>
+                    /* Footer Media Queries */
+                </style>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

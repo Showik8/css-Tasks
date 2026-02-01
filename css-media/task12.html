@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Task 12: Product Grid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 12</h1>
+                <p>პროექტი: E-commerce Grid</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>ელ-კომერციის საიტებზე პროდუქტების ბადე (Grid) უნდა ადაპტირდებოდეს ეკრანის ზომასთან.</p>
+                <p>ამჟამად გვაქვს 3 სვეტი (<code>grid-template-columns: repeat(3, 1fr)</code>).</p>
+                
+                <h2>ინსტრუქცია (Mobile-First მიდგომა):</h2>
+                <ol>
+                    <li>
+                        გახსენი <code>style.css</code> და იპოვე <code>.product-grid</code>.
+                    </li>
+                    <li>
+                        შეცვალე <code>.product-grid</code>-ის საბაზისო სტილი ისე, რომ იყოს <strong>1 სვეტი</strong> (Mobile).
+                    </li>
+                    <li>
+                        დაამატე მედია ქუერი <strong>600px-ის ზევით</strong>:
+                        <br>
+                        <code>@media (min-width: 600px) { ... grid-template-columns: repeat(2, 1fr); }</code>
+                    </li>
+                    <li>
+                        დაამატე მედია ქუერი <strong>1000px-ის ზევით</strong>:
+                        <br>
+                        <code>@media (min-width: 1000px) { ... grid-template-columns: repeat(3, 1fr); }</code>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>რჩევა:</strong> თანამედროვე Grid-ში შეიძლება <code>repeat(auto-fit, minmax(250px, 1fr))</code> გამოყენებაც, რაც მედია ქუერების გარეშეც მუშაობს, მაგრამ კარგია თუ ორივე მეთოდს ფლობთ.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task11.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task13.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                <div class="product-grid">
+                    <!-- Cards -->
+                    <div class="product-card">
+                        <div class="product-img"></div>
+                        <div class="product-info">
+                            <div class="product-title">Nike Air Max</div>
+                            <div class="product-price">$120.00</div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"></div>
+                        <div class="product-info">
+                            <div class="product-title">Adidas Ultraboost</div>
+                            <div class="product-price">$180.00</div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"></div>
+                        <div class="product-info">
+                            <div class="product-title">Puma RS-X</div>
+                            <div class="product-price">$110.00</div>
+                        </div>
+                    </div>
+                </div>
+                <style>
+                    /* Grid Responsiveness */
+                </style>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

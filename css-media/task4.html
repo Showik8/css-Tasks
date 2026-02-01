@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Task 4: Interaction</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 4</h1>
+                <p>თემა: Light & Interaction</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>ეს მახასიათებლები გვაძლევს საშუალებას გავიგოთ, როგორ ურთიერთქმედებს მომხმარებელი საიტთან (მაუსით თუ თითით).</p>
+                <ul style="list-style: disc; padding-left: 20px; margin-bottom: 20px;">
+                    <li><code>hover: hover</code> – მოწყობილობას აქვს hover-ის მხარდაჭერა (მაგ: მაუსი).</li>
+                    <li><code>hover: none</code> – არ აქვს (მაგ: სმარტფონი).</li>
+                    <li><code>pointer: fine</code> – ზუსტი მაჩვენებელი (მაუსი).</li>
+                    <li><code>pointer: coarse</code> – უხეში მაჩვენებელი (თითი).</li>
+                </ul>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გახსენი <code>style.css</code>.
+                    </li>
+                    <li>
+                        იპოვე ღილაკი <code>.interaction-btn</code>.
+                    </li>
+                    <li>
+                        დაწერე კოდი, რომელიც გაზრდის ღილაკის ზომას (padding) თუ მომხმარებელი სენსორულ ეკრანზეა:
+                        <br>
+                        <code>@media (pointer: coarse) { ... }</code>
+                    </li>
+                    <li>
+                        ასევე, შეგიძლია დაამატო ეფექტები მხოლოდ მაშინ, თუ hover მხარდაჭერილია:
+                        <br>
+                        <code>@media (hover: hover) { .interaction-btn:hover { ... } }</code>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>შენიშვნა:</strong> <code>inverted-colors</code> გამოიყენება ხელმისაწვდომობისთვის (Accessibility), როცა მომხმარებელს ფერების ინვერსია აქვს ჩართული.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task3.html" class="nav-btn prev">&larr; წინა</a>
+                    <a href="task5.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                <button class="interaction-btn">
+                    დააჭირე / შეეხე
+                </button>
+                <style>
+                    /* ადგილი შენი კოდისთვის */
+                </style>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

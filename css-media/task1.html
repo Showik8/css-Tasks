@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Task 1: Width & Height</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>დავალება 1</h1>
+                <p>თემა: Width & Height</p>
+            </header>
+
+            <div class="content">
+                <h2>აღწერა:</h2>
+                <p>Media Queries ყველაზე ხშირად გამოიყენება ეკრანის სიგანისა და სიმაღლის მიხედვით სტილების შესაცვლელად.</p>
+                <ul style="list-style: disc; padding-left: 20px; margin-bottom: 20px;">
+                    <li><code>width</code> – viewport-ის ზუსტი სიგანე</li>
+                    <li><code>min-width</code> – მინიმალური სიგანე (ამ ზომიდან ზემოთ)</li>
+                    <li><code>max-width</code> – მაქსიმალური სიგანე (ამ ზომამდე)</li>
+                    <li><code>height</code> / <code>min-height</code> / <code>max-height</code> – იგივე ლოგიკა სიმაღლისთვის</li>
+                </ul>
+                
+                <h2>ინსტრუქცია:</h2>
+                <ol>
+                    <li>
+                        გახსენი <code>style.css</code> (ან დაწერე <code>&lt;style&gt;</code> ტეგში).
+                    </li>
+                    <li>
+                        იპოვე ელემენტი კლასით <code>.responsive-box</code>.
+                    </li>
+                    <li>
+                        დაწერე მედია ქუერი, რომელიც გააქტიურდება როდესაც ეკრანის სიგანე <strong>ნაკლებია 800px-ზე</strong>:
+                        <br>
+                        <code>@media (max-width: 800px) { ... }</code>
+                    </li>
+                    <li>
+                        ამ მედია ქუერიში შეუცვალე <code>.responsive-box</code>-ს ფერი (მაგ: <code>background-color: #ef4444;</code>).
+                    </li>
+                    <li>
+                        შეავიწროვე ბრაუზერის ფანჯარა და დააკვირდი ცვლილებას.
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>შენიშვნა:</strong> <code>min-width</code> ("Moble First") და <code>max-width</code> ("Desktop First") მიდგომები ყველაზე გავრცელებულია.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="index.html" class="nav-btn prev">&larr; მთავარი</a>
+                    <a href="task2.html" class="nav-btn next">შემდეგი &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                <div class="responsive-box">
+                    შეცვალე ფანჯრის ზომა
+                </div>
+                <!-- Inline style for demonstration if user doesn't edit CSS directly immediately, 
+                     but instructions say edit CSS. We expect user to do it. -->
+                <style>
+                    /* ადგილი შენი კოდისთვის */
+                    /* @media (max-width: 800px) {
+                        .responsive-box {
+                            background-color: #ef4444;
+                        }
+                    } */
+                </style>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
