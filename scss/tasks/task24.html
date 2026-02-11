@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS Challenge 4: Grid Gallery</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>24. Grid Gallery</h1>
+                <p>Loops & Math Challenge</p>
+            </header>
+            <div class="content">
+                <p><strong>Goal:</strong> შექმენი გალერეა 12 სვეტიანი გრიდით.</p>
+                <h2>მოთხოვნები:</h2>
+                <ol>
+                    <li>გამოიყენე <code>@for</code> რომ შექმნა კლასები <code>.col-1</code>-დან <code>.col-12</code>-მდე.</li>
+                    <li>სიგანე გამოთვალე ფორმულით: <code>width: math.div(100%, 12) * $i</code>.</li>
+                </ol>
+            </div>
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task23.html" class="nav-btn prev">&larr; Modal System</a>
+                    <a href="task25.html" class="nav-btn next">Next: Theming Engine &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="ui-card" style="display: flex; gap: 4px; border: none; background: none; padding: 0;">
+                    <div style="height: 50px; background: #6366f1; width: 33%; display: flex; align-items: center; justify-content: center; color: white;">.col-4 (33%)</div>
+                    <div style="height: 50px; background: #ec4899; width: 33%; display: flex; align-items: center; justify-content: center; color: white;">.col-4</div>
+                    <div style="height: 50px; background: #10b981; width: 33%; display: flex; align-items: center; justify-content: center; color: white;">.col-4</div>
+                 </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

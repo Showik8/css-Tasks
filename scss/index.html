@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS Mastery Course</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- LEFT PANEL: NAVIGATION -->
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>SCSS / SASS</h1>
+                <p>სრული კურსი</p>
+            </header>
+
+            <div class="content">
+                <p>მოგესალმებით SCSS-ის შემსწავლელ კურსში. ეს კურსი მოიცავს გარემოს გამართვას, თეორიას და პრაქტიკულ პროექტებს.</p>
+                
+                <h2>კურსის სტრუქტურა:</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 8px;"><strong>Setup:</strong> Node.js, Sass ინსტალაცია</li>
+                    <li style="margin-bottom: 8px;"><strong>Units 1-20:</strong> თეორია + მცირე მაგალითები</li>
+                    <li style="margin-bottom: 8px;"><strong>Practice 21-25:</strong> შემაჯამებელი დავალებები</li>
+                </ul>
+
+                <div class="tip">
+                    <strong>რჩევა:</strong> მიყევი თანმიმდევრობას. ყოველი მომდევნო თემა ეყრდნობა წინა მასალას.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <span class="placeholder"></span>
+                    <a href="tasks/00_setup.html" class="nav-btn next">დაწყება: Setup &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL: DASHBOARD -->
+        <main class="result-panel">
+            <div class="workspace">
+                
+                <div style="text-align: center; margin-bottom: 50px;">
+                    <h1 style="font-size: 3rem; background: linear-gradient(135deg, #a78bfa, #f472b6); background-clip: text; -webkit-background-clip: text; color: transparent; margin-bottom: 10px; font-weight: 800;">SCSS MASTERCLASS</h1>
+                    <p style="color: #94a3b8; font-size: 1.1rem;">Zero to Hero in 25 Steps</p>
+                </div>
+
+                <div class="topic-list">
+                    <!-- Setup -->
+                    <a href="tasks/00_setup.html" class="topic-card" style="border-color: #f472b6;">
+                        <span class="topic-number" style="color: #f472b6;">SETUP</span>
+                        <div class="topic-title">Installation</div>
+                        <div class="topic-desc">NPM & Sass Setup</div>
+                    </a>
+                    <a href="tasks/00_syntax.html" class="topic-card" style="border-color: #f472b6;">
+                        <span class="topic-number" style="color: #f472b6;">INTRO</span>
+                        <div class="topic-title">Syntax Guide</div>
+                        <div class="topic-desc">Sass vs SCSS</div>
+                    </a>
+
+                    <!-- Unit 1 -->
+                    <a href="tasks/task1.html" class="topic-card">
+                        <span class="topic-number">UNIT 1</span>
+                        <div class="topic-title">Variables</div>
+                        <div class="topic-desc">Theming & Maintenance</div>
+                    </a>
+                    <!-- Unit 2 -->
+                    <a href="tasks/task2.html" class="topic-card">
+                        <span class="topic-number">UNIT 2</span>
+                        <div class="topic-title">Nesting</div>
+                        <div class="topic-desc">Structure & Readability</div>
+                    </a>
+                    <!-- Unit 3 -->
+                    <a href="tasks/task3.html" class="topic-card">
+                        <span class="topic-number">UNIT 3</span>
+                        <div class="topic-title">Parent Selector</div>
+                        <div class="topic-desc">Pseudo-classes & BEM</div>
+                    </a>
+                    <!-- Unit 4 -->
+                    <a href="tasks/task4.html" class="topic-card">
+                        <span class="topic-number">UNIT 4</span>
+                        <div class="topic-title">Partials & Modules</div>
+                        <div class="topic-desc">Architecture & @use</div>
+                    </a>
+                    <!-- Unit 5 -->
+                    <a href="tasks/task5.html" class="topic-card">
+                        <span class="topic-number">UNIT 5</span>
+                        <div class="topic-title">Mixins</div>
+                        <div class="topic-desc">Reusability Patterns</div>
+                    </a>
+                    <!-- Unit 6 -->
+                    <a href="tasks/task6.html" class="topic-card">
+                        <span class="topic-number">UNIT 6</span>
+                        <div class="topic-title">Mixin Arguments</div>
+                        <div class="topic-desc">Dynamic Styles</div>
+                    </a>
+                    <!-- Unit 7 -->
+                    <a href="tasks/task7.html" class="topic-card">
+                        <span class="topic-number">UNIT 7</span>
+                        <div class="topic-title">Extend</div>
+                        <div class="topic-desc">Inheritance @extend</div>
+                    </a>
+                    <!-- Unit 8 -->
+                    <a href="tasks/task8.html" class="topic-card">
+                        <span class="topic-number">UNIT 8</span>
+                        <div class="topic-title">Placeholders</div>
+                        <div class="topic-desc">Silent Classes %</div>
+                    </a>
+                    <!-- Unit 9 -->
+                    <a href="tasks/task9.html" class="topic-card">
+                        <span class="topic-number">UNIT 9</span>
+                        <div class="topic-title">Math Operators</div>
+                        <div class="topic-desc">Calculations</div>
+                    </a>
+                     <!-- Unit 10 -->
+                     <a href="tasks/task10.html" class="topic-card">
+                        <span class="topic-number">UNIT 10</span>
+                        <div class="topic-title">Interpolation</div>
+                        <div class="topic-desc">String Operations</div>
+                    </a>
+                    <!-- Unit 11 -->
+                    <a href="tasks/task11.html" class="topic-card">
+                        <span class="topic-number">UNIT 11</span>
+                        <div class="topic-title">Built-in Modules</div>
+                        <div class="topic-desc">sass:color & math</div>
+                    </a>
+                    <!-- Unit 12 -->
+                    <a href="tasks/task12.html" class="topic-card">
+                        <span class="topic-number">UNIT 12</span>
+                        <div class="topic-title">Functions</div>
+                        <div class="topic-desc">Custom Logic @function</div>
+                    </a>
+                    <!-- Unit 13 -->
+                    <a href="tasks/task13.html" class="topic-card">
+                        <span class="topic-number">UNIT 13</span>
+                        <div class="topic-title">Lists</div>
+                        <div class="topic-desc">Data Structures</div>
+                    </a>
+                    <!-- Unit 14 -->
+                    <a href="tasks/task14.html" class="topic-card">
+                        <span class="topic-number">UNIT 14</span>
+                        <div class="topic-title">Maps</div>
+                        <div class="topic-desc">Key-Value Stores</div>
+                    </a>
+                    <!-- Unit 15 -->
+                    <a href="tasks/task15.html" class="topic-card">
+                        <span class="topic-number">UNIT 15</span>
+                        <div class="topic-title">If / Else</div>
+                        <div class="topic-desc">Conditional Logic</div>
+                    </a>
+                    <!-- Unit 16 -->
+                    <a href="tasks/task16.html" class="topic-card">
+                        <span class="topic-number">UNIT 16</span>
+                        <div class="topic-title">@each Loop</div>
+                        <div class="topic-desc">Map Iteration</div>
+                    </a>
+                    <!-- Unit 17 -->
+                    <a href="tasks/task17.html" class="topic-card">
+                        <span class="topic-number">UNIT 17</span>
+                        <div class="topic-title">@for Loop</div>
+                        <div class="topic-desc">Numerical Iteration</div>
+                    </a>
+                    <!-- Unit 18 -->
+                    <a href="tasks/task18.html" class="topic-card">
+                        <span class="topic-number">UNIT 18</span>
+                        <div class="topic-title">@while Loop</div>
+                        <div class="topic-desc">Complex Logic</div>
+                    </a>
+                    <!-- Unit 19 -->
+                    <a href="tasks/task19.html" class="topic-card">
+                        <span class="topic-number">UNIT 19</span>
+                        <div class="topic-title">@content</div>
+                        <div class="topic-desc">Media Managers</div>
+                    </a>
+                    <!-- Unit 20 -->
+                    <a href="tasks/task20.html" class="topic-card">
+                        <span class="topic-number">UNIT 20</span>
+                        <div class="topic-title">Best Practices</div>
+                        <div class="topic-desc">Architecture</div>
+                    </a>
+
+                    <!-- PRACTICAL TASK -->
+                    <a href="tasks/task21.html" class="topic-card" style="border-color: #ec4899;">
+                        <span class="topic-number" style="color: #ec4899;">CHALLENGE 1</span>
+                        <div class="topic-title">The Pricing Card</div>
+                        <div class="topic-desc">Vars & Nesting</div>
+                    </a>
+                    <a href="tasks/task22.html" class="topic-card" style="border-color: #ec4899;">
+                        <span class="topic-number" style="color: #ec4899;">CHALLENGE 2</span>
+                        <div class="topic-title">The Navbar</div>
+                        <div class="topic-desc">Parent Selectors</div>
+                    </a>
+                    <a href="tasks/task23.html" class="topic-card" style="border-color: #ec4899;">
+                        <span class="topic-number" style="color: #ec4899;">CHALLENGE 3</span>
+                        <div class="topic-title">Modal System</div>
+                        <div class="topic-desc">Mixins & Extend</div>
+                    </a>
+                    <a href="tasks/task24.html" class="topic-card" style="border-color: #ec4899;">
+                        <span class="topic-number" style="color: #ec4899;">CHALLENGE 4</span>
+                        <div class="topic-title">Grid Gallery</div>
+                        <div class="topic-desc">Loops & Math</div>
+                    </a>
+                    <a href="tasks/task25.html" class="topic-card" style="border-color: #ec4899;">
+                        <span class="topic-number" style="color: #ec4899;">CHALLENGE 5</span>
+                        <div class="topic-title">Theming Engine</div>
+                        <div class="topic-desc">Maps & Logic</div>
+                    </a>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

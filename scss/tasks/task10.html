@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS 10. Interpolation</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>10. Interpolation</h1>
+                <p>#{} Syntax</p>
+            </header>
+            <div class="content">
+                <p><strong>Interpolation #{}</strong> გაძლევს საშუალებას გამოიყენო ცვლადი სელექტორის ან property-ს სახელში (და არა მარტო მნიშვნელობაში).</p>
+                <h2>დავალება:</h2>
+                <ol>
+                    <li>შექმენი ცვლადი <code>$name: 'danger';</code>.</li>
+                    <li>გამოიყენე ინტერპოლაცია კლასის შესაქმნელად:
+                        <pre><code>.btn-#{$name} {
+  background: red;
+}</code></pre>
+                    </li>
+                </ol>
+            </div>
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task9.html" class="nav-btn prev">&larr; Math</a>
+                    <a href="task11.html" class="nav-btn next">Next: Built-in Modules &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="ui-card">
+                    <button class="btn-danger" style="background: red; color: white; padding: 10px 20px; border: none; border-radius: 6px;">.btn-danger</button>
+                    <div style="margin-top: 10px; color: #94a3b8; font-size: 0.8rem;">Generated via .btn-#{$name}</div>
+                 </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

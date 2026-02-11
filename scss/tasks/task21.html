@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS Challenge 1: Pricing Card</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>21. Pricing Card</h1>
+                <p>Vars & Nesting Challenge</p>
+            </header>
+            <div class="content">
+                <p><strong>Goal:</strong> შექმენი Pricing Card კომპონენტი SCSS-ის გამოყენებით.</p>
+                <h2>მოთხოვნები:</h2>
+                <ol>
+                    <li>შექმენი <code>task21.scss</code>.</li>
+                    <li>შექმენი ცვლადები ფერებისთვის: <code>$price-bg</code>, <code>$price-text</code>, <code>$price-accent</code>.</li>
+                    <li>გამოიყენე Nesting <code>.card</code>-ისთვის (header, price, features, button-ის ჩასასმელად).</li>
+                    <li>დააკომპილირე და ჩასვი მიღებული CSS <code>&lt;style&gt;</code> ტეგში ან დალინკე ფაილი.</li>
+                </ol>
+            </div>
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task20.html" class="nav-btn prev">&larr; Architecture</a>
+                    <a href="task22.html" class="nav-btn next">Next: Navbar Challenge &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="ui-card" style="width: 300px; text-align: center; border: 1px solid #333;">
+                    <h3 style="margin-bottom: 10px; color: #f472b6;">PRO</h3>
+                    <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 20px;">$29<span style="font-size: 1rem; color: #64748b;">/mo</span></div>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 20px; color: #ccc; text-align: left; padding-left: 20px;">
+                        <li style="margin-bottom: 8px;">✅ Unlimited Projects</li>
+                        <li style="margin-bottom: 8px;">✅ Analytics</li>
+                        <li>✅ 24/7 Support</li>
+                    </ul>
+                    <button style="width: 100%; padding: 12px; background: #f472b6; color: white; border: none; font-weight: bold; border-radius: 6px; cursor: pointer;">Choose Plan</button>
+                 </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS 7. Extend</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>7. Extend</h1>
+                <p>Inheritance (@extend)</p>
+            </header>
+            <div class="content">
+                <p><strong>@extend</strong> საშუალებას გვაძლევს ერთი კლასიდან ავიღოთ ყველა სტილი და გადავიტანოთ მეორეში.</p>
+                <h2>დავალება:</h2>
+                <ol>
+                    <li>შექმენი <code>.message</code> (padding, border).</li>
+                    <li>შექმენი <code>.success</code> და გამოიყენე <code>@extend .message;</code>.</li>
+                    <li>დაამატე მხოლოდ განსხვავებული ფერი (green).</li>
+                </ol>
+            </div>
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task6.html" class="nav-btn prev">&larr; Arguments</a>
+                    <a href="task8.html" class="nav-btn next">Next: Placeholders &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="ui-card" style="text-align: center;">
+                    <div style="padding: 15px; border: 1px solid #10b981; background: rgba(16, 185, 129, 0.1); color: #10b981; border-radius: 8px;">
+                        Success Message (@extend .message)
+                    </div>
+                 </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

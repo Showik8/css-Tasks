@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS 11. Modules</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>11. Modules</h1>
+                <p>sass:color</p>
+            </header>
+            <div class="content">
+                <p>SCSS-ს აქვს ჩაშენებული მოდულები. მაგალითად <code>sass:color</code> ფერების მანიპულაციისთვის.</p>
+                <h2>დავალება:</h2>
+                <ol>
+                    <li>ფაილის თავში: <code>@use "sass:color";</code>.</li>
+                    <li>შექმენი <code>$base: #ec4899;</code>.</li>
+                    <li>მიიღე ღია ფერი: <code>color.scale($base, $lightness: 40%)</code>.</li>
+                </ol>
+            </div>
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task10.html" class="nav-btn prev">&larr; Interpolation</a>
+                    <a href="task12.html" class="nav-btn next">Next: Functions &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="ui-card" style="display: flex; gap: 10px;">
+                    <div style="flex: 1; height: 50px; background: #ec4899; display: flex; align-items: center; justify-content: center; color: white;">Base</div>
+                    <div style="flex: 1; height: 50px; background: #fce7f3; display: flex; align-items: center; justify-content: center; color: #ec4899;">Light</div>
+                 </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

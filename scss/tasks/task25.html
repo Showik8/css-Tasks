@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS Challenge 5: Theming Engine</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>25. Theming Engine</h1>
+                <p>Maps & Logic Challenge</p>
+            </header>
+            <div class="content">
+                <p><strong>Goal:</strong> შექმენი თემების გენერატორი (Light, Dark, Neon).</p>
+                <h2>მოთხოვნები:</h2>
+                <ol>
+                    <li>შექმენი map <code>$themes</code> სადაც გასაღები არის თემის სახელი, ხოლო მნიშვნელობა - ფერების map.</li>
+                    <li>გამოიყენე <code>@each</code> რომ დააგენერირო კლასები: <code>.theme-light</code>, <code>.theme-dark</code>.</li>
+                    <li>შიგნით გამოიყენე CSS Custom Properties (Variables) რომ შეცვალო ფერები დინამიურად.</li>
+                </ol>
+            </div>
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task24.html" class="nav-btn prev">&larr; Grid Gallery</a>
+                    <a href="../index.html" class="nav-btn next">Finish Course &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="ui-card theme-demo" style="border: 2px solid #8b5cf6; background: #0f172a;">
+                    <h3 style="color: #8b5cf6;">Neon Theme</h3>
+                    <p style="color: #cbd5e1;">Generated from SCSS Map.</p>
+                    <button style="background: #8b5cf6; color: white; border: none; padding: 8px 16px; margin-top: 10px; border-radius: 4px;">Action</button>
+                 </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

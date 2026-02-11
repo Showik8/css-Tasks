@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS 2. Nesting</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>2. Nesting</h1>
+                <p>Structure & Readability</p>
+            </header>
+
+            <div class="content">
+                <p><strong>Nesting</strong> (ჩადგმა) საშუალებას გვაძლევს დავწეროთ CSS ისე, როგორც HTML არის სტრუქტურირებული.</p>
+                
+                <h2>დავალება:</h2>
+                <ol>
+                    <li>შექმენი ფაილი <code>task2.scss</code>.</li>
+                    <li>დაწერე კოდი ჩადგმის გამოყენებით:
+                        <pre><code>.nav {
+  ul {
+    margin: 0;
+    li {
+      display: inline-block;
+      a { text-decoration: none; }
+    }
+  }
+}</code></pre>
+                    </li>
+                </ol>
+
+                <div class="tip">
+                    <strong>Caution:</strong> ნუ ჩადგმავ 3 დონეზე ღრმად. ეს ართულებს კოდის მხარდაჭერას.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task1.html" class="nav-btn prev">&larr; Variables</a>
+                    <a href="task3.html" class="nav-btn next">Next: Parent Selector &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="ui-card nesting-demo" style="width: 100%; max-width: 400px;">
+                    <h3 style="margin-bottom: 20px; color: white;">Target Result</h3>
+                    <nav class="nav-example" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px;">
+                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; gap: 20px;">
+                            <li><a href="#" style="color: #6366f1; text-decoration: none; font-weight: bold;">Home</a></li>
+                            <li><a href="#" style="color: #94a3b8; text-decoration: none;">About</a></li>
+                            <li><a href="#" style="color: #94a3b8; text-decoration: none;">Contact</a></li>
+                        </ul>
+                    </nav>
+                 </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

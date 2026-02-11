@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS 3. Parent Selector</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>3. Parent Selector</h1>
+                <p>The Ampersand (&)</p>
+            </header>
+
+            <div class="content">
+                <p><strong>& (Ampersand)</strong> მიუთითებს მშობელ სელექტორზე. ის გამოიყენება pseudo-class-ებისთვის (<code>:hover</code>) და BEM მოდიფიკატორებისთვის.</p>
+                
+                <h2>დავალება:</h2>
+                <ol>
+                    <li>შექმენი ღილაკის სტილი:
+                        <pre><code>.btn {
+  background: blue;
+  &:hover { background: darkblue; }
+  &--primary { font-weight: bold; }
+}</code></pre>
+                    </li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task2.html" class="nav-btn prev">&larr; Nesting</a>
+                    <a href="task4.html" class="nav-btn next">Next: Partials &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="ui-card" style="text-align: center;">
+                    <button style="padding: 10px 20px; background: #6366f1; color: white; border: none; border-radius: 6px; cursor: pointer; transition: 0.3s;" onmouseover="this.style.background='#4f46e5'" onmouseout="this.style.background='#6366f1'">
+                        Hover Me (&:hover)
+                    </button>
+                    <div style="margin-top: 20px; color: #94a3b8; font-size: 0.9rem;">
+                        See how <code>&:hover</code> works without retyping <code>.btn</code>
+                    </div>
+                 </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

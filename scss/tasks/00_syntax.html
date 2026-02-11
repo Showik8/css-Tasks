@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS vs Sass: Syntax</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>00. Syntax</h1>
+                <p>SCSS vs Sass (Indented)</p>
+            </header>
+
+            <div class="content">
+                <p>Sass-ს აქვს ორი სინტაქსი. ჩვენ გამოვიყენებთ <strong>SCSS</strong>-ს (Sassy CSS), რადგან ის უფრო ჰგავს სტანდარტულ CSS-ს.</p>
+                
+                <h2>SCSS (რასაც ჩვენ ვისწავლით):</h2>
+                <ul style="margin-bottom: 20px;">
+                    <li>იყენებს ფრჩხილებს <code>{}</code> და წერტილ-მძიმებს <code>;</code>.</li>
+                    <li>სრულიად თავსებადია CSS-თან (ნებისმიერი CSS არის ვალიდური SCSS).</li>
+                </ul>
+
+                <h2>Sass (ძველი / Indented):</h2>
+                <ul>
+                    <li>არ იყენებს ფრჩხილებს და წერტილ-მძიმებს.</li>
+                    <li>იყენებს შეწევას (indentation) ბლოკების განსასაზღვრად (Python-ის მსგავსად).</li>
+                </ul>
+
+                <div class="tip">
+                    <strong>Why SCSS?</strong> უფრო ადვილია სწავლა, თუ უკვე იცი CSS. ასევე უფრო პოპულარულია ინდუსტრიაში.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="00_setup.html" class="nav-btn prev">&larr; Setup</a>
+                    <a href="task1.html" class="nav-btn next">Start Course: Variables &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div style="display: flex; gap: 20px; width: 100%; max-width: 800px; flex-wrap: wrap;">
+                    
+                    <!-- SCSS Block -->
+                    <div class="ui-card" style="flex: 1; min-width: 300px; padding: 0; overflow: hidden; border: 1px solid #6366f1;">
+                        <div style="background: #6366f1; color: white; padding: 10px 20px; font-weight: bold;">style.scss (Best Choice)</div>
+                        <pre style="background: #1e1e1e; margin: 0; padding: 20px; font-family: 'JetBrains Mono'; font-size: 0.9rem; color: #ccc;">
+<span style="color: #ffbd2e;">$primary-color</span>: #333;
+
+body {
+  color: <span style="color: #ffbd2e;">$primary-color</span>;
+  
+  .container {
+    width: 100%;
+  }
+}
+                        </pre>
+                    </div>
+
+                    <!-- Sass Block -->
+                    <div class="ui-card" style="flex: 1; min-width: 300px; padding: 0; overflow: hidden; border: 1px solid #ec4899;">
+                        <div style="background: #ec4899; color: white; padding: 10px 20px; font-weight: bold;">style.sass (Indented)</div>
+                        <pre style="background: #1e1e1e; margin: 0; padding: 20px; font-family: 'JetBrains Mono'; font-size: 0.9rem; color: #ccc;">
+<span style="color: #ffbd2e;">$primary-color</span>: #333
+
+body
+  color: <span style="color: #ffbd2e;">$primary-color</span>
+  
+  .container
+    width: 100%
+                        </pre>
+                    </div>
+
+                 </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

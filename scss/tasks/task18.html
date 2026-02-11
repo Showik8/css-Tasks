@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS 18. @while</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>18. @while</h1>
+                <p>While Condition</p>
+            </header>
+            <div class="content">
+                <p><strong>@while</strong> მუშაობს სანამ პირობა სრულდება.</p>
+                <h2>დავალება:</h2>
+                <ol>
+                    <li><code>$w: 10;</code></li>
+                    <li><code>@while $w <= 100</code>...</li>
+                    <li>შექმენი <code>.w-#{$w}</code>.</li>
+                    <li><code>$w: $w + 10;</code>.</li>
+                </ol>
+            </div>
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task17.html" class="nav-btn prev">&larr; @for</a>
+                    <a href="task19.html" class="nav-btn next">Next: @content &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="ui-card">
+                    <div style="width: 50%; background: blue; height: 10px;">50%</div>
+                    <div style="width: 80%; background: green; height: 10px; margin-top: 5px;">80%</div>
+                 </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

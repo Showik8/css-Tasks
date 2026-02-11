@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS 4. Partials & Modules</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>4. Partials</h1>
+                <p>File Organization</p>
+            </header>
+
+            <div class="content">
+                <p><strong>Partials</strong> არის ფაილები, რომლებიც იწყება <code>_</code> (underscore)-ით. ისინი არ კომპილირდება ცალკე CSS ფაილად, არამედ გამოიყენება სხვა ფაილებში.</p>
+                
+                <h2>დავალება:</h2>
+                <ol>
+                    <li>შექმენი <code>_variables.scss</code> და გადაიტანე იქ ფერები.</li>
+                    <li>შექმენი <code>main.scss</code>.</li>
+                    <li>გამოიყენე: <code>@use 'variables';</code></li>
+                </ol>
+
+                <div class="tip">
+                    <strong>Note:</strong> <code>@import</code> მოძველებულია. გამოიყენე <code>@use</code>.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task3.html" class="nav-btn prev">&larr; Parent Selector</a>
+                    <a href="task5.html" class="nav-btn next">Next: Mixins &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="ui-card" style="font-family: 'JetBrains Mono'; text-align: left; background: #1e1e1e;">
+                    <div style="color: #94a3b8; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 15px;">Project Structure</div>
+                    <div style="color: #ccc;">
+                        📂 scss/<br>
+                        &nbsp; ├── 📄 _variables.scss<br>
+                        &nbsp; ├── 📄 _reset.scss<br>
+                        &nbsp; └── 📄 main.scss <span style="color: #6366f1;">(@use 'variables')</span>
+                    </div>
+                 </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

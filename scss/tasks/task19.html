@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS 19. @content</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>19. @content</h1>
+                <p>Passing Content</p>
+            </header>
+            <div class="content">
+                <p><strong>@content</strong> გამოიყენება mixin-ში შიგთავსის ჩასასმელად.</p>
+                <h2>დავალება:</h2>
+                <ol>
+                    <li><code>@mixin mobile { @media... { @content } }</code>.</li>
+                    <li>გამოიყენე: <code>@include mobile { color: red; }</code>.</li>
+                </ol>
+            </div>
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task18.html" class="nav-btn prev">&larr; @while</a>
+                    <a href="task20.html" class="nav-btn next">Next: Best Practices &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="ui-card">
+                    Resize Me
+                 </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

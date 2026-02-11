@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS 16. @each Loop</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>16. @each</h1>
+                <p>Looping Lists</p>
+            </header>
+            <div class="content">
+                <p><strong>@each</strong> ციკლი გადაუვლის სიას.</p>
+                <h2>დავალება:</h2>
+                <ol>
+                    <li><code>$icons: fb, tw, ig;</code></li>
+                    <li><code>@each $icon in $icons</code>...</li>
+                    <li>შექმენი კლასები <code>.icon-#{$icon}</code>.</li>
+                </ol>
+            </div>
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task15.html" class="nav-btn prev">&larr; If/Else</a>
+                    <a href="task17.html" class="nav-btn next">Next: @for &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="ui-card" style="display: flex; gap: 10px; justify-content: center;">
+                    <div style="background: #1877f2; padding: 10px; border-radius: 50%; color: white;">fb</div>
+                    <div style="background: #1da1f2; padding: 10px; border-radius: 50%; color: white;">tw</div>
+                 </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

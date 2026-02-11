@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS 9. Math</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>9. Math</h1>
+                <p>Operators</p>
+            </header>
+            <div class="content">
+                <p>SCSS-ს შეუძლია მათემატიკური მოქმედებები. ახლა საჭიროა <code>sass:math</code> მოდულის გამოყენება.</p>
+                <h2>დავალება:</h2>
+                <ol>
+                    <li>შექმენი <code>$container: 1000px;</code>.</li>
+                    <li>გამოთვალე sidebar-ის ზომა: <code>width: $container / 4;</code>.</li>
+                    <li>გამოიყენე <code>math.div($container, 4)</code>.</li>
+                </ol>
+            </div>
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task8.html" class="nav-btn prev">&larr; Placeholders</a>
+                    <a href="task10.html" class="nav-btn next">Next: Interpolation &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="ui-card" style="display: flex; height: 100px;">
+                    <div style="width: 25%; background: rgba(99, 102, 241, 0.2); border: 1px solid #6366f1; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;">25%</div>
+                    <div style="width: 75%; background: rgba(236, 72, 153, 0.2); border: 1px solid #ec4899; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;">75%</div>
+                 </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

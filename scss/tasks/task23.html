@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS Challenge 3: Modal System</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>23. Modal System</h1>
+                <p>Mixins & Extend Challenge</p>
+            </header>
+            <div class="content">
+                <p><strong>Goal:</strong> შექმენი მოდალური ფანჯრების სისტემა.</p>
+                <h2>მოთხოვნები:</h2>
+                <ol>
+                    <li>შექმენი mixin <code>overlay</code> (fixed layout).</li>
+                    <li>შექმენი placeholder <code>%modal-base</code> (padding, radius, shadow).</li>
+                    <li>შექმენი <code>.modal-success</code> და <code>.modal-error</code> რომლებიც იყენებენ <code>@extend %modal-base</code>-ს და განსხვავებულ <code>border-color</code>-ს.</li>
+                </ol>
+            </div>
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task22.html" class="nav-btn prev">&larr; Navbar</a>
+                    <a href="task24.html" class="nav-btn next">Next: Grid Challenge &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="ui-card" style="border-left: 4px solid #10b981; max-width: 400px; width: 100%;">
+                    <h3>Operation Successful</h3>
+                    <p style="color: #94a3b8; font-size: 0.9rem;">Your changes have been saved.</p>
+                    <div style="margin-top: 15px; display: flex; justify-content: flex-end;">
+                        <button style="background: none; border: none; color: #ccc; cursor: pointer;">Close</button>
+                        <button style="background: #10b981; color: white; border: none; padding: 8px 16px; border-radius: 4px; margin-left: 10px; cursor: pointer;">OK</button>
+                    </div>
+                 </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

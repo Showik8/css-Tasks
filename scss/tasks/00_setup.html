@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS Setup: Installation</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>00. Setup</h1>
+                <p>Environment Configuration</p>
+            </header>
+
+            <div class="content">
+                <p>სანამ კოდის წერას დავიწყებთ, საჭიროა გარემოს მომზადება. SCSS არის პრე-პროცესორი, რაც ნიშნავს რომ ის უნდა კომპილირდეს CSS-ში.</p>
+                
+                <h2>ნაბიჯი 1: Node.js & NPM</h2>
+                <p>დარწმუნდი რომ გაქვს დაინსტალირებული <a href="https://nodejs.org/" target="_blank" style="color: var(--accent-cyan);">Node.js</a>.</p>
+                <code class="cmd">node -v</code>
+                <code class="cmd">npm -v</code>
+
+                <h2>ნაბიჯი 2: Sass Compiler</h2>
+                <p>ჩვენ გამოვიყენებთ ოფიციალურ Dart Sass კომპილერს. გახსენი ტერმინალი და ჩაწერე:</p>
+                <code class="cmd">npm install -g sass</code>
+
+                <h2>ნაბიჯი 3: პროექტის შექმნა</h2>
+                <ol>
+                    <li>შექმენი საქაღალდე <code>scss-course</code>.</li>
+                    <li>გახსენი VS Code-ში.</li>
+                    <li>შექმენი ფაილი <code>style.scss</code>.</li>
+                </ol>
+
+                <div class="tip">
+                    <strong>Watch Mode:</strong> ავტომატური კომპილაციისთვის გაუშვი:
+                    <br><code>sass --watch style.scss style.css</code>
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="../index.html" class="nav-btn prev">&larr; Home</a>
+                    <a href="00_syntax.html" class="nav-btn next">Next: Syntax &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 
+                 <div class="ui-card terminal-demo" style="width: 100%; max-width: 500px; background: #1e1e1e; border: 1px solid #333; font-family: 'JetBrains Mono', monospace; padding: 0;">
+                    <div style="background: #2d2d2d; padding: 10px 15px; display: flex; gap: 8px; border-bottom: 1px solid #333;">
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f56;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #27c93f;"></div>
+                    </div>
+                    <div style="padding: 20px; color: #ccc; font-size: 0.9rem; line-height: 1.6;">
+                        <div><span style="color: #4cd964;">➜</span> <span style="color: #5ac8fa;">~</span> npm install -g sass</div>
+                        <div style="color: #888;">... installing sass ...</div>
+                        <div style="margin-top: 10px;"><span style="color: #4cd964;">➜</span> <span style="color: #5ac8fa;">project</span> sass --watch style.scss style.css</div>
+                        <div style="color: #888;">Sass is watching for changes. Press Ctrl-C to stop.</div>
+                        <div style="color: #888; margin-top: 5px;">Compile: style.scss -> style.css</div>
+                    </div>
+                 </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

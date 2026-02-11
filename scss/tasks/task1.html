@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS 1. Variables</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>1. Variables</h1>
+                <p>Theming & Maintenance</p>
+            </header>
+
+            <div class="content">
+                <p><strong>Variables</strong> (ცვლადები) არის SCSS-ის ერთ-ერთი ყველაზე მნიშვნელოვანი ნაწილი. ისინი საშუალებას გვაძლევს შევინახოთ ფერები, ზომები და შრიფტები ერთ ადგილას.</p>
+                
+                <h2>დავალება:</h2>
+                <ol>
+                    <li>შექმენი ფაილი <code>task1.scss</code> შენს ედიტორში.</li>
+                    <li>შექმენი ცვლადები:
+                        <pre><code>$primary: #6366f1;
+$bg-dark: #1e293b;
+$radius: 12px;</code></pre>
+                    </li>
+                    <li>გამოიყენე ისინი <code>.card</code> კლასისთვის.</li>
+                    <li>დააკვირდი კომპილაციას: <code>sass --watch task1.scss task1.css</code></li>
+                </ol>
+
+                <div class="tip">
+                    <strong>Pro Tip:</strong> ცვლადები ყოველთვის უნდა იწყებოდეს <code>$</code> ნიშნით.
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="00_intro.html" class="nav-btn prev">&larr; Intro</a>
+                    <a href="task2.html" class="nav-btn next">Next: Nesting &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="ui-card profile-card" style="width: 300px; text-align: center; background: #1e293b; color: white; border-radius: 12px; padding: 20px;">
+                    <div style="width: 80px; height: 80px; border-radius: 50%; background: #6366f1; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-size: 2rem;">👤</div>
+                    <h3 style="margin-bottom: 5px;">User Profile</h3>
+                    <p style="color: #94a3b8; font-size: 0.9rem;">Web Developer</p>
+                    <button style="margin-top: 20px; background: #6366f1; border: none; padding: 10px 20px; color: white; border-radius: 6px; cursor: pointer;">Follow</button>
+                    <div style="margin-top: 15px; font-size: 0.8rem; color: #64748b;">
+                        <code>$primary: #6366f1;</code><br>
+                        <code>$radius: 12px;</code>
+                    </div>
+                 </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

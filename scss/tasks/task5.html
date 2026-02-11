@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS 5. Mixins</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>5. Mixins</h1>
+                <p>Reusable Styles</p>
+            </header>
+
+            <div class="content">
+                <p><strong>@mixin</strong> საშუალებას გვაძლევს შევქმნათ სტილების ჯგუფი და გამოვიყენოთ ის მრავალჯერ.</p>
+                
+                <h2>დავალება:</h2>
+                <ol>
+                    <li>შექმენი mixin <code>flex-center</code>:
+                        <pre><code>@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}</code></pre>
+                    </li>
+                    <li>გამოიყენე ის: <code>.box { @include flex-center; }</code></li>
+                </ol>
+            </div>
+            
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task4.html" class="nav-btn prev">&larr; Partials</a>
+                    <a href="task6.html" class="nav-btn next">Next: Arguments &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="ui-card mixin-demo" style="width: 100%; height: 200px; max-width: 400px; display: flex; justify-content: center; align-items: center; background: linear-gradient(45deg, #6366f1, #ec4899);">
+                    <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 12px; backdrop-filter: blur(5px); color: white; font-weight: bold;">
+                        Centered Content
+                        <div style="font-size: 0.7rem; font-weight: normal; margin-top: 5px;">@include flex-center;</div>
+                    </div>
+                 </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

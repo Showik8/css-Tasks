@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS 12. Functions</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>12. Functions</h1>
+                <p>@function</p>
+            </header>
+            <div class="content">
+                <p><strong>@function</strong> გვიბრუნებს მნიშვნელობას და არ ქმნის CSS სელექტორს.</p>
+                <h2>დავალება:</h2>
+                <ol>
+                    <li>შექმენი ფუნქცია <code>to-rem($px)</code>.</li>
+                    <li>ფორმულა: <code>math.div($px, 16) * 1rem</code>.</li>
+                    <li>გამოიყენე: <code>font-size: to-rem(24);</code>.</li>
+                </ol>
+            </div>
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task11.html" class="nav-btn prev">&larr; Modules</a>
+                    <a href="task13.html" class="nav-btn next">Next: Lists &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="ui-card">
+                    <h1 style="font-size: 1.5rem;">Title (1.5rem)</h1>
+                    <p style="color: #94a3b8;">Originally 24px, converted to rem.</p>
+                 </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS 8. Placeholders</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>8. Placeholders</h1>
+                <p>Silent Classes (%)</p>
+            </header>
+            <div class="content">
+                <p><strong>%placeholder</strong> ჰგავს კლასს, მაგრამ ის არ ჩნდება CSS-ში სანამ არ გამოიყენებ <code>@extend</code>-ით. ეს ამცირებს CSS ფაილის ზომას.</p>
+                <h2>დავალება:</h2>
+                <ol>
+                    <li>შექმენი <code>%card-shadow</code>.</li>
+                    <li>გამოიყენე ის <code>.profile-card</code>-ში.</li>
+                    <li>შეამოწმე CSS: <code>%card-shadow</code> ცალკე არ უნდა არსებობდეს.</li>
+                </ol>
+            </div>
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task7.html" class="nav-btn prev">&larr; Extend</a>
+                    <a href="task9.html" class="nav-btn next">Next: Math &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+        <main class="result-panel">
+            <div class="workspace">
+                 <div class="ui-card" style="box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5);">
+                    Card with %shadow
+                 </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

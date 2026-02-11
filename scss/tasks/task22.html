@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS Challenge 2: Navbar</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="instructions-panel">
+            <header class="header">
+                <h1>22. The Navbar</h1>
+                <p>Parent Selector Challenge</p>
+            </header>
+            <div class="content">
+                <p><strong>Goal:</strong> შექმენი ნავიგაცია hover ეფექტებით და აქტიური სტატუსით.</p>
+                <h2>მოთხოვნები:</h2>
+                <ol>
+                    <li>შექმენი <code>task22.scss</code>.</li>
+                    <li>გამოიყენე BEM: <code>.nav</code>, <code>.nav__item</code>, <code>.nav__link</code>.</li>
+                    <li>გამოიყენე <code>&</code> (Parent Selector):
+                        <ul>
+                            <li><code>&:hover</code> ლინკებისთვის.</li>
+                            <li><code>&--active</code> აქტიური ლინკისთვის.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <footer class="footer">
+                <nav class="nav-buttons">
+                    <a href="task21.html" class="nav-btn prev">&larr; Pricing Card</a>
+                    <a href="task23.html" class="nav-btn next">Next: Modal Challenge &rarr;</a>
+                </nav>
+            </footer>
+        </aside>
+        <main class="result-panel">
+            <div class="workspace">
+                 <nav style="background: #1e1e1e; padding: 20px; border-radius: 8px; width: 100%;">
+                    <a href="#" style="color: white; text-decoration: none; margin-right: 20px; border-bottom: 2px solid #6366f1;">Home (&--active)</a>
+                    <a href="#" style="color: #94a3b8; text-decoration: none; margin-right: 20px;">Features (&:hover)</a>
+                    <a href="#" style="color: #94a3b8; text-decoration: none;">Pricing</a>
+                 </nav>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
